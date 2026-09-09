@@ -2,7 +2,18 @@
 
 import Link from 'next/link';
 import { fleetData } from '@/data/fleet';
-import { Car, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: 'Our Fleet — Premium Vehicles for Every Journey',
+  description:
+    'Explore Suhalaya\'s fleet of premium chauffeur-driven vehicles — sedans, SUVs, Tempo Travellers, and luxury coaches for corporate travel, airport transfers, and road trips across South India.',
+  alternates: { canonical: 'https://suhalayatravels.com/fleet' },
+  openGraph: {
+    title: 'Our Fleet — Premium Vehicles | Suhalaya Travels',
+    description: 'Sedans, SUVs, luxury coaches — every vehicle chauffeur-driven and meticulously maintained for your comfort across South India.',
+    url: 'https://suhalayatravels.com/fleet',
+  },
+};
 
 export default function FleetPage() {
   return (

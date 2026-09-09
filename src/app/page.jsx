@@ -11,6 +11,52 @@ import { blogsData } from '@/data/blogs';
 import { locationsData } from '@/data/locations';
 import { ArrowRight, MapPin, ChevronRight, Compass, BookOpen } from 'lucide-react';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://suhalayatravels.com',
+  name: 'Suhalaya Travels',
+  description:
+    'Premium chauffeur-driven mobility partner for corporate travel, airport transfers, employee transport, and South India road journeys.',
+  url: 'https://suhalayatravels.com',
+  telephone: '+91-80-XXXXXXXX',
+  image: 'https://suhalayatravels.com/og-image.png',
+  logo: 'https://suhalayatravels.com/icon.png',
+  priceRange: '₹₹₹',
+  currenciesAccepted: 'INR',
+  paymentAccepted: 'Cash, Credit Card, Bank Transfer',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Bangalore',
+    addressLocality: 'Bangalore',
+    addressRegion: 'Karnataka',
+    postalCode: '560001',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 12.9716,
+    longitude: 77.5946,
+  },
+  areaServed: [
+    'Bangalore', 'Hyderabad', 'Chennai', 'Mysore', 'Coimbatore',
+    'Kochi', 'Thiruvananthapuram', 'Mangalore', 'South India',
+  ],
+  serviceType: [
+    'Corporate Mobility', 'Airport Transfer', 'Employee Transport',
+    'Executive Travel', 'Road Trips', 'Chauffeur Service',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/suhalayatravels',
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+};
+
 export default function HomePage() {
   const featuredServices = servicesData.slice(0, 8);
   const featuredBlogs = blogsData.slice(0, 3);
@@ -18,6 +64,10 @@ export default function HomePage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* 1. Hero */}
       <Hero 
         onOpenQuoteModal={() => {

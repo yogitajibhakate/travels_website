@@ -4,6 +4,18 @@ import Link from 'next/link';
 import { industriesData } from '@/data/industries';
 import { Building2, ShieldCheck, CheckCircle2, ArrowRight, Phone, Award, Users, Globe, Lock } from 'lucide-react';
 
+export const metadata = {
+  title: 'Corporate Mobility — Managed Employee & Executive Travel',
+  description:
+    'Suhalaya Travels provides corporate mobility solutions for enterprises across South India — employee transport, executive shuttles, airport transfers, and compliant night-drop services.',
+  alternates: { canonical: 'https://suhalayatravels.com/corporate' },
+  openGraph: {
+    title: 'Corporate Mobility Solutions | Suhalaya Travels',
+    description: 'Managed corporate travel, employee transport and executive mobility solutions for businesses across South India.',
+    url: 'https://suhalayatravels.com/corporate',
+  },
+};
+
 export default function CorporatePage() {
   return (
     <div>

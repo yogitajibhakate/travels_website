@@ -5,6 +5,18 @@ import Link from 'next/link';
 import { blogsData } from '@/data/blogs';
 import { BookOpen, Clock, ArrowRight, Sparkles } from 'lucide-react';
 
+export const metadata = {
+  title: 'Travel Blog — Tips, Routes & Corporate Mobility Insights',
+  description:
+    'Read Suhalaya Travels\' blog for expert tips on corporate mobility, South India road trip routes, airport transfer guides, and chauffeur-driven travel insights.',
+  alternates: { canonical: 'https://suhalayatravels.com/blog' },
+  openGraph: {
+    title: 'Travel Blog | Suhalaya Travels',
+    description: 'Corporate mobility insights, South India road trip routes, and expert chauffeur travel tips from Suhalaya Travels.',
+    url: 'https://suhalayatravels.com/blog',
+  },
+};
+
 export default function BlogHubPage() {
   const comingSoonCategories = [
     { title: 'Corporate Mobility', desc: 'Ideas for making business travel easier to manage.' },

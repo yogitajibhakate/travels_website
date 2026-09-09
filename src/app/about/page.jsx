@@ -1,6 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'About Us — Our Story & Values',
+  description:
+    'Learn about Suhalaya Travels — South India\'s premium chauffeur-driven mobility partner. Our story, mission, safety protocols, and the values behind every journey.',
+  alternates: { canonical: 'https://suhalayatravels.com/about' },
+  openGraph: {
+    title: 'About Suhalaya Travels — Our Story & Values',
+    description: 'Premium chauffeur-driven journeys in South India. Meet the team behind every safe, comfortable ride.',
+    url: 'https://suhalayatravels.com/about',
+  },
+};
 import { ShieldCheck, Award, MapPin, Users, ArrowRight, HeartHandshake, Car, Compass } from 'lucide-react';
 
 export default function AboutPage() {

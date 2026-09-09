@@ -4,6 +4,18 @@ import BookingWidget from '@/components/BookingWidget';
 import { MapPin, Phone, Mail, Clock, Building2, Calendar, Compass, UserCheck, Sparkles, CheckCircle2 } from 'lucide-react';
 import { locationsData } from '@/data/locations';
 
+export const metadata = {
+  title: 'Contact Us — Book a Ride or Get a Quote',
+  description:
+    'Get in touch with Suhalaya Travels for corporate bookings, airport transfers, or custom travel quotes. Reach our team by phone, email, or walk-in at our offices across South India.',
+  alternates: { canonical: 'https://suhalayatravels.com/contact' },
+  openGraph: {
+    title: 'Contact Suhalaya Travels — Book a Premium Chauffeur Ride',
+    description: 'Connect with our team for corporate mobility, airport transfers, or premium travel packages across South India.',
+    url: 'https://suhalayatravels.com/contact',
+  },
+};
+
 export default function ContactPage() {
   const headOffice = locationsData.find(l => l.isHeadOffice) || locationsData[0];
 

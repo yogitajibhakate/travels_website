@@ -4,6 +4,18 @@ import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import { ArrowRight, ChevronRight, CheckCircle2, Phone, Compass, Calendar, Building2, Users } from 'lucide-react';
 
+export const metadata = {
+  title: 'Our Services — Corporate, Airport & Executive Travel',
+  description:
+    'Suhalaya offers premium chauffeur-driven services across South India — corporate mobility, airport transfers, employee transport, executive travel, and curated heritage road trips.',
+  alternates: { canonical: 'https://suhalayatravels.com/services' },
+  openGraph: {
+    title: 'Our Services — Corporate & Executive Travel | Suhalaya Travels',
+    description: 'From corporate mobility to airport transfers and heritage road trips — premium chauffeur-driven services across South India.',
+    url: 'https://suhalayatravels.com/services',
+  },
+};
+
 export default function ServicesHubPage() {
   const businessServices = servicesData.filter(s => s.categoryCluster === 'business-mobility');
   const eventServices = servicesData.filter(s => s.categoryCluster === 'events-groups');
