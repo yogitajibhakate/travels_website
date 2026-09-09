@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import { ArrowRight, ChevronRight, CheckCircle2, Phone, Compass, Calendar, Building2, Users } from 'lucide-react';

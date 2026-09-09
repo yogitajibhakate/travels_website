@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { industriesData } from '@/data/industries';
 import { Building2, ShieldCheck, CheckCircle2, ArrowRight, Phone, Award, Users, Globe, Lock } from 'lucide-react';

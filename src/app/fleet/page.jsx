@@ -1,7 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import { fleetData } from '@/data/fleet';
+import { Car, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Our Fleet — Premium Vehicles for Every Journey',

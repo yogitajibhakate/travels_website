@@ -1,5 +1,3 @@
-'use client';
-
 import BookingWidget from '@/components/BookingWidget';
 import { MapPin, Phone, Mail, Clock, Building2, Calendar, Compass, UserCheck, Sparkles, CheckCircle2 } from 'lucide-react';
 import { locationsData } from '@/data/locations';
