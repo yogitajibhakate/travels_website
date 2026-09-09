@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import SafetyBlock from '@/components/SafetyBlock';
 import { ShieldCheck, Award, MapPin, Users, ArrowRight, HeartHandshake, Car, Compass } from 'lucide-react';
 
 export default function AboutPage() {
@@ -108,7 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SafetyBlock />
+
 
       {/* Final CTA */}
       <section className="section section-dark" style={{ textAlign: 'center' }}>

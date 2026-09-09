@@ -8,7 +8,6 @@ import { fleetData } from '@/data/fleet';
 import { blogsData } from '@/data/blogs';
 import { locationsData } from '@/data/locations';
 import FAQAccordion from '@/components/FAQAccordion';
-import SafetyBlock from '@/components/SafetyBlock';
 import BookingWidget from '@/components/BookingWidget';
 import { CheckCircle2, ArrowRight, ShieldCheck, UserCheck, Clock, MapPin, Car, BookOpen } from 'lucide-react';
 
@@ -245,7 +244,7 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 7. Safety Block Component */}
-      <SafetyBlock />
+
 
       {/* 8. Locations Served */}
       <section className="section">

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { industriesData } from '@/data/industries';
-import SafetyBlock from '@/components/SafetyBlock';
 import { Building2, ShieldCheck, CheckCircle2, ArrowRight, Phone, Award, Users, Globe, Lock } from 'lucide-react';
 
 export default function CorporatePage() {
@@ -207,7 +206,7 @@ export default function CorporatePage() {
         </div>
       </section>
 
-      <SafetyBlock />
+
 
       {/* CTA Band */}
       <section className="section section-dark" style={{ textAlign: 'center' }}>

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { servicesData } from '@/data/services';
-import SafetyBlock from '@/components/SafetyBlock';
 import { ArrowRight, ChevronRight, CheckCircle2, Phone, Compass, Calendar, Building2, Users } from 'lucide-react';
 
 export default function ServicesHubPage() {
@@ -425,7 +424,7 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      <SafetyBlock />
+
 
       {/* 9. FINAL CTA */}
       <section className="section section-dark" style={{ textAlign: 'center' }}>
