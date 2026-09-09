@@ -30,12 +30,35 @@ export default function HomePage() {
         }}
       />
 
+      {/* 1.5 Benchmark Stats Counter Band */}
+      <section style={{ backgroundColor: 'var(--color-navy-900)', color: '#FFF', borderTop: '1px solid rgba(255,255,255,0.1)', padding: '24px 0' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '24px', textAlign: 'center' }}>
+            <div style={{ borderRight: '1px solid rgba(255,255,255,0.1)', paddingRight: '12px' }}>
+              <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#29ABE2', fontFamily: 'var(--font-display)' }}>25+ Years</div>
+              <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Mobility Excellence (Since 1999)</div>
+            </div>
+            <div style={{ borderRight: '1px solid rgba(255,255,255,0.1)', paddingRight: '12px' }}>
+              <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#29ABE2', fontFamily: 'var(--font-display)' }}>500+</div>
+              <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Corporate & Enterprise Accounts</div>
+            </div>
+            <div style={{ borderRight: '1px solid rgba(255,255,255,0.1)', paddingRight: '12px' }}>
+              <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#29ABE2', fontFamily: 'var(--font-display)' }}>100+</div>
+              <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Cities & Outstation Routes</div>
+            </div>
+            <div>
+              <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#29ABE2', fontFamily: 'var(--font-display)' }}>99.8%</div>
+              <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>On-Time Dispatch SLA Rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Introduction: More Than a Ride. A Mobility Partner. */}
       <section className="section" id="introduction-section" style={{ backgroundColor: '#FFF' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '48px', alignItems: 'center' }}>
             <div>
-              {/* Tagline eyebrow: italic grey-500 mirroring "Exploring the world of comfort" */}
               <span className="eyebrow">Exploring the world of comfort</span>
               <div className="badge badge-sky" style={{ marginBottom: '16px' }}>Welcome to Suhalaya Travels</div>
               <h2 style={{ fontSize: '2.4rem', color: 'var(--color-navy-900)', marginBottom: '20px' }}>
@@ -43,20 +66,20 @@ export default function HomePage() {
               </h2>
 
               <div style={{ fontSize: '1.05rem', color: 'var(--color-ink-900)', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <p>
-                  Business travel doesn't always happen between two fixed points.
+                <p style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--color-navy-900)' }}>
+                  Some journeys need a car. Others need coordination.
                 </p>
                 <p style={{ backgroundColor: 'var(--color-steel-100)', padding: '18px 22px', borderRadius: 'var(--radius-md)', borderLeft: '4px solid #29ABE2', fontWeight: '500', fontSize: '0.98rem' }}>
-                  Employees travel across shifts. Executives move between airports, offices and meetings. Clients arrive from different cities. Conferences bring hundreds of people together. Families travel across states for weddings, pilgrimages and celebrations.
+                  Daily employee movement. Visiting executives. Airport schedules. Multiple event venues. Wedding guests arriving from different cities.
+                </p>
+                <p style={{ fontStyle: 'italic', color: 'var(--color-grey-500)' }}>
+                  The requirement changes. The expectation doesn't.
                 </p>
                 <p>
-                  <strong>Suhalaya helps manage that movement.</strong>
+                  With operations built around corporate and chauffeur-driven travel, Suhalaya Travels brings vehicles, chauffeurs and journey planning together under one roof.
                 </p>
-                <p style={{ fontSize: '0.95rem' }}>
-                  Our chauffeur-driven mobility services cover corporate travel, employee transportation, airport transfers, executive mobility, events, weddings and large group transportation across India.
-                </p>
-                <p style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--color-navy-900)' }}>
-                  For travellers who want to explore South India at their own pace, we also offer customised chauffeur-driven road journeys where <em>you decide the route and we take care of the road.</em>
+                <p style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--color-sky-600)' }}>
+                  One partner. Multiple ways to move.
                 </p>
               </div>
             </div>
@@ -73,17 +96,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Services Grid: Mobility Built Around Your Journey */}
+      {/* 3. Services Grid: One Partner. Every Journey. */}
       <section className="section section-steel" id="services-overview">
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px', flexWrap: 'wrap', gap: '16px' }}>
             <div>
               <span className="eyebrow">Exploring the world of comfort</span>
               <div className="badge badge-sky" style={{ marginBottom: '12px' }}>Our Services</div>
-              <h2>Mobility Built Around Your Journey</h2>
-              <p style={{ color: 'var(--color-grey-500)', marginTop: '8px', maxWidth: '600px' }}>
-                Not every journey needs the same vehicle, schedule, or service. Suhalaya brings these requirements together under one mobility partner.
-              </p>
+              <h2>One Partner. Every Journey.</h2>
             </div>
             <Link href="/services" className="btn btn-outline">
               Explore All Services <ArrowRight size={16} />
@@ -91,55 +111,147 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
-            {featuredServices.map(service => (
-              <div key={service.slug} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
-                <div>
-                  <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>
-                    {service.categoryCluster.replace('for-', 'For ')}
-                  </div>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>{service.name}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
-                    {service.tagline}
-                  </p>
-                </div>
-                <Link href={`/services/${service.slug}`} style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                  Explore Service Details <ChevronRight size={16} color="#29ABE2" />
-                </Link>
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Corporate Mobility</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Business travel that keeps pace with meetings, offices, hotels and changing schedules.
+                </p>
               </div>
-            ))}
+              <Link href="/services/corporate-mobility" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Employee Transportation</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Planned mobility for teams travelling to and from workplaces, campuses and business hubs.
+                </p>
+              </div>
+              <Link href="/services/employee-transportation" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Airport Transfers</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  A straightforward journey between the airport, hotel, office or home.
+                </p>
+              </div>
+              <Link href="/services/airport-transfers" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Chauffeur on Call</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Need a car for a few hours, a full day or a specific engagement? Book around your schedule.
+                </p>
+              </div>
+              <Link href="/services/chauffeur-on-call" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Executive & VIP Travel</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Quiet, comfortable transportation for executives, guests and important business engagements.
+                </p>
+              </div>
+              <Link href="/services/executive-vip-travel" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Events & Groups</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Events & Offsites</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  From conferences to team outings, coordinate people and vehicles without juggling multiple providers.
+                </p>
+              </div>
+              <Link href="/services/corporate-events-conferences" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Events & Groups</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Weddings & Family Events</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Guest transfers, venue movement and family travel—planned around the celebration.
+                </p>
+              </div>
+              <Link href="/services/weddings-family-events" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Journeys Beyond</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>South India Chauffeur Travel</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Build your own road journey across South India and enjoy the route without driving it yourself.
+                </p>
+              </div>
+              <Link href="/services/south-india-chauffeur-travel" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. South India Chauffeur Road Trips (Section 17 - Heritage Gold Accent reserved here §2a) */}
+      {/* 4. South India: You Plan the Journey. We Handle the Road. */}
       <section className="section" style={{ backgroundColor: '#0F2A52', color: '#FFF' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center' }}>
             <div>
               <span className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>Exploring the world of comfort</span>
-              {/* Reserved Heritage Gold Accent badge for Heritage/Pilgrimage story */}
               <div className="badge badge-heritage" style={{ marginBottom: '16px' }}>
-                <Compass size={14} style={{ marginRight: '6px' }} /> South Indian Heritage Journeys
+                <Compass size={14} style={{ marginRight: '6px' }} /> South India Chauffeur Travel
               </div>
               <h2 style={{ color: '#FFF', fontSize: '2.4rem', marginBottom: '20px' }}>
-                South India. Your Route. Your Pace. Our Chauffeur.
+                You Plan the Journey. We Handle the Road.
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.08rem', marginBottom: '20px', lineHeight: '1.7' }}>
-                You choose where you want to go. Add a few places you've always wanted to visit. Stop when the landscape changes. Stay another night if you like the place. Your chauffeur takes care of the driving.
-              </p>
-              <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.98rem', marginBottom: '28px', lineHeight: '1.6' }}>
-                From the coffee plantations of Coorg to the ruins of Hampi, the beaches of Gokarna, the hills of Ooty, the forests of Kabini and the backwaters of Kerala, South India is best experienced from the road.
+              <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '1.1rem', marginBottom: '18px', fontWeight: '600' }}>
+                Some of the best journeys aren't built around a fixed itinerary.
               </p>
 
-              <div style={{ padding: '16px 20px', borderRadius: 'var(--radius-md)', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)', marginBottom: '32px', display: 'inline-block' }}>
-                <span style={{ fontSize: '1.05rem', fontWeight: '700', color: '#29ABE2' }}>
-                  "You plan the journey. We handle the road."
-                </span>
+              <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.98rem', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <div>📍 Bengaluru to Mysuru and Coorg</div>
+                <div>📍 Hampi and Badami</div>
+                <div>📍 Ooty and Coonoor</div>
+                <div>📍 Wayanad</div>
+                <div>📍 Gokarna and Udupi</div>
               </div>
 
+              <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', marginBottom: '20px', lineHeight: '1.6' }}>
+                Take the route you want. Stop where you want. Stay longer when a place deserves it.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', marginBottom: '32px', lineHeight: '1.6' }}>
+                For customised chauffeur-driven road travel across South India, the journey can be planned around your pace, your destinations and your group.
+              </p>
+
               <div>
-                <Link href="/services/south-india-road-journeys" className="btn btn-primary">
-                  Explore South India Road Trips <ArrowRight size={16} />
+                <Link href="/services/south-india-chauffeur-travel" className="btn btn-primary">
+                  Plan a South India Journey <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -374,7 +486,7 @@ export default function HomePage() {
             <h2>Head Office & Dispatch Network Across South India</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
             {locationsData.map(loc => (
               <div key={loc.slug} className="card" style={{ padding: '24px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
@@ -392,16 +504,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 12. Final CTA Band (Section 34) */}
+      {/* 12. Final CTA Band: Wherever You're Going, Start With Suhalaya. */}
       <section className="section section-dark" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '720px' }}>
           <span className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>Exploring the world of comfort</span>
           <div className="badge badge-sky" style={{ marginBottom: '20px', color: '#29ABE2', backgroundColor: 'rgba(41,171,226,0.18)' }}>Get Started Today</div>
-          <h2 style={{ color: '#FFF', marginBottom: '20px', fontSize: '2.4rem' }}>
-            Tell Us Where You Need to Go. We'll Plan the Mobility.
+          <h2 style={{ color: '#FFF', marginBottom: '20px', fontSize: '2.5rem' }}>
+            Wherever You're Going, Start With Suhalaya.
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '36px' }}>
-            Corporate travel. Employee transportation. Airport transfers. Executive mobility. Conferences. Weddings. Large events. Or a road trip where the only thing you have to decide is where to stop next.
+          <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '1.15rem', marginBottom: '10px', fontWeight: '600' }}>
+            Tell us what needs to move, where it needs to go and when.
+          </p>
+          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1rem', marginBottom: '36px' }}>
+            We'll work out the transportation around it.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button 
@@ -419,7 +534,7 @@ export default function HomePage() {
               className="btn btn-outline-white"
               style={{ padding: '16px 36px', fontSize: '1rem' }}
             >
-              Call 24/7 Desk: +91 80 4900 7777
+              Call Us
             </a>
           </div>
         </div>

@@ -24,6 +24,43 @@ export default function ServiceDetailPage({ params }) {
   const relatedServices = servicesData.filter(s => s.slug !== slug).slice(0, 3);
   const relatedBlogs = blogsData.filter(b => b.relatedServiceSlug === slug || b.category === service.categoryCluster).slice(0, 3);
 
+  const parseWhoItsFor = (text) => {
+    if (!text) return [];
+    if (Array.isArray(text)) return text;
+    const normalized = text
+      .replace(/,?\s+and\s+/gi, ', ')
+      .replace(/\s+&\s+/gi, ', ')
+      .replace(/\.$/, '');
+    return normalized
+      .split(',')
+      .map(item => item.trim())
+      .filter(Boolean)
+      .map(item => item.charAt(0).toUpperCase() + item.slice(1));
+  };
+
+  const targetAudienceList = parseWhoItsFor(service.whoItsFor);
+
+  const getServiceImage = (serviceSlug) => {
+    switch (serviceSlug) {
+      case 'weddings-family-events':
+        return '/images/wedding-event-fleet.png';
+      case 'employee-transportation':
+      case 'large-events-air-shows':
+      case 'corporate-events-conferences':
+        return '/images/employee-shuttle-fleet.png';
+      case 'south-india-chauffeur-travel':
+      case 'pilgrimage-heritage-travel':
+      case 'team-outings-offsites':
+        return '/images/south-india-trip.png';
+      case 'corporate-mobility':
+      case 'executive-vip-travel':
+      case 'chauffeur-on-call':
+        return '/images/executive-chauffeur.png';
+      default:
+        return '/images/hero-bg.jpg';
+    }
+  };
+
   return (
     <div>
       {/* 1. Service Hero */}
@@ -32,7 +69,7 @@ export default function ServiceDetailPage({ params }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center' }}>
             <div>
               <div className="badge badge-gold" style={{ marginBottom: '16px' }}>
-                {service.categoryCluster.replace('for-', 'For ')}
+                {service.categoryName || 'Service Category'}
               </div>
               <h1 style={{ color: '#FFF', marginBottom: '20px' }}>{service.heroHeadline}</h1>
               <p style={{ color: '#CBD4DC', fontSize: '1.1rem', marginBottom: '32px', lineHeight: '1.7' }}>
@@ -47,7 +84,7 @@ export default function ServiceDetailPage({ params }) {
                   }}
                   className="btn btn-primary"
                 >
-                  Request {service.shortTitle} Quote <ArrowRight size={16} />
+                  {service.ctaText || `Request ${service.shortTitle} Quote`} <ArrowRight size={16} />
                 </button>
                 
                 <a href="https://wa.me/918049007777" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
@@ -71,18 +108,58 @@ export default function ServiceDetailPage({ params }) {
             <div>
               <div className="badge badge-navy" style={{ marginBottom: '12px' }}>Target Audience</div>
               <h2>Who This Service Is Built For</h2>
-              <p style={{ fontSize: '1.05rem', color: 'var(--color-ink-700)', lineHeight: '1.7', marginTop: '16px' }}>
-                {service.whoItsFor}
-              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0 0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {targetAudienceList.map((item, index) => (
+                  <li 
+                    key={index} 
+                    style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: '12px', 
+                      padding: '12px 18px',
+                      backgroundColor: 'var(--color-steel-100)',
+                      borderRadius: 'var(--radius-md)',
+                      border: '1px solid var(--color-steel-200)',
+                      fontSize: '0.96rem', 
+                      color: 'var(--color-navy-900)', 
+                      fontWeight: '600',
+                      boxShadow: '0 2px 6px rgba(15, 42, 82, 0.03)'
+                    }}
+                  >
+                    <div style={{ 
+                      width: '24px', 
+                      height: '24px', 
+                      borderRadius: '50%', 
+                      backgroundColor: 'rgba(41, 171, 226, 0.12)', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      flexShrink: 0 
+                    }}>
+                      <CheckCircle2 size={15} color="#29ABE2" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             
             <div>
               <div className="badge badge-gold" style={{ marginBottom: '12px' }}>Service Guarantee</div>
               <h2>Suhalaya Operational SLA</h2>
-              <p style={{ fontSize: '1.05rem', color: 'var(--color-ink-700)', lineHeight: '1.7', marginTop: '16px' }}>
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-ink-700)', lineHeight: '1.7', marginTop: '16px', whiteSpace: 'pre-line' }}>
                 {service.description}
               </p>
             </div>
+          </div>
+
+          {/* Service Relevant Visual Image Banner */}
+          <div style={{ marginTop: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-card)', border: '1px solid var(--color-steel-200)' }}>
+            <img 
+              src={getServiceImage(service.slug)} 
+              alt={service.name} 
+              style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block' }}
+            />
           </div>
         </div>
       </section>
@@ -178,7 +255,7 @@ export default function ServiceDetailPage({ params }) {
             <h2>Dispatch Network for {service.shortTitle}</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
             {locationsData.map(loc => (
               <div key={loc.slug} className="card" style={{ padding: '20px', textAlign: 'center' }}>
                 <MapPin size={24} color="#C9962F" style={{ margin: '0 auto 8px' }} />

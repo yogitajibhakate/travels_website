@@ -5,12 +5,15 @@ import { submitLeadToCRM } from '@/data/crm';
 import { CheckCircle2, ArrowRight, Car, MapPin, Calendar, User, Phone, Mail, Building, Sparkles } from 'lucide-react';
 
 export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
+  const todayDate = new Date().toLocaleDateString('en-CA');
+  
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     service_interest: 'corporate-mobility',
     city: 'Bengaluru',
-    pickup_date: '',
+    pickup_date: todayDate,
+    pickup_time: '09:00',
     vehicle_preference: 'Executive SUV',
     contact_name: '',
     contact_phone: '',
@@ -21,6 +24,12 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    
+    if (name === 'pickup_date' && value && value < todayDate) {
+      setFormData(prev => ({ ...prev, pickup_date: todayDate }));
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
@@ -137,10 +146,32 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '24px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '24px' }}>
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Preferred Date</label>
-                <input type="date" name="pickup_date" value={formData.pickup_date} onChange={handleChange} className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
+                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Date *</label>
+                <input 
+                  type="date" 
+                  name="pickup_date" 
+                  value={formData.pickup_date} 
+                  min={todayDate} 
+                  onChange={handleChange} 
+                  className="form-input" 
+                  style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Time *</label>
+                <input 
+                  type="time" 
+                  name="pickup_time" 
+                  value={formData.pickup_time} 
+                  onChange={handleChange} 
+                  className="form-input" 
+                  style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} 
+                  required 
+                />
               </div>
 
               <div>

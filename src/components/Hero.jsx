@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import BookingWidget from './BookingWidget';
 import { ShieldCheck, Clock, Navigation, Award, ArrowRight } from 'lucide-react';
 
@@ -18,8 +19,6 @@ export default function Hero({ onOpenQuoteModal, onOpenCorporateModal }) {
         overflow: 'hidden' 
       }}
     >
-      {/* Hero Background Image Displayed Cleanly */}
-
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center' }}>
           
@@ -39,33 +38,36 @@ export default function Hero({ onOpenQuoteModal, onOpenCorporateModal }) {
               <span className="gradient-text-sky">Move with Confidence.</span>
             </h1>
 
-            <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '1.18rem', fontWeight: '600', marginBottom: '14px', lineHeight: '1.4' }}>
-              Chauffeur-driven mobility for businesses, executives, events and journeys across India.
+            <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '16px', lineHeight: '1.4' }}>
+              Chauffeur-driven mobility for business, people and journeys that matter.
             </p>
 
-            <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.98rem', marginBottom: '36px', lineHeight: '1.65', maxWidth: '580px' }}>
-              From an airport transfer for an important client to employee transportation for an entire organisation, Suhalaya brings together professional chauffeurs, a diverse fleet, and coordinated mobility solutions for journeys of every scale.
+            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.02rem', marginBottom: '14px', lineHeight: '1.65', maxWidth: '620px' }}>
+              From an early-morning airport pickup to a multi-day corporate event, the journey needs to work around your schedule—not the other way around.
             </p>
 
-            {/* Dual CTAs — §2a: sky-500 (#29ABE2) is primary action color */}
+            <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.98rem', marginBottom: '36px', lineHeight: '1.65', maxWidth: '620px' }}>
+              Corporate travel, employee movement, executive mobility, events, weddings and customised journeys come together under one mobility partner.
+            </p>
+
+            {/* CTAs */}
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '44px' }}>
               <button 
                 onClick={onOpenQuoteModal} 
                 className="btn btn-primary"
-                style={{ padding: '16px 36px', fontSize: '1rem' }}
+                style={{ padding: '16px 34px', fontSize: '1rem' }}
                 id="hero-quote-btn"
               >
                 Plan Your Journey <ArrowRight size={18} />
               </button>
-              
-              <button 
-                onClick={onOpenCorporateModal} 
+
+              <Link 
+                href="/contact" 
                 className="btn btn-outline-white"
-                style={{ padding: '16px 32px', fontSize: '1rem' }}
-                id="hero-corporate-btn"
+                style={{ padding: '16px 30px', fontSize: '1rem' }}
               >
-                Corporate Enquiry
-              </button>
+                Talk to Our Team
+              </Link>
             </div>
 
             {/* Key Value Pillars */}

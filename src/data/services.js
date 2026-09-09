@@ -2,22 +2,20 @@ export const servicesData = [
   {
     slug: 'corporate-mobility',
     name: 'Corporate Mobility',
-    shortTitle: 'Corporate Mobility',
-    categoryCluster: 'for-business',
+    shortTitle: 'Corporate Travel',
+    categoryCluster: 'business-mobility',
+    categoryName: 'BUSINESS MOBILITY',
     priority: 'P0',
-    tagline: 'Business travel solutions for companies, executives, clients and teams.',
-    heroHeadline: 'Corporate Mobility Solutions',
-    heroSubheadline: 'Business Travel That Moves at Your Pace',
-    description: `Your business may have one office or twenty. Your employees may travel every day or only when a project demands it. Suhalaya provides chauffeur-driven corporate transportation designed around the way businesses actually operate.
+    tagline: 'Business travel, meetings, client visits and inter-office movement.',
+    heroHeadline: 'Keep Business Moving.',
+    heroSubheadline: 'Business travel rarely happens in a straight line. Airport. Office. Hotel. Client meeting. Another office. Dinner. Airport again. A dedicated mobility partner makes those movements easier to coordinate.',
+    description: `Business travel rarely happens in a straight line. Airport. Office. Hotel. Client meeting. Another office. Dinner. Airport again.
 
-From airport transfers and client meetings to site visits, inter-office movement, executive travel, and corporate events, transportation can be arranged around your schedule rather than the other way around.
+A dedicated mobility partner makes those movements easier to coordinate, particularly when multiple employees, executives or locations are involved.
 
-For companies, this can mean individual cars for executives, recurring employee transportation, dedicated vehicles for visiting clients or coordinated fleets for business events.
-
-Our corporate mobility services can be used for hourly travel, full-day requirements, point-to-point journeys, multiple stops and longer intercity travel.
-
-Whether you are moving one important guest or managing transportation for an entire team, the objective remains the same: make business travel easier to coordinate, easier to manage and more comfortable for the people travelling.`,
-    whoItsFor: 'Companies, executive leadership, corporate travel desks, facilities heads, and visiting client delegations.',
+Daily business travel, visiting executives, inter-office movement and corporate requirements can all be managed through a single transportation partner.`,
+    ctaText: 'Plan Corporate Travel',
+    whoItsFor: 'Corporate meetings, Client visits, Executive movement, Airport transfers, Inter-office travel, Hotel transfers, Business travel within the city, Multi-location movement',
     whatsIncluded: [
       'Dedicated key account management & 24/7 corporate dispatch desk',
       'Centralized monthly consolidated billing with GST compliance',
@@ -47,23 +45,19 @@ Whether you are moving one important guest or managing transportation for an ent
     slug: 'employee-transportation',
     name: 'Employee Transportation',
     shortTitle: 'Employee Transport',
-    categoryCluster: 'for-business',
+    categoryCluster: 'business-mobility',
+    categoryName: 'BUSINESS MOBILITY',
     priority: 'P0',
-    tagline: 'Planned daily transportation for employees, shifts, campuses and corporate locations.',
-    heroHeadline: 'Employee Transportation Services',
-    heroSubheadline: 'A Better Commute Begins with Better Planning',
-    description: `For employees, transportation is part of the working day. For HR and administration teams, it is an operational responsibility that involves routes, schedules, shifts, vehicles and people.
+    tagline: 'Regular employee movement, office commutes and shift-based travel.',
+    heroHeadline: 'Better Commutes. Better Business.',
+    heroSubheadline: 'The workday starts before the employee reaches the office. Good employee transportation considers routes, timings, shifts, pickup points and people—not just vehicles.',
+    description: `The workday starts before the employee reaches the office.
 
-Suhalaya supports employee transportation programmes for organisations that need structured daily movement between homes, offices, campuses and business parks.
+Good employee transportation needs to consider routes, timings, shifts, pickup points and the people using the service—not just the number of vehicles.
 
-Transportation can be planned around employee locations and shift requirements, with route planning and operational coordination built into the programme.
-
-Our solutions are suited to technology companies, GCCs, manufacturing organisations, business parks and other organisations with recurring employee mobility requirements.
-
-For organisations operating late shifts, employee safety and clear transportation procedures become particularly important. Pickup and drop coordination, journey monitoring where available and escalation processes can be incorporated according to the service requirement.
-
-The goal is not simply to get employees to work. It is to make the journey to and from work dependable.`,
-    whoItsFor: 'HR directors, facilities heads, and administration teams managing daily workforce commute and shift movement.',
+From regular office commutes to shift-based transportation, mobility can be organised around the working pattern of the organisation. Bengaluru's technology parks, business districts and industrial areas create very different transportation requirements. The plan needs to reflect that.`,
+    ctaText: 'Discuss Employee Transport',
+    whoItsFor: 'Regular office transportation, Shift-based movement, Employee pickup and drop, Business parks and campuses, Multiple routes and locations',
     whatsIncluded: [
       'Intelligent route planning and roster-based trip optimization',
       'Strict night-shift safety compliance and escort coordination',
@@ -89,575 +83,372 @@ The goal is not simply to get employees to work. It is to make the journey to an
     ]
   },
   {
-    slug: 'chauffeur-on-call',
-    name: 'Chauffeur on Call',
-    shortTitle: 'Chauffeur on Call',
-    categoryCluster: 'for-business',
-    priority: 'P0',
-    tagline: 'A vehicle and chauffeur available around your schedule for multiple meetings and stops.',
-    heroHeadline: 'Chauffeur on Call Mobility',
-    heroSubheadline: 'Your Day. Your Schedule. Your Chauffeur.',
-    description: `Some days don't fit into a point-to-point booking. You may have a morning airport transfer, three meetings across the city, a client lunch and an evening flight.
-
-Instead of booking four different rides, keep one chauffeur with you.
-
-Suhalaya's Chauffeur on Call service gives executives, professionals and corporate travellers access to a vehicle for a defined period, allowing them to move between multiple locations through the day.
-
-It is particularly useful for executive meetings, client visits, site inspections, business delegations, corporate guests, airport & hotel movement, and full-day city travel.
-
-One vehicle. Multiple destinations. No need to keep starting over.`,
-    whoItsFor: 'Executives, business leaders, visiting delegates, and professionals with complex city schedules.',
-    whatsIncluded: [
-      'Flexible hourly and full-day rental options',
-      'Experienced city chauffeurs familiar with corporate hubs',
-      'Pristine sedan or SUV dedicated exclusively to your day',
-      'Seamless extension capability for unexpected meeting delays'
-    ],
-    vehicleClasses: ['Economy Sedans', 'Executive Sedans', 'Premium SUVs'],
-    steps: [
-      { number: '01', title: 'Select Package', description: 'Choose your hourly package based on planned duration and expected mileage.' },
-      { number: '02', title: 'Chauffeur Dispatch', description: 'Receive driver details and vehicle confirmation prior to pickup.' },
-      { number: '03', title: 'At Your Service', description: 'Your chauffeur remains parked and ready between meetings.' },
-      { number: '04', title: 'Transparent Settlement', description: 'Itemized billing calculated on actual hours and distance used.' }
-    ],
-    useCases: [
-      'Multi-site Executive Meetings',
-      'Client Visits & Property Inspections',
-      'Full-day Business Delegations'
-    ],
-    faqs: [
-      { q: 'Can I extend my package duration during the day?', a: 'Yes, extra hours and mileage are calculated transparently as per pre-agreed hourly extension rates.' }
-    ]
-  },
-  {
     slug: 'airport-transfers',
     name: 'Airport Transfers',
     shortTitle: 'Airport Transfers',
-    categoryCluster: 'for-business',
+    categoryCluster: 'business-mobility',
+    categoryName: 'BUSINESS MOBILITY',
     priority: 'P0',
-    tagline: 'Scheduled airport movement for executives, employees, guests, families and delegates.',
-    heroHeadline: 'Chauffeur-Driven Airport Transfers',
-    heroSubheadline: 'From Terminal to Destination, Without the Detour',
-    description: `An airport transfer is often the first impression a visiting executive, client or delegate has of a city.
+    tagline: 'Airport-to-office, hotel, home and onward transfers.',
+    heroHeadline: 'From Terminal to Destination. Without the Detour.',
+    heroSubheadline: 'The flight may be unpredictable. Your ground transportation doesn\'t have to be.',
+    description: `The flight may be unpredictable. Your ground transportation doesn't have to be.
 
-Suhalaya provides chauffeur-driven airport transfers for individuals, families, corporate guests and groups.
+Airport pickups and drops can be arranged for individuals, executives, families, and corporate guests, with the vehicle selected to meet your needs.
 
-Whether it is a Bengaluru airport pickup for an international executive, a Mumbai airport transfer for a business meeting or coordinated arrivals for delegates attending a conference in Hyderabad, transportation can be planned around the travel schedule.
-
-Airport services include airport pickup and drop, airport-to-hotel transfers, airport-to-office transfers, executive airport transfers, corporate guest transportation, group airport transportation, wedding guest transfers, and conference delegate movement.
-
-You have a flight to catch. The ground journey should already be taken care of.`,
-    whoItsFor: 'Visiting executives, international delegates, business travellers, wedding guests, and families.',
+For corporate guests, airport transportation can also form part of a wider business itinerary. Arrival. Pickup. Destination. Done.`,
+    ctaText: 'Arrange an Airport Transfer',
+    whoItsFor: 'Airport → Hotel, Airport → Office, Airport → Home, Airport → Meeting, Airport → Outstation Destination',
     whatsIncluded: [
-      'Flight status radar tracking (pickup time automatically adjusts for flight delays)',
-      'Terminal meet-and-greet service with custom paging name placards',
-      'Bottled water, mobile charging, and clean vehicle interiors',
-      'Transparent flat pricing with zero hidden surge charges'
+      'Real-time flight status tracking & automatic buffer time adjustments',
+      'Paging sign pickup assistance at arrivals terminal',
+      'Clean executive sedan or SUV with ample luggage capacity',
+      'Toll & parking included options for seamless billing',
+      '24/7 dispatch support for late-night and early-morning flights'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'VIP & Group Vans'],
+    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury Sedans'],
     steps: [
-      { number: '01', title: 'Flight Details', description: 'Provide flight number, terminal, and arrival/departure schedule.' },
-      { number: '02', title: 'Radar Tracking', description: 'Our control desk monitors flight status in real time.' },
-      { number: '03', title: 'Terminal Welcome', description: 'Chauffeur meets you at the designated airport arrival exit.' },
-      { number: '04', title: 'Direct Transit', description: 'Relax in private comfort straight to your hotel, office, or venue.' }
+      { number: '01', title: 'Flight Details', description: 'Provide flight number, arrival/departure time, and passenger count.' },
+      { number: '02', title: 'Chauffeur Tracking', description: 'Receive chauffeur details and live tracking link prior to landing.' },
+      { number: '03', title: 'Terminal Pickup', description: 'Meet your chauffeur at the designated arrival gate with optional sign paging.' },
+      { number: '04', title: 'Direct Journey', description: 'Smooth, direct transfer to your hotel, office, home, or meeting.' }
     ],
     useCases: [
-      'C-Suite Executive Airport Pickups',
-      'Delegation & Speaker Flight Transfers',
-      'Wedding Guest Airport Shuttles'
+      'Visiting Executive & Client Pickups',
+      'International Delegate Arrivals',
+      'Family Holiday & Group Airport Travel'
     ],
     faqs: [
-      { q: 'What happens if my flight is delayed?', a: 'We monitor live flight tracking, so your chauffeur adjusts arrival time automatically without delay penalties.' }
+      { q: 'What happens if my flight is delayed?', a: 'We track flight statuses in real-time and adjust pickup times automatically without penalty.' },
+      { q: 'Where do I meet my chauffeur at the airport?', a: 'Your chauffeur will be waiting at the designated arrival hall with a name paging board.' }
     ]
   },
   {
-    slug: 'executive-vip-mobility',
-    name: 'Executive & VIP Mobility',
-    shortTitle: 'Executive & VIP Mobility',
-    categoryCluster: 'for-business',
-    priority: 'P1',
-    tagline: 'Premium chauffeur-driven travel for senior leadership and important guests.',
-    heroHeadline: 'Executive & VIP Mobility Solutions',
-    heroSubheadline: 'When the Passenger Matters, Every Detail Matters.',
-    description: `Senior executives rarely travel for just one reason. An airport arrival can lead to a board meeting, a client visit, a factory inspection, and another flight—all in the same day.
+    slug: 'chauffeur-on-call',
+    name: 'Chauffeur on Call',
+    shortTitle: 'Chauffeur on Call',
+    categoryCluster: 'business-mobility',
+    categoryName: 'BUSINESS MOBILITY',
+    priority: 'P0',
+    tagline: 'A chauffeur and vehicle available around your schedule.',
+    heroHeadline: 'Your Day. Your Schedule. Your Chauffeur.',
+    heroSubheadline: 'Sometimes you don\'t need a transfer. You need a car available when you need it.',
+    description: `Sometimes you don't need a transfer. You need a car available when you need it.
 
-Suhalaya provides chauffeur-driven executive mobility for CXOs, senior management, visiting executives, investors, corporate guests and VIP travellers.
+For meetings across the city, appointments, business engagements or a full day of movement, chauffeur-on-call gives you the flexibility to keep the vehicle with you for the duration of your requirement.
 
-Choose from executive sedans, premium SUVs, luxury cars and VIP vehicles depending on the requirement.
-
-The journey can be planned around airport arrivals, hotels, offices, meetings, events and multiple destinations.
-
-For executives, the vehicle becomes more than transportation. It becomes time between meetings—time to make a call, prepare for the next appointment or simply switch off.
-
-Arrive prepared. Travel privately. Let someone else handle the road.`,
-    whoItsFor: 'CXOs, board members, investors, visiting dignitaries, and high-value corporate guests.',
+Choose the vehicle for the occasion and spend the day focusing on what brought you there—not traffic or parking.`,
+    ctaText: 'Book a Chauffeur',
+    whoItsFor: 'Morning meetings, Multiple appointments, Shopping and personal travel, Business engagements, Full-day city movement',
     whatsIncluded: [
-      'Flagship luxury fleet (Mercedes-Benz, BMW, Audi, Toyota Camry, Toyota Vellfire)',
-      'Senior chauffeurs certified in executive etiquette & defensive driving',
-      'NDA guarantees for maximum privacy and confidentiality',
-      'Tailored onboard amenities and priority backup vehicle support'
+      'Dedicated vehicle & driver at your disposal for 4hr, 8hr, or 12hr packages',
+      'Flexible routes with unlimited intermediate stops',
+      'Experienced chauffeurs familiar with local city geography & traffic patterns',
+      'Fuel, maintenance, and insurance fully covered',
+      'Seamless extension options if your day runs longer'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'Super Luxury'],
+    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury Sedans'],
     steps: [
-      { number: '01', title: 'Protocol Briefing', description: 'Reviewing itinerary, security preferences, and VIP requirements.' },
-      { number: '02', title: 'Vehicle Audit', description: 'Rigorous 35-point mechanical and cleanliness inspection prior to dispatch.' },
-      { number: '03', title: 'Flawless Travel', description: 'Discreet, punctual chauffeur service focused on passenger comfort.' }
+      { number: '01', title: 'Package Selection', description: 'Choose your preferred duration (e.g. 8 Hrs / 80 Kms) and vehicle class.' },
+      { number: '02', title: 'Chauffeur Arrival', description: 'Your vehicle arrives at your designated starting point ahead of time.' },
+      { number: '03', title: 'Flexible Itinerary', description: 'Travel to multiple meetings, lunch, and stops without rebooking.' },
+      { number: '04', title: 'Day Wrap-Up', description: 'Simple duty slip confirmation upon final drop-off.' }
     ],
     useCases: [
-      'Board of Directors Meetings',
-      'Investor & Analyst Delegations',
-      'High-Profile Corporate Guest Travel'
+      'Multi-meeting Business Days',
+      'Client Entertainment & Dinners',
+      'City Sightseeing & Personal Chauffeur Usage'
     ],
     faqs: [
-      { q: 'Do chauffeurs follow strict privacy guidelines?', a: 'Yes, all executive chauffeurs assigned to VIP movement sign confidentiality agreements.' }
+      { q: 'Can I extend the package hours during the trip?', a: 'Yes, extra hours and kilometers are calculated transparently at standard pro-rata rates.' },
+      { q: 'Is the chauffeur dedicated exclusively to me?', a: 'Yes, the car and driver remain exclusively assigned to you for your entire booking duration.' }
     ]
   },
   {
-    slug: 'executive-security',
-    name: 'Executive Security & Secure Chauffeur Mobility',
-    shortTitle: 'Executive Security Mobility',
-    categoryCluster: 'for-business',
-    priority: 'P1',
-    tagline: 'Security-First Mobility for Executives & High-Value Travel',
-    heroHeadline: 'Executive Security Mobility',
-    heroSubheadline: 'Controlled Movement. Professional Chauffeurs. Greater Discretion.',
-    description: `When an executive, VIP or important guest is travelling, transportation can become part of the overall movement plan.
+    slug: 'executive-vip-travel',
+    name: 'Executive & VIP Travel',
+    shortTitle: 'Executive VIP Travel',
+    categoryCluster: 'business-mobility',
+    categoryName: 'BUSINESS MOBILITY',
+    priority: 'P0',
+    tagline: 'Executive cars and chauffeur-driven travel for important guests and leadership.',
+    heroHeadline: 'Arrive Ready. Leave the Driving to Us.',
+    heroSubheadline: 'For important meetings, visiting leadership, clients and high-value business travel, the journey becomes part of the experience.',
+    description: `For important meetings, visiting leadership, clients and high-value business travel, the journey becomes part of the experience.
 
-Suhalaya can support security-conscious chauffeur transportation through controlled pickup and drop coordination, discreet vehicle movement, chauffeur and vehicle information, journey monitoring where available and defined escalation procedures.
+A suitable vehicle. A composed chauffeur. A comfortable environment between engagements.
 
-For sensitive business travel, the vehicle can also provide a private environment for conversations, calls and work between destinations.
-
-This is particularly relevant when executives are travelling between airports, hotels, offices, industrial facilities, conferences or high-profile events.
-
-Suhalaya's role is the mobility layer within the wider security plan. Where specialised security personnel or protection services are required, those should be coordinated separately with the appropriate security provider.`,
-    whoItsFor: 'High-profile executives, security-conscious corporate leaders, visiting dignitaries, and sensitive delegations.',
+From executive sedans to premium and luxury vehicles, transportation can be matched to the importance and nature of the occasion. Use the time between meetings to prepare, take a call, review the day, or simply switch off.`,
+    ctaText: 'Arrange Executive Travel',
+    whoItsFor: 'C-Suite Executives, Visiting Board Members, VIP Guests, High-net-worth Individuals, Investor Delegations',
     whatsIncluded: [
-      'Controlled pickup/drop logistics with advance driver/vehicle verification',
-      'Discreet vehicle movement with privacy window tints where permissible',
-      '24/7 central tracking and defined emergency escalation protocols',
-      'Private acoustic environment for confidential mobile calls'
+      'Top-tier executive fleet (Camry, E-Class, Vellfire, S-Class, BMW 7 Series)',
+      'Senior uniformed chauffeurs trained in executive NDA protocols',
+      'Quiet, pristine interiors equipped with Wi-Fi, bottled water, & device chargers',
+      'Priority 24/7 executive dispatch monitoring desk',
+      'Discreet service with custom privacy preferences'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'Super Luxury'],
+    vehicleClasses: ['Executive Sedans', 'Luxury Sedans', 'Super Luxury SUVs', 'VIP Vans'],
     steps: [
-      { number: '01', title: 'Security Alignment', description: 'Mapping route protocols, security checkpoints, and contact trees.' },
-      { number: '02', title: 'Vetted Dispatch', description: 'Deploying pre-verified chauffeurs and fully inspected vehicles.' },
-      { number: '03', title: 'Monitored Movement', description: 'Discreet tracking from departure terminal to final destination.' }
+      { number: '01', title: 'VIP Briefing', description: 'Specify vehicle preferences, security guidelines, and passenger details.' },
+      { number: '02', title: 'Vehicle Prep', description: 'Thorough inspection, detailing, and amenity stocking prior to dispatch.' },
+      { number: '03', title: 'Chauffeur Protocol', description: 'Punctual arrival with professional, courteous, discreet service.' },
+      { number: '04', title: 'Smooth Execution', description: 'Uninterrupted mobility allowing leaders to work or rest in comfort.' }
     ],
     useCases: [
-      'High-Net-Worth & C-Suite Intercity Movement',
-      'Sensitive M&A & Investor Site Visits',
-      'Diplomatic & VIP Dignitary Transfers'
+      'Board Meetings & Investor Roadshows',
+      'C-Suite Airport & Office Transfers',
+      'VIP Diplomatic & Industry Summits'
     ],
     faqs: [
-      { q: 'Does Suhalaya provide armed bodyguards?', a: 'Suhalaya provides the security-conscious mobility layer. Close protection personnel should be engaged via specialized security partners.' }
+      { q: 'What luxury car models are available?', a: 'Our executive fleet includes Mercedes-Benz E-Class/S-Class, BMW 5/7 Series, Toyota Camry Hybrid, and Toyota Vellfire.' },
+      { q: 'Are your chauffeurs NDA compliant?', a: 'Yes, our senior executive chauffeurs are vetted and trained in strict confidentiality protocols.' }
     ]
   },
   {
-    slug: 'corporate-events',
+    slug: 'corporate-events-conferences',
     name: 'Corporate Events & Conferences',
-    shortTitle: 'Corporate Events',
-    categoryCluster: 'for-business',
+    shortTitle: 'Events & Conferences',
+    categoryCluster: 'events-groups',
+    categoryName: 'EVENTS & GROUPS',
     priority: 'P1',
-    tagline: 'End-to-end transportation coordination for delegates, speakers, executives and teams.',
-    heroHeadline: 'Corporate Events & Conference Mobility',
-    heroSubheadline: 'An Event Is Only as Smooth as Its Movement',
-    description: `A conference may have 300 delegates arriving at different times, staying at five hotels and travelling to one venue. A product launch may involve executives, media, clients and partners. A pharma dealer meet may require airport transfers, hotel movement and venue shuttles.
+    tagline: 'Delegate, speaker, airport, hotel and venue transportation.',
+    heroHeadline: 'One Event. Hundreds of Movements. One Mobility Plan.',
+    heroSubheadline: 'An event transportation plan begins long before the first vehicle arrives.',
+    description: `An event transportation plan begins long before the first vehicle arrives.
 
-The transportation plan has to work behind the scenes without becoming a problem.
+Who is arriving? From where? At what time? Which hotel? Which venue? How many movements are expected?
 
-Suhalaya can coordinate airport arrivals, hotel transfers, venue shuttles, delegate movement, VIP transportation, executive cars, group vehicles, standby vehicles, and return transportation.
-
-The fleet can be scaled according to the event, from individual sedans and SUVs to vans, tempo travellers and large coaches.
-
-You organise the event. We organise the movement.`,
-    whoItsFor: 'Event management companies, corporate comms teams, MICE organizers, and convention hosts.',
+Once these pieces are mapped, the fleet and transportation schedule can be organised around them. Multiple vehicle categories can be coordinated according to the scale and requirements of the event.`,
+    ctaText: 'Plan Event Transportation',
+    whoItsFor: 'Airport Transfers, Hotel Transfers, Venue Transfers, Speaker Transportation, Delegate Movement, Guest Transportation, Departure Transfers',
     whatsIncluded: [
-      'On-site transport marshals and ground staging supervisors',
-      'Coordinated delegate arrivals across multi-flight manifests',
-      'Custom vehicle placards / branded delegate signages',
-      'Scalable fleet: Sedans, SUVs, Tempo Travellers, and 49-seater coaches'
+      'On-site mobility coordinator and central dispatch desk',
+      'Multi-vehicle fleet coordination (Sedans, SUVs, Vans, Coaches)',
+      'Flight arrival monitoring for staggered delegate arrivals',
+      'Custom vehicle signage & venue parking management',
+      'Consolidated event billing with itemized trip logs'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP & Group Vans', 'Coaches'],
+    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP Vans', 'Deluxe Coaches'],
     steps: [
-      { number: '01', title: 'Manifest Review', description: 'Analyzing guest arrival times, hotel allotments, and venue schedules.' },
-      { number: '02', title: 'Fleet Staging', description: 'Allocating dedicated shuttles, executive cars, and venue marshals.' },
-      { number: '03', title: 'On-site Operations', description: 'Ground coordinators manage continuous shuttle loops and VIP movements.' }
+      { number: '01', title: 'Roster Review', description: 'Analyze delegate flight arrival schedules, hotel locations, and venue timings.' },
+      { number: '02', title: 'Fleet Planning', description: 'Structure shuttle frequencies, VIP private cars, and coach allocations.' },
+      { number: '03', title: 'On-Site Execution', description: 'Dedicated ground managers direct arrivals, departures, and staging.' },
+      { number: '04', title: 'Post-Event Audit', description: 'Consolidated billing report matching actual duty slips.' }
     ],
     useCases: [
-      'Annual Leadership Summits & Offsites',
-      'Product Launches & Media Drives',
-      'Industry Conventions & Exhibitions'
+      'Annual Corporate AGMs & Summits',
+      'Tech Conventions & Trade Shows',
+      'Global Partner & Product Launch Events'
     ],
     faqs: [
-      { q: 'Do you deploy ground coordinators at airport exit gates and venues?', a: 'Yes, for multi-vehicle events we assign ground marshals to manage guest receiving and vehicle dispatch.' }
+      { q: 'Do you provide on-site ground coordinators?', a: 'Yes, for large conferences we provide dedicated operational managers at airports and venues.' },
+      { q: 'Can you handle group transfers from multiple hotels?', a: 'Yes, we design multi-point pickup routes and scheduled shuttle loops.' }
     ]
   },
   {
-    slug: 'pharma-healthcare-events',
-    name: 'Pharma & Healthcare Events',
-    shortTitle: 'Pharma Events',
-    categoryCluster: 'for-business',
+    slug: 'team-outings-offsites',
+    name: 'Team Outings & Offsites',
+    shortTitle: 'Team Outings',
+    categoryCluster: 'events-groups',
+    categoryName: 'EVENTS & GROUPS',
     priority: 'P1',
-    tagline: 'Transportation for Pharma Conferences, Dealer Meets & Medical Events.',
-    heroHeadline: 'Pharma & Healthcare Event Mobility',
-    heroSubheadline: 'Precision Transportation for Medical Symposia & Dealer Meets',
-    description: `Pharmaceutical events have their own rhythm. Delegates arrive from different cities. Regional teams may travel together. Senior executives need individual transportation. Hotels and venues may be several kilometres apart.
+    tagline: 'Group transportation for corporate outings and multi-day offsites.',
+    heroHeadline: 'Leave the Office. Leave the Driving to Us.',
+    heroSubheadline: 'The best part of an offsite starts when the team gets on the road.',
+    description: `The best part of an offsite starts when the team gets on the road.
 
-Suhalaya can support transportation for pharma conferences, dealer meets, medical conferences, product launches, plant visits and healthcare events.
+Choose the destination, decide the group size and let the transportation be planned around the day.
 
-From individual executive cars to large delegate fleets, transportation can be planned according to arrival schedules, hotel locations, venue timings and guest categories.
-
-Cities we can support include Bengaluru, Hyderabad, Mumbai, Pune, Chennai, Delhi NCR, Ahmedabad, Kolkata, Kochi, Jaipur and other major business destinations, subject to operational availability.`,
-    whoItsFor: 'Pharma companies, healthcare organizers, medical associations, and dealer network event leads.',
+Sedans, SUVs, vans and coaches can be arranged depending on the group and itinerary. The transportation can be structured around the experience rather than multiple individual bookings.`,
+    ctaText: 'Plan a Team Outing',
+    whoItsFor: 'A short outing around Bengaluru, A weekend team trip, A multi-day offsite outside the city',
     whatsIncluded: [
-      'Multi-city support across Bengaluru, Hyderabad, Mumbai, Pune, Chennai, Delhi NCR & more',
-      'Dedicated executive cars for key opinion leaders (KOLs) and senior doctors',
-      'Group shuttle logistics connecting airports, hotels, and convention halls',
-      'Strict adherence to event schedules and hotel transfer timings'
+      'Comfortable group vehicles (Force Urbania, Tempo Travellers, 24-49 Seater Coaches)',
+      'Interstate permits, toll fees, and driver allowances pre-arranged',
+      'Experienced outstation drivers familiar with resort routes & highways',
+      'Luggage space management for overnight offsites',
+      'Custom pickup points at corporate headquarters or tech parks'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP & Group Vans', 'Coaches'],
+    vehicleClasses: ['VIP Vans', 'Coaches', 'Premium SUVs'],
     steps: [
-      { number: '01', title: 'Event Blueprint', description: 'Mapping doctor arrival windows, hotel clusters, and venue timings.' },
-      { number: '02', title: 'Fleet Alignment', description: 'Assigning executive sedans for KOLs and coaches for regional delegate groups.' },
-      { number: '03', title: 'Execution & Support', description: 'On-ground dispatch management across all event days.' }
+      { number: '01', title: 'Group Size & Destination', description: 'Specify headcount, departure location, and resort destination.' },
+      { number: '02', title: 'Vehicle Selection', description: 'Choose from luxury 9-16 seater Urbania vans to 49-seater AC coaches.' },
+      { number: '03', title: 'Seamless Journey', description: 'Punctual departure with coordinated rest stops along scenic routes.' },
+      { number: '04', title: 'Safe Return', description: 'Timely return trip bringing the team back directly to HQ.' }
     ],
     useCases: [
-      'Pharma Annual Dealer Meets',
-      'Medical Association Conferences & Symposia',
-      'Pharmaceutical Manufacturing Plant Inspection Tours'
+      'Resort Team Retreats in Coorg & Kabini',
+      'Weekend Corporate Outings to Nandi Hills & Sakleshpur',
+      'Multi-day Departmental Strategy Offsites'
     ],
     faqs: [
-      { q: 'Which cities do you support for pharma events?', a: 'Bengaluru, Hyderabad, Mumbai, Pune, Chennai, Delhi NCR, Ahmedabad, Kolkata, Kochi, Jaipur and other major hubs.' }
-    ]
-  },
-  {
-    slug: 'ai-technology-gcc',
-    name: 'AI, Technology & GCC Mobility',
-    shortTitle: 'AI & Tech Mobility',
-    categoryCluster: 'for-business',
-    priority: 'P0',
-    tagline: 'Moving India\'s Technology Economy.',
-    heroHeadline: 'AI, Technology & GCC Mobility Solutions',
-    heroSubheadline: 'Chauffeur-Driven Mobility Built for Fast-Growing Tech Ecosystems',
-    description: `Technology companies don't operate on a nine-to-five transportation model. Employees work across shifts. Global leadership teams arrive at different times. International visitors need airport and hotel transfers. Teams travel between campuses and event venues.
-
-Suhalaya provides chauffeur-driven mobility for IT companies, AI companies, startups, GCCs, technology parks and digital businesses.
-
-Transportation can include employee movement, executive travel, airport transfers, visiting teams, client meetings, conferences and offsites.
-
-For large technology events and AI summits, Suhalaya can also coordinate delegate transportation across hotels, airports and venues.
-
-For the people building what's next, we take care of getting them there.`,
-    whoItsFor: 'AI enterprises, Global Capability Centers (GCCs), IT/ITES leaders, tech park management, and startups.',
-    whatsIncluded: [
-      '24/7 flexible fleet dispatch for shift-based tech workforces',
-      'Executive airport & campus transfers for visiting global leadership',
-      'Scalable mobility for tech summits, investor days, and hackathons',
-      'Centralized account dashboard with digital billing compliance'
-    ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP & Group Vans', 'Coaches'],
-    steps: [
-      { number: '01', title: 'Tech Hub Alignment', description: 'Integrating mobility with campus corridors (Whitefield, ORR, HITEC City, OMR).' },
-      { number: '02', title: 'Fleet Allocation', description: 'Deploying sedans, SUVs, and staff shuttles to match workforce shifts.' },
-      { number: '03', title: 'Live Trip Monitoring', description: 'Central control desk ensures round-the-clock operational uptime.' }
-    ],
-    useCases: [
-      'Global CXO Campus Visits & Town Halls',
-      'Tech Park Employee Shift Commutes',
-      'Visiting Developer & Engineering Team Mobility'
-    ],
-    faqs: [
-      { q: 'Can you handle multi-shift commuting schedules?', a: 'Yes, we manage round-the-clock shift transport for GCCs and tech parks.' }
-    ]
-  },
-  {
-    slug: 'ai-summits-conferences',
-    name: 'AI Summits & Technology Conferences',
-    shortTitle: 'AI Summit Mobility',
-    categoryCluster: 'for-business',
-    priority: 'P1',
-    tagline: 'AI Summit Mobility: Moving the People Behind the Future.',
-    heroHeadline: 'AI Summit & Technology Conference Mobility',
-    heroSubheadline: 'Event Mobility Planned Around Complex Speaker & Delegate Schedules',
-    description: `An AI summit can bring together founders, investors, researchers, corporate leaders, and international delegates from several cities and countries. That creates a very specific mobility challenge.
-
-Airport arrivals need to connect with hotel check-ins. VIP guests may need dedicated vehicles. Delegates need scheduled venue transfers. Speakers may have separate itineraries.
-
-Suhalaya can build transportation around the event programme rather than treating every journey independently.
-
-From Bengaluru's technology ecosystem to major conferences in Hyderabad, Mumbai, Delhi, Pune and Chennai, the fleet can be planned around delegate numbers and guest profiles.
-
-Technology may be moving fast. Event transportation still needs to run on time.`,
-    whoItsFor: 'AI summit organizers, tech conference planners, venture summits, and global developer events.',
-    whatsIncluded: [
-      'Segmented fleet allocation for speakers, VIPs, investors, and delegates',
-      'Airport arrival staging with flight tracking and terminal greeting',
-      'Scheduled hotel-to-venue shuttle loops',
-      'On-site dispatch control desk for real-time schedule modifications'
-    ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'Coaches'],
-    steps: [
-      { number: '01', title: 'Speaker & Guest Segmentation', description: 'Mapping individual arrival windows and dedicated car requirements.' },
-      { number: '02', title: 'Shuttle Loop Design', description: 'Establishing scheduled transfers connecting hotel clusters with event venues.' },
-      { number: '03', title: 'Live Ground Management', description: 'On-site coordinators manage guest movements seamlessly.' }
-    ],
-    useCases: [
-      'International AI Summits in Bengaluru & Hyderabad',
-      'Venture Capital & Founder Retreats',
-      'Global Tech Developer Conventions'
-    ],
-    faqs: [
-      { q: 'How early should we plan transport for an AI summit?', a: 'We recommend finalizing transport blueprints 3 to 4 weeks prior to the event date.' }
-    ]
-  },
-  {
-    slug: 'large-events-air-shows',
-    name: 'Large Events & Air Shows',
-    shortTitle: 'Large Events / Air Shows',
-    categoryCluster: 'for-moments',
-    priority: 'P2',
-    tagline: 'When Thousands Move, Every Minute Matters.',
-    heroHeadline: 'Large Events & Air Show Mobility Logistics',
-    heroSubheadline: 'High-Volume Transportation Planning for Mass Events & Air Shows',
-    description: `Large public events create concentrated movement. Air shows, exhibitions, sporting events, cultural festivals and major public gatherings can generate thousands of arrivals and departures within a limited window.
-
-Suhalaya can support organisers, corporate groups, VIP guests and delegations with planned transportation, scheduled pickup points, group vehicles, shuttle movement and return journeys.
-
-For air shows and large venues, transportation planning can take into account arrival windows, designated pickup areas, hotel clusters and event schedules.
-
-An air show is not just an event at a venue. It is a transportation exercise involving airports, hotels, parking areas, entry gates, VIP zones and thousands of visitors. A successful mobility plan starts before the first guest arrives.`,
-    whoItsFor: 'Air show organizers, defense contractors, international delegations, expo hosts, and large event agencies.',
-    whatsIncluded: [
-      'Pre-planned vehicle access pass coordination and staging marshal management',
-      'High-capacity shuttle fleets running scheduled loop operations',
-      'Dedicated VIP convoy logistics with lead vehicle coordination',
-      '24/7 central dispatch control room on-site'
-    ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP & Group Vans', 'Coaches'],
-    steps: [
-      { number: '01', title: 'Perimeter Blueprinting', description: 'Mapping security access gates, drop-off points, and holding bays.' },
-      { number: '02', title: 'Staging & Passes', description: 'Equipping driver personnel with accredited event perimeters access passes.' },
-      { number: '03', title: 'High-Volume Execution', description: 'Managing continuous passenger shuttle flows during peak arrival/departure hours.' }
-    ],
-    useCases: [
-      'Aero India & Defense Exhibitions',
-      'International Trade Conventions at BIEC',
-      'Major Sporting Events & Festivals'
-    ],
-    faqs: [
-      { q: 'Can you handle restricted venue security passes?', a: 'Yes, we manage driver accreditation and vehicle entry permits for secure perimeters.' }
-    ]
-  },
-  {
-    slug: 'team-outings',
-    name: 'Corporate Offsites & Team Outings',
-    shortTitle: 'Team Outings & Offsites',
-    categoryCluster: 'for-business',
-    priority: 'P1',
-    tagline: 'Leave the Office. Leave the Driving to Us.',
-    heroHeadline: 'Corporate Offsite & Team Outing Mobility',
-    heroSubheadline: 'Group Transportation for Corporate Retreats, Outings & Offsites',
-    description: `A team outing should begin when the team gets into the vehicle—not when someone starts worrying about who is driving.
-
-Suhalaya provides group transportation for corporate outings, annual days, retreats, workshops, and offsites.
-
-Choose from SUVs, vans, tempo travellers and buses according to group size.
-
-Pickup points can be planned around employee locations or designated meeting points, with transportation continuing to the destination and back.
-
-For longer offsites, chauffeur-driven outstation transportation can be arranged across South India.
-
-Whether your team is heading to a resort outside Bengaluru or travelling across states for a multi-day retreat, the transportation plan can be built around the programme.
-
-More conversations. Less navigation. Better journeys.`,
-    whoItsFor: 'HR managers, team leads, corporate event planners, and department heads.',
-    whatsIncluded: [
-      'Wide fleet choice: Premium SUVs, Force Urbania, Tempo Travellers, and AC Coaches',
-      'Experienced highway chauffeurs familiar with resort destinations across South India',
-      'Custom pickup points at office campuses or employee assembly hubs',
-      'Transparent flat billing inclusive of fuel, tolls, permits, and driver night allowances'
-    ],
-    vehicleClasses: ['Premium SUVs', 'VIP & Group Vans', 'Coaches'],
-    steps: [
-      { number: '01', title: 'Group Size Selection', description: 'Selecting appropriate vehicle capacities for 10 to 200+ team members.' },
-      { number: '02', title: 'Route & Pickup Setup', description: 'Establishing coordinated campus pickups and resort arrival schedules.' },
-      { number: '03', title: 'Relaxed Journey', description: 'Enjoying team bonding while your driver handles highway transit.' }
-    ],
-    useCases: [
-      'Weekend Team Retreats in Coorg, Kabini, or Ooty',
-      'Company Annual Days & Resort Picnics',
-      'Leadership Strategy Workshops'
-    ],
-    faqs: [
-      { q: 'Are tolls and driver allowances included in offsite quotes?', a: 'Yes, all outstation offsite packages carry clear, transparent all-inclusive rate structures.' }
+      { q: 'Are interstate taxes included in outstation quotes?', a: 'Yes, all permit fees, tolls, state taxes, and driver charges are clearly outlined.' },
+      { q: 'What AC coaches are available for large teams?', a: 'We offer 24, 35, 40, 45, and 49 seater luxury AC coaches including Volvo Gliders.' }
     ]
   },
   {
     slug: 'weddings-family-events',
     name: 'Weddings & Family Events',
-    shortTitle: 'Weddings & Family Events',
-    categoryCluster: 'for-moments',
+    shortTitle: 'Weddings & Family',
+    categoryCluster: 'events-groups',
+    categoryName: 'EVENTS & GROUPS',
     priority: 'P1',
-    tagline: 'Let the Celebration Be the Main Event.',
-    heroHeadline: 'Weddings & Family Event Mobility Solutions',
-    heroSubheadline: 'Coordinated Guest Transportation & Luxury Bridal Mobility',
-    description: `A wedding can involve hundreds of guests arriving from different cities, staying at multiple hotels and travelling between several venues.
+    tagline: 'Guest transfers, family movement and wedding transportation.',
+    heroHeadline: 'Let the Celebration Take Centre Stage.',
+    heroSubheadline: 'A wedding can involve dozens of journeys before the ceremony even begins.',
+    description: `A wedding can involve dozens of journeys before the ceremony even begins.
 
-Suhalaya helps bring that movement together.
+Airport pickups. Hotels. Family movement. Venue transfers. Guest transportation. Late-night returns.
 
-Transportation can include:
-- Bride & Groom Cars: Premium vehicles for the couple.
-- Family Transportation: Dedicated vehicles for immediate family and important guests.
-- Airport Transfers: Pickup and drop-off for guests arriving from different cities.
-- Hotel Shuttles: Scheduled transportation between hotels and venues.
-- Event Movement: Transportation between wedding functions, receptions and celebrations.
-- Standby Vehicles: Additional vehicles for changing schedules and last-minute requirements.
-
-For destination weddings, transportation can be coordinated across multiple days and locations.
-
-Guests should remember the celebration—not how they got there.`,
-    whoItsFor: 'Wedding planners, bride & groom families, hosts of milestone family celebrations.',
+Keeping these movements organised means families can concentrate on the celebration instead of coordinating vehicles. From individual luxury cars to larger group transportation, the requirement can be planned around the guest list, venues and schedule.`,
+    ctaText: 'Plan Wedding Mobility',
+    whoItsFor: 'Airport pickups, Hotel transfers, Family transportation, Venue movement, Guest transfers, Return journeys',
     whatsIncluded: [
-      'Luxury sedans and SUVs for Bride & Groom and immediate family',
-      'Scheduled hotel-to-venue shuttle loops for outstation guests',
-      'Airport/railway pickup receiving teams with guest signages',
-      'On-site fleet marshal to manage vehicle staging during ceremonies'
+      'Bridal & VIP luxury sedans (Mercedes, BMW, Audi, Camry, Vellfire)',
+      'Guest shuttle fleet for hotel-to-venue movement',
+      'Decorated wedding car coordination options',
+      'Dedicated family logistics liaison desk',
+      'Flexible standby cars for last-minute family errands'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'VIP & Group Vans'],
+    vehicleClasses: ['Luxury Sedans', 'Super Luxury SUVs', 'VIP Vans', 'Coaches'],
     steps: [
-      { number: '01', title: 'Wedding Manifest', description: 'Mapping guest arrival flights, hotel stays, and ceremony venues.' },
-      { number: '02', title: 'Fleet Allocation', description: 'Reserving bridal cars, family SUVs, and guest shuttle vans.' },
-      { number: '03', title: 'Celebration Execution', description: 'Ensuring every family member and guest arrives relaxed and on time.' }
+      { number: '01', title: 'Itinerary Mapping', description: 'Review wedding functions, venue locations, and guest arrival lists.' },
+      { number: '02', title: 'Fleet Allocation', description: 'Assign luxury cars for bride/groom and shuttles for wedding guests.' },
+      { number: '03', title: 'Event Day Coordination', description: 'Ensure smooth guest flow between hotels, marriage halls, and receptions.' },
+      { number: '04', title: 'Farewell Transfers', description: 'Coordinated departure shuttles back to airport or railway stations.' }
     ],
     useCases: [
-      'Destination Weddings in Palace Grounds, Mysuru & Resorts',
-      'Multi-day Sangeet, Wedding & Reception Shuttles',
-      'Outstation Relative Airport Transfers'
+      'Destination Weddings in Palace & Resort Venues',
+      'Multi-day Sangeet, Wedding & Reception Movement',
+      'Outstation Guest Pickup & Escort Fleet'
     ],
     faqs: [
-      { q: 'Can bridal cars be decorated with flowers?', a: 'Yes, floral decorations are permitted by prior arrangement.' }
+      { q: 'Can we book cars for multiple wedding functions across 3 days?', a: 'Yes, we provide full wedding mobility management for multi-day celebrations.' },
+      { q: 'Do you offer luxury cars for the bride and groom?', a: 'Yes, including Mercedes S-Class, BMW 7 Series, Audi Q7, and Toyota Vellfire.' }
     ]
   },
   {
-    slug: 'pilgrimage-travel',
-    name: 'Pilgrimage & Heritage Travel',
-    shortTitle: 'Pilgrimage & Heritage Travel',
-    categoryCluster: 'for-journeys',
-    priority: 'P2',
-    tagline: 'Journeys That Deserve More Time.',
-    heroHeadline: 'Pilgrimage & Heritage Road Journeys',
-    heroSubheadline: 'Chauffeur-Driven Sacred Tours Designed at Your Family\'s Pace',
-    description: `Some journeys aren't about reaching the destination quickly.
-
-A temple circuit may involve several stops. A heritage journey may require time to explore. A family trip with elderly parents may need a slower pace.
-
-Suhalaya offers chauffeur-driven pilgrimage and heritage journeys where the itinerary can be shaped around the family.
-
-Popular destinations include Tirupati, Madurai, Rameswaram, Thanjavur, Hampi, Badami and other cultural and spiritual destinations across South India.
-
-Build the journey around the people travelling, with time for meals, rest and exploration.
-
-Travel with fewer deadlines. Make room for the journey itself.`,
-    whoItsFor: 'Families travelling with elderly parents, temple tour groups, and culture & history enthusiasts.',
-    whatsIncluded: [
-      'Patient, respectful chauffeurs familiar with temple timings and entry gates',
-      'Comfortable vehicles with easy ingress/egress for senior citizens',
-      'Custom route flexibility for unhurried meal and rest stopovers',
-      'Inter-state permits and FASTag tolls handled seamlessly'
-    ],
-    vehicleClasses: ['Premium SUVs', 'VIP & Group Vans'],
-    steps: [
-      { number: '01', title: 'Darshan Alignment', description: 'Planning routes around temple opening hours and puja schedules.' },
-      { number: '02', title: 'Comfortable Pick', description: 'Choosing an Innova Crysta or Tempo Traveller with ample legroom.' },
-      { number: '03', title: 'Sacred Travel', description: 'A serene road trip tailored to your family\'s comfort.' }
-    ],
-    useCases: [
-      'Tirupati Balaji Sacred Tour from Bengaluru/Chennai',
-      'Tamil Nadu Temple Circuit (Madurai, Rameshwaram, Thanjavur)',
-      'Karnataka Heritage Trail (Hampi, Badami, Pattadakal)'
-    ],
-    faqs: [
-      { q: 'Do chauffeurs assist elderly passengers during temple stops?', a: 'Yes, our drivers are patient and assist senior passengers with boarding and luggage at every drop point.' }
-    ]
-  },
-  {
-    slug: 'south-india-road-journeys',
-    name: 'South India Road Journeys',
-    shortTitle: 'South India Road Journeys',
-    categoryCluster: 'for-journeys',
+    slug: 'south-india-chauffeur-travel',
+    name: 'South India Chauffeur Travel',
+    shortTitle: 'South India Road Trips',
+    categoryCluster: 'journeys-beyond',
+    categoryName: 'JOURNEYS BEYOND THE CITY',
     priority: 'P0',
-    tagline: 'Self-planned chauffeur-driven road trips across South India.',
-    heroHeadline: 'South India Road Journeys',
-    heroSubheadline: 'South India. Your Route. Your Pace. Our Chauffeur.',
-    description: `This isn't a corporate transport page. It's a travel experience.
+    tagline: 'Self-planned chauffeur-driven road journeys across South India.',
+    heroHeadline: 'Your Route. Your Pace. Our Chauffeur.',
+    heroSubheadline: 'Forget the fixed sightseeing circuit. Build the trip around what you actually want to see.',
+    description: `Forget the fixed sightseeing circuit. Build the trip around what you actually want to see.
 
-You choose where you want to go. Add a few places you've always wanted to visit. Stop when the landscape changes. Stay another night if you like the place.
+Spend longer in Mysuru. Take a detour through Coorg. Combine Hampi and Badami. Head towards Ooty, Wayanad, Gokarna or Kerala.
 
-Your chauffeur takes care of the driving.
-
-From the coffee plantations of Coorg to the ruins of Hampi, the beaches of Gokarna, the hills of Ooty, the forests of Kabini and the backwaters of Kerala, South India is best experienced from the road.
-
-You plan the journey. We handle the road.`,
-    whoItsFor: 'Families, road trip lovers, international tourists, couples, and leisure explorers.',
+The chauffeur handles the road while you experience the journey. Build the route around your own interests and schedule.`,
+    ctaText: 'Build Your Road Trip',
+    whoItsFor: 'Bengaluru → Mysuru → Coorg, Bengaluru → Hampi → Badami, Bengaluru → Ooty → Coonoor, Bengaluru → Wayanad, Bengaluru → Kabini → Coorg, Bengaluru → Gokarna → Udupi, Bengaluru → Tirupati → Chennai',
     whatsIncluded: [
-      'Dedicated outstation chauffeur fluent in regional routes and highway conditions',
-      'Spacious Innova Crystas, Fortuners, and Tempo Travellers with roof carriers',
-      'Complete route freedom—pause, explore, or alter plans as you travel',
-      'Transparent flat per-km pricing with zero hidden driver charges'
+      'Clean, comfortable outstation vehicles (Innova Crysta, Hycross, Fortuner, Sedans)',
+      'Experienced long-distance highway chauffeurs knowledgeable about regional routes',
+      'Flexible itineraries with freedom to stop and explore along the way',
+      'All toll, parking, interstate taxes, and driver allowance covered',
+      '24/7 customer care & emergency breakdown support'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP & Group Vans'],
+    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP Vans'],
     steps: [
-      { number: '01', title: 'Route Inspiration', description: 'Pick from popular South India mini-itineraries or build your custom circuit.' },
-      { number: '02', title: 'Vehicle Selection', description: 'Select an SUV or luxury van for optimum highway comfort.' },
-      { number: '03', title: 'Hit the Road', description: 'Relax in the passenger seat while your chauffeur handles navigation and tolls.' }
+      { number: '01', title: 'Route Customization', description: 'Choose your starting city, destinations, and trip duration.' },
+      { number: '02', title: 'Vehicle Selection', description: 'Pick the right car for your group size and luggage needs.' },
+      { number: '03', title: 'On the Road', description: 'Relax while your chauffeur navigates scenic highways and local terrain.' },
+      { number: '04', title: 'Unforgettable Journey', description: 'Enjoy your vacation at your own speed with total peace of mind.' }
     ],
     useCases: [
-      'Coorg & Kabini Coffee & Wildlife Circuit',
-      'Nilgiris Hill Station Drive (Ooty & Coonoor)',
-      'Gokarna & Coastal Karnataka Road Trip'
+      'Family Outstation Holidays',
+      'South India Heritage & Nature Exploration',
+      'Flexible Road Trips Across Karnataka, Kerala & Tamil Nadu'
     ],
     faqs: [
-      { q: 'Can we change our route mid-trip?', a: 'Absoluty. You set the pace and route, and your chauffeur adapts to your schedule.' }
+      { q: 'Is the itinerary fixed or can we change stops during the trip?', a: 'You have complete freedom to adjust stops and timings as you travel.' },
+      { q: 'Are driver accommodation and meals handled by Suhalaya?', a: 'Yes, driver allowances are fully included in our transparent pricing.' }
     ]
   },
   {
-    slug: 'pan-india-mobility',
-    name: 'Pan-India Mobility',
-    shortTitle: 'Pan-India Mobility',
-    categoryCluster: 'for-business',
+    slug: 'pilgrimage-heritage-travel',
+    name: 'Pilgrimage & Heritage Travel',
+    shortTitle: 'Pilgrimage & Heritage',
+    categoryCluster: 'journeys-beyond',
+    categoryName: 'JOURNEYS BEYOND THE CITY',
     priority: 'P1',
-    tagline: 'One Mobility Partner. Across India.',
-    heroHeadline: 'Pan-India Corporate Mobility Services',
-    heroSubheadline: 'Business Moves Across Cities. Your Mobility Partner Should Too.',
-    description: `Your business may begin in Bengaluru. Your business travel doesn't.
+    tagline: 'Comfortable journeys to pilgrimage, heritage and culturally significant destinations.',
+    heroHeadline: 'Journeys That Deserve More Time.',
+    heroSubheadline: 'Some destinations aren\'t about reaching the next stop quickly. They are about the people travelling with you and the places along the way.',
+    description: `Some destinations aren't about reaching the next stop quickly. They are about the people travelling with you, the places along the way and the time spent there.
 
-Suhalaya's corporate and chauffeur-driven transportation services can support requirements across India, subject to operational availability.
+Plan comfortable chauffeur-driven journeys to pilgrimage destinations, heritage towns and culturally significant locations.
 
-From Bengaluru and Hyderabad to Mumbai, Delhi NCR, Chennai, Pune, Ahmedabad, Kolkata, and Kochi, transportation can be arranged for employees, executives, clients, delegates, and corporate events.
-
-Use Suhalaya for corporate travel, airport transfers, executive mobility, employee transportation, conferences, events, weddings, intercity travel, and VIP movement.
-
-Business moves across cities. Your mobility partner should too.`,
-    whoItsFor: 'Enterprise organizations operating across multiple Indian metros and business destinations.',
+The itinerary can be planned around the places you want to visit rather than fitting your journey into a rigid route.`,
+    ctaText: 'Plan Your Journey',
+    whoItsFor: 'Families, Senior travellers, Small groups, Multi-generation trips, Heritage journeys, Pilgrimage circuits',
     whatsIncluded: [
-      'Unified mobility partner across major Indian metros and business hubs',
-      'Standardized SLA guarantees and central key account management',
-      'Centralized corporate billing across all nationwide trips',
-      'Consistent chauffeur quality and vehicle standards nationwide'
+      'Comfort-focused vehicles with easy entry/exit for senior citizens',
+      'Courteous chauffeurs patient with elder travel needs and temple timings',
+      'Customized pace with ample rest stops and relaxed driving',
+      'Coverage across major temple towns (Tirupati, Madurai, Rameshwaram, Belur, Hampi)',
+      'Luggage assistance and direct temple gate drop-offs where permitted'
     ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury & VIP', 'Coaches'],
+    vehicleClasses: ['Premium SUVs', 'VIP Vans', 'Executive Sedans'],
     steps: [
-      { number: '01', title: 'Multi-City Onboarding', description: 'Consolidating corporate travel policies and rate cards across cities.' },
-      { number: '02', title: 'Single Desk Booking', description: 'Book transfers in Mumbai, Delhi, Bengaluru, or Hyderabad via one central desk.' },
-      { number: '03', title: 'Unified Invoicing', description: 'Receive one consolidated GST invoice across all nationwide locations.' }
+      { number: '01', title: 'Circuit Planning', description: 'Identify sacred temples or historical monuments you wish to visit.' },
+      { number: '02', title: 'Comfort Setup', description: 'Select an easy-access vehicle like Innova Hycross or Force Urbania.' },
+      { number: '03', title: 'Relaxed Travel', description: 'Journey at a serene pace tailored to family & senior passenger comfort.' },
+      { number: '04', title: 'Blessed Return', description: 'Safe return home after a peaceful spiritual or cultural pilgrimage.' }
     ],
     useCases: [
-      'Multi-City Executive Roadshows',
-      'Nationwide Corporate Delegate Logistics',
-      'Pan-India CXO Mobility Contracts'
+      'Multi-generation Family Pilgrimages',
+      'Senior Citizen Heritage & Temple Tours',
+      'Cultural Architectural Circuits in South India'
     ],
     faqs: [
-      { q: 'Which cities are covered under Pan-India mobility?', a: 'Bengaluru, Hyderabad, Mumbai, Delhi NCR, Chennai, Pune, Ahmedabad, Kolkata, Kochi, and key tier-1/2 business destinations.' }
+      { q: 'Are your vehicles suitable for elderly family members?', a: 'Yes, vehicles like Innova Crysta and Force Urbania offer comfortable seating and easy entry/exit.' },
+      { q: 'Can the driver adjust to early-morning darshan schedules?', a: 'Yes, our chauffeurs are accustomed to early-morning temple timings and rituals.' }
+    ]
+  },
+  {
+    slug: 'large-events-air-shows',
+    name: 'Large Events & Air Shows',
+    shortTitle: 'Large Events & Air Shows',
+    categoryCluster: 'events-groups',
+    categoryName: 'EVENTS & GROUPS',
+    priority: 'P1',
+    tagline: 'Fleet planning and transportation coordination for large gatherings.',
+    heroHeadline: 'When Thousands Move, Every Minute Matters.',
+    heroSubheadline: 'Large public events require a different approach to transportation. Multiple entry points. Restricted movement. Large crowds. Tight schedules.',
+    description: `Large public events require a different approach to transportation.
+
+Multiple entry points. Restricted movement. Large crowds. Tight schedules. Delegates, guests, teams and staff arriving from different locations.
+
+The solution isn't simply adding more cars. It is creating a movement plan that accounts for fleet size, routes, timings, staging and passenger requirements.`,
+    ctaText: 'Discuss Event Mobility',
+    whoItsFor: 'BEFORE: Map arrivals, routes, staging areas and passenger groups. DURING: Coordinate vehicle movement around the event schedule. AFTER: Manage departures and return transportation.',
+    whatsIncluded: [
+      'Comprehensive fleet dispatch & traffic staging plan',
+      'VIP protocol vehicles & high-capacity shuttle coaches',
+      'Dedicated command control desk with ground ops leads',
+      'Special venue access pass coordination & staging area management',
+      'End-to-end arrival, event-duration, and departure logistics'
+    ],
+    vehicleClasses: ['Executive Sedans', 'Luxury Sedans', 'VIP Vans', 'Coaches'],
+    steps: [
+      { number: '01', title: 'Blueprint Mapping', description: 'Analyze venue access gates, security protocols, and staging zones.' },
+      { number: '02', title: 'Fleet Mobilization', description: 'Deploy a tailored combination of luxury cars, vans, and shuttle buses.' },
+      { number: '03', title: 'Live Control Desk', description: 'Monitor vehicle loops, VIP movements, and delegate transfers in real-time.' },
+      { number: '04', title: 'Post-Event Wrap-up', description: 'Orderly departure execution avoiding gridlock and delays.' }
+    ],
+    useCases: [
+      'Aero India & Defense Air Shows',
+      'International Industrial Exhibitions & Trade Fairs',
+      'Mega Cultural Festivals & Sports Conventions'
+    ],
+    faqs: [
+      { q: 'Have you handled large-scale events like Aero India?', a: 'Yes, Suhalaya has decades of experience coordinating VIP and delegate mobility for major defense air shows and international expos.' },
+      { q: 'How do you handle restricted security zones at venues?', a: 'Our team coordinates directly with event security for vehicle permits and designated staging badges.' }
     ]
   }
 ];

@@ -58,124 +58,99 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 
                 {/* Home */}
                 <li className="nav-item">
-                  <Link href="/" className="nav-link">Home</Link>
+                  <Link href="/" className="nav-link">HOME</Link>
                 </li>
 
                 {/* Services (Dropdown) */}
                 <li className="nav-item">
                   <Link href="/services" className="nav-link">
-                    Services <ChevronDown size={14} style={{ opacity: 0.8 }} />
+                    SERVICES <ChevronDown size={14} style={{ opacity: 0.8 }} />
                   </Link>
                   
-                  {/* 3-Cluster Mega Menu */}
-                  <div className="mega-menu">
+                  {/* 3-Column Mega Menu */}
+                  <div className="mega-menu" style={{ width: '960px', left: '-220px' }}>
+                    
+                    {/* Column 1: BUSINESS MOBILITY */}
                     <div className="mega-column">
-                      <h4>For Business</h4>
-                      {businessServices.map(s => (
-                        <Link key={s.slug} href={`/services/${s.slug}`} className="mega-link">
-                          {s.name}
-                          <small>{s.tagline}</small>
-                        </Link>
-                      ))}
+                      <h4>BUSINESS MOBILITY</h4>
+                      <Link href="/services/corporate-mobility" className="mega-link">
+                        Corporate Mobility
+                        <small>Business travel, meetings, client visits and inter-office movement.</small>
+                      </Link>
+                      <Link href="/services/employee-transportation" className="mega-link">
+                        Employee Transportation
+                        <small>Regular employee movement, office commutes and shift-based travel.</small>
+                      </Link>
+                      <Link href="/services/airport-transfers" className="mega-link">
+                        Airport Transfers
+                        <small>Airport-to-office, hotel, home and onward transfers.</small>
+                      </Link>
+                      <Link href="/services/chauffeur-on-call" className="mega-link">
+                        Chauffeur on Call
+                        <small>A chauffeur and vehicle available around your schedule.</small>
+                      </Link>
+                      <Link href="/services/executive-vip-travel" className="mega-link">
+                        Executive & VIP Travel
+                        <small>Executive cars and chauffeur-driven travel for important guests and leadership.</small>
+                      </Link>
                     </div>
 
+                    {/* Column 2: EVENTS & GROUPS */}
                     <div className="mega-column">
-                      <h4>For Journeys</h4>
-                      {journeyServices.map(s => (
-                        <Link key={s.slug} href={`/services/${s.slug}`} className="mega-link">
-                          {s.name}
-                          <small>{s.tagline}</small>
-                        </Link>
-                      ))}
+                      <h4>EVENTS & GROUPS</h4>
+                      <Link href="/services/corporate-events-conferences" className="mega-link">
+                        Corporate Events & Conferences
+                        <small>Delegate, speaker, airport, hotel and venue transportation.</small>
+                      </Link>
+                      <Link href="/services/team-outings-offsites" className="mega-link">
+                        Team Outings & Offsites
+                        <small>Group transportation for corporate outings and multi-day offsites.</small>
+                      </Link>
+                      <Link href="/services/weddings-family-events" className="mega-link">
+                        Weddings & Family Events
+                        <small>Guest transfers, family movement and wedding transportation.</small>
+                      </Link>
+                      <Link href="/services/large-events-air-shows" className="mega-link">
+                        Large Events & Air Shows
+                        <small>Fleet planning and transportation coordination for large gatherings.</small>
+                      </Link>
                     </div>
 
+                    {/* Column 3: JOURNEYS BEYOND THE CITY */}
                     <div className="mega-column">
-                      <h4>For Moments</h4>
-                      {momentServices.map(s => (
-                        <Link key={s.slug} href={`/services/${s.slug}`} className="mega-link">
-                          {s.name}
-                          <small>{s.tagline}</small>
+                      <h4>JOURNEYS BEYOND THE CITY</h4>
+                      <Link href="/services/south-india-chauffeur-travel" className="mega-link">
+                        South India Chauffeur Travel
+                        <small>Self-planned chauffeur-driven road journeys across South India.</small>
+                      </Link>
+                      <Link href="/services/pilgrimage-heritage-travel" className="mega-link">
+                        Pilgrimage & Heritage Travel
+                        <small>Comfortable journeys to pilgrimage, heritage and culturally significant destinations.</small>
+                      </Link>
+                      
+                      <div style={{ marginTop: '20px', paddingTop: '12px', borderTop: '1px solid var(--color-steel-200)' }}>
+                        <Link href="/services" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                          View All Services →
                         </Link>
-                      ))}
+                      </div>
                     </div>
+
                   </div>
                 </li>
 
-                {/* Corporate Mobility (Dropdown) */}
+                {/* Fleet - Direct link without dropdown */}
                 <li className="nav-item">
-                  <Link href="/corporate" className="nav-link">
-                    Corporate Mobility <ChevronDown size={14} style={{ opacity: 0.8 }} />
-                  </Link>
-                  <div className="mega-menu" style={{ width: '380px', left: '-30px', gridTemplateColumns: '1fr' }}>
-                    <div className="mega-column">
-                      <h4>Enterprise Solutions</h4>
-                      <Link href="/corporate" className="mega-link">
-                        Overview & SLA Standards
-                        <small>Dedicated key account management desk</small>
-                      </Link>
-                      <Link href="/corporate/create-account" className="mega-link">
-                        Create Corporate Account
-                        <small>Monthly credit terms & rate card</small>
-                      </Link>
-                      <Link href="/corporate/industries/it-ites-gcc" className="mega-link">
-                        IT / ITES / GCC Tech Parks
-                        <small>24/7 employee shift shuttles</small>
-                      </Link>
-                      <Link href="/corporate/industries/pharma-healthcare" className="mega-link">
-                        Pharma & Healthcare
-                        <small>Medical events & plant visits</small>
-                      </Link>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Fleet (Dropdown) */}
-                <li className="nav-item">
-                  <Link href="/fleet" className="nav-link">
-                    Fleet <ChevronDown size={14} style={{ opacity: 0.8 }} />
-                  </Link>
-                  <div className="mega-menu" style={{ width: '420px', left: '-50px', gridTemplateColumns: '1fr' }}>
-                    <div className="mega-column">
-                      <h4>Fleet Categories</h4>
-                      {fleetData.map(f => (
-                        <Link key={f.id} href="/fleet" className="mega-link">
-                          {f.name}
-                          <small>{f.models.join(' • ')} ({f.capacity})</small>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </li>
-
-                {/* Locations */}
-                <li className="nav-item">
-                  <Link href="/locations" className="nav-link">Locations</Link>
-                </li>
-
-                {/* Packages (Dropdown) */}
-                <li className="nav-item">
-                  <Link href="/packages" className="nav-link">
-                    Packages <ChevronDown size={14} style={{ opacity: 0.8 }} />
-                  </Link>
-                  <div className="mega-menu" style={{ width: '400px', left: '-50px', gridTemplateColumns: '1fr' }}>
-                    <div className="mega-column">
-                      <h4>Curated Road Trip Circuits</h4>
-                      {miniItineraries.map(pkg => (
-                        <Link key={pkg.slug} href={`/packages/${pkg.slug}`} className="mega-link">
-                          {pkg.name}
-                          <small>{pkg.duration} — {pkg.tagline}</small>
-                        </Link>
-                      ))}
-                      <Link href="/packages" className="mega-link" style={{ marginTop: '8px', color: '#29ABE2', fontWeight: '700' }}>
-                        View All Packages & Event Mobility →
-                      </Link>
-                    </div>
-                  </div>
+                  <Link href="/fleet" className="nav-link">FLEET</Link>
                 </li>
 
                 {/* Blog */}
                 <li className="nav-item">
-                  <Link href="/blog" className="nav-link">Blog</Link>
+                  <Link href="/blog" className="nav-link">BLOG</Link>
+                </li>
+
+                {/* Contact Us */}
+                <li className="nav-item">
+                  <Link href="/contact" className="nav-link">CONTACT US</Link>
                 </li>
               </ul>
             </nav>
@@ -188,13 +163,13 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                   display: 'inline-flex', 
                   alignItems: 'center', 
                   gap: '8px', 
-                  color: '#FFF', 
+                  color: 'var(--color-navy-900)', 
                   fontSize: '0.88rem', 
                   fontWeight: '600',
                   padding: '8px 16px',
                   borderRadius: 'var(--radius-pill)',
-                  backgroundColor: 'rgba(255,255,255,0.06)',
-                  border: '1px solid rgba(255,255,255,0.12)',
+                  backgroundColor: 'rgba(15, 42, 82, 0.04)',
+                  border: '1px solid var(--color-steel-200)',
                   transition: 'all 0.2s ease'
                 }}
                 className="phone-link-wrapper"
@@ -203,28 +178,14 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 <span>+91 80 4900 7777</span>
               </a>
 
-              <button 
-                onClick={onOpenCorporateModal}
-                className="btn btn-outline-white corp-btn-desktop"
-                style={{ padding: '9px 18px', fontSize: '0.85rem' }}
-                id="header-corporate-btn"
-              >
-                Corporate Account
-              </button>
-
-              <button 
-                onClick={onOpenQuoteModal} 
-                className="btn btn-primary"
-                style={{ padding: '10px 22px', fontSize: '0.88rem' }}
-                id="header-quote-btn"
-              >
-                Request Quote <ArrowRight size={14} />
-              </button>
+              {/* Hidden trigger elements for modal triggers */}
+              <button id="header-corporate-btn" onClick={onOpenCorporateModal} style={{ display: 'none' }} aria-hidden="true" />
+              <button id="header-quote-btn" onClick={onOpenQuoteModal} style={{ display: 'none' }} aria-hidden="true" />
 
               {/* Mobile Hamburger Toggle */}
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                style={{ background: 'none', border: 'none', color: '#FFF', padding: '6px', cursor: 'pointer' }}
+                style={{ background: 'none', border: 'none', color: 'var(--color-navy-900)', padding: '6px', cursor: 'pointer' }}
                 className="mobile-toggle"
               >
                 {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -238,15 +199,15 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div style={{ backgroundColor: 'var(--color-navy-900)', borderTop: '1px solid rgba(255,255,255,0.1)', padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Home</Link>
-          <Link href="/services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Services</Link>
-          <Link href="/corporate" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Corporate Mobility</Link>
-          <Link href="/fleet" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Our Fleet</Link>
-          <Link href="/locations" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Locations</Link>
-          <Link href="/packages" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Packages</Link>
-          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Blog</Link>
-          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFF', fontWeight: '600', fontSize: '1.05rem' }}>Contact Us</Link>
+        <div style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid var(--color-steel-200)', padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
+          <Link href="/" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Home</Link>
+          <Link href="/services" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Services</Link>
+          <Link href="/corporate" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Corporate Mobility</Link>
+          <Link href="/fleet" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Our Fleet</Link>
+          <Link href="/locations" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Locations</Link>
+          <Link href="/packages" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Packages</Link>
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Blog</Link>
+          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Contact Us</Link>
         </div>
       )}
     </header>

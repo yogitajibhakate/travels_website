@@ -1,107 +1,52 @@
 export const fleetData = [
   {
     id: 'economy-sedans',
+    tag: 'Economy Sedans',
     name: 'Economy Sedans',
-    category: 'Economy Sedans',
     models: ['Maruti Suzuki Dzire', 'Hyundai Aura', 'Hyundai Verna'],
-    capacity: '3 Passengers (+ Chauffeur) • 2 Bags',
-    idealFor: 'Everyday corporate travel, city commuting, and cost-effective airport transfers.',
-    features: [
-      'Clean, air-conditioned comfortable interior',
-      'Dual airbags & ABS safety compliance',
-      'Ergonomic seating for 3 passengers',
-      'Uniformed, background-verified chauffeur'
-    ],
-    tag: 'Everyday Travel'
+    capacity: '3 Passengers (+ Chauffeur)',
+    idealFor: 'Everyday corporate travel, point-to-point city journeys, airport transfers, and budget-conscious business movement.',
+    features: ['3 Comfortable Passenger Seats', 'Comfortable A/C', 'Ample Luggage Space', 'GPS Tracking']
   },
   {
     id: 'executive-sedans',
-    name: 'Executive Sedans',
-    category: 'Executive Sedans',
+    tag: 'Executive Sedans',
+    name: 'Executive',
     models: ['Honda City', 'Maruti Suzuki Ciaz'],
-    capacity: '3 Passengers (+ Chauffeur) • 3 Bags',
-    idealFor: 'Executive business meetings, corporate guest travel, and airport transfers.',
-    features: [
-      'Enhanced legroom and premium cabin comfort',
-      'High-speed mobile charging ports',
-      'Bottled mineral water & tissues',
-      'Quiet acoustic cabin for phone calls'
-    ],
-    tag: 'Corporate Executive'
+    capacity: '3 Passengers (+ Chauffeur)',
+    idealFor: 'Executive city travel, client meetings, business visits, and high-comfort corporate transfers.',
+    features: ['3 Executive Passenger Seats', 'Executive Legroom', 'Rear A/C Vents', 'Charging Ports']
   },
   {
     id: 'premium',
-    name: 'Premium Vehicles',
-    category: 'Premium',
-    models: ['Toyota Innova Crysta', 'Toyota Innova Hycross', 'Toyota Fortuner', 'Toyota Camry'],
-    capacity: '6 Passengers (+ Chauffeur) • 4 Bags',
-    idealFor: 'Senior executives, outstation road trips, family vacations, and site inspections.',
-    features: [
-      'Reclining captain seats in middle row',
-      'Dual-zone climate control AC',
-      'Ample luggage space with carrier option',
-      'Superior suspension for smooth highway journeys'
-    ],
-    tag: 'Most Popular'
+    tag: 'Premium MUVs & SUVs',
+    name: 'Premium',
+    models: ['Toyota Innova Crysta (6 Pax)', 'Toyota Innova Hycross (6 Pax)', 'Toyota Fortuner (6 Pax)', 'Toyota Camry (3 Pax)'],
+    capacity: '3–6 Passengers (+ Chauffeur)',
+    idealFor: 'Executive travel, family road trips, group airport movement, and outstation chauffeur journeys.',
+    features: ['Reclining Captain Seats', 'Hybrid Luxury Options', 'Triple-zone A/C', 'Premium Suspension']
   },
   {
-    id: 'luxury-vip',
-    name: 'Luxury & VIP',
-    category: 'Luxury & VIP',
-    models: ['Toyota Vellfire', 'BMW 5 Series', 'Mercedes-Benz E-Class', 'Audi A4'],
-    capacity: '3–5 Passengers (+ Chauffeur) • 3 Bags',
-    idealFor: 'Premium executive mobility, VIP guests, delegation heads, and luxury airport travel.',
-    features: [
-      'Executive leather upholstery & power reclining seats',
-      'Premium sound system & ambient lighting',
-      'Senior chauffeurs certified in VIP protocol & privacy',
-      'NDAs and strict passenger confidentiality'
-    ],
-    tag: 'Executive Choice'
+    id: 'luxury',
+    tag: 'Luxury Lounge & VIP',
+    name: 'Luxury',
+    models: ['Toyota Vellfire (6 Pax)', 'BMW 5 Series (3 Pax)', 'Mercedes-Benz E-Class (3 Pax)', 'Audi A4 (3 Pax)', 'BMW 7 Series (3 Pax)', 'Mercedes-Benz S-Class (3 Pax)', 'Audi Q7 (6 Pax)'],
+    capacity: '3–6 Passengers (+ Chauffeur)',
+    idealFor: 'VIP leadership, visiting C-suite executives, high-profile corporate delegates, and luxury wedding mobility.',
+    features: ['Ultra Luxury Lounge Seats', 'Ambient Lighting', 'Soft-close Doors', 'Executive Privacy Glass', 'Air Suspension']
   },
   {
-    id: 'super-luxury',
-    name: 'Super Luxury',
-    category: 'Super Luxury',
-    models: ['BMW 7 Series', 'Mercedes-Benz S-Class', 'Audi Q7'],
-    capacity: '3 Passengers (+ Chauffeur) • 3 Bags',
-    idealFor: 'High-priority VIP guests, C-suite leadership, dignitaries, and flagship events.',
-    features: [
-      'Flagship luxury sedan / SUV experience',
-      'Panoramic sunroof & rear seat entertainment controls',
-      'Uncompromised privacy & top-tier chauffeur etiquette',
-      'Priority backup vehicle dispatch standby'
+    id: 'multi-passenger-vehicles',
+    tag: 'Vans & Coaches',
+    name: 'Multi Passenger Vehicles',
+    models: [
+      'Toyota Commuter (9–13 Passengers VIP Van)',
+      'Force Urbania (8, 11 & 15 Passengers Monocoque)',
+      'TATA / Eicher / Ashok Leyland AC Coaches (23–48 Passengers)',
+      'Volvo & Mercedes-Benz Glider Luxury Buses (44 Passengers)'
     ],
-    tag: 'Flagship Luxury'
-  },
-  {
-    id: 'vip-vans',
-    name: 'VIP & Group Vans',
-    category: 'VIP & Group Vans',
-    models: ['Toyota Commuter', 'Force Urbania'],
-    capacity: '9 to 15 Passengers (+ Chauffeur) • Luggage Bay',
-    idealFor: 'Premium group movement, corporate delegations, wedding shuttles, and family retreats.',
-    features: [
-      'High-roof walk-through cabin with pushback seats',
-      'Individual AC vents for every seat row',
-      'Spacious luggage storage bay',
-      'Air suspension for smooth highway stability'
-    ],
-    tag: 'Premium Group'
-  },
-  {
-    id: 'coaches',
-    name: 'Air-Conditioned Coaches',
-    category: 'Coaches',
-    models: ['TATA', 'Eicher', 'Ashok Leyland', 'Volvo', 'Mercedes-Benz'],
-    capacity: '21 to 48 Passengers (+ Driver & Crew)',
-    idealFor: 'Conferences, employee transportation, weddings, air shows, and large event shuttles.',
-    features: [
-      'Plush reclining seats with safety seatbelts',
-      'Large under-floor luggage belly storage',
-      'Speed governor & real-time GPS tracking',
-      'Certified heavy vehicle experienced drivers'
-    ],
-    tag: 'Large Delegation'
+    capacity: '8–48 Passengers (+ Chauffeur / Crew)',
+    idealFor: 'Group transportation, corporate team outings, event shuttles, wedding guest transfers, and large delegation mobility.',
+    features: ['1x1 & 2x1 Reclining Seats', 'High Ceiling Standing Height', 'Panoramic Windows', 'Air Suspension & Underbody Luggage Bays']
   }
 ];
