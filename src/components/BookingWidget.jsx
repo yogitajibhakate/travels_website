@@ -1,28 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { submitLeadToCRM } from '@/data/crm';
 import { CheckCircle2, ArrowRight, Car, MapPin, Calendar, User, Phone, Mail, Building, Sparkles } from 'lucide-react';
 
 export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
-  const todayDate = new Date().toLocaleDateString('en-CA');
-  
-  const getNowTimeStr = () => {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    return `${hours}:${minutes}`;
-  };
+  const [todayDate, setTodayDate] = useState('');
+  const [nowTime, setNowTime] = useState('');
 
-  const nowTime = getNowTimeStr();
-  
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     service_interest: 'corporate-mobility',
     city: 'Bengaluru',
-    pickup_date: todayDate,
-    pickup_time: nowTime,
+    pickup_date: '',
+    pickup_time: '',
     vehicle_preference: 'Executive SUV',
     contact_name: '',
     contact_phone: '',
@@ -31,20 +23,43 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
     consent_marketing: true
   });
 
+  useEffect(() => {
+    const now = new Date();
+    const localDate = now.toLocaleDateString('en-CA');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const localTime = `${hours}:${minutes}`;
+
+    setTodayDate(localDate);
+    setNowTime(localTime);
+
+    setFormData(prev => {
+      const isTodayOrPast = !prev.pickup_date || prev.pickup_date <= localDate;
+      const effectiveDate = isTodayOrPast ? localDate : prev.pickup_date;
+      const effectiveTime = (effectiveDate === localDate && (!prev.pickup_time || prev.pickup_time < localTime)) ? localTime : prev.pickup_time;
+      
+      return {
+        ...prev,
+        pickup_date: effectiveDate,
+        pickup_time: effectiveTime
+      };
+    });
+  }, []);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     
     if (name === 'pickup_date') {
       const selectedDate = value;
-      if (selectedDate < todayDate) {
+      if (todayDate && selectedDate < todayDate) {
         setFormData(prev => ({ 
           ...prev, 
           pickup_date: todayDate,
-          pickup_time: prev.pickup_time < nowTime ? nowTime : prev.pickup_time 
+          pickup_time: (nowTime && prev.pickup_time < nowTime) ? nowTime : prev.pickup_time 
         }));
         return;
       }
-      if (selectedDate === todayDate && formData.pickup_time < nowTime) {
+      if (todayDate && selectedDate === todayDate && nowTime && formData.pickup_time < nowTime) {
         setFormData(prev => ({ 
           ...prev, 
           pickup_date: selectedDate, 
@@ -56,7 +71,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
 
     if (name === 'pickup_time') {
       const selectedTime = value;
-      if (formData.pickup_date === todayDate && selectedTime < nowTime) {
+      if (todayDate && formData.pickup_date === todayDate && nowTime && selectedTime < nowTime) {
         setFormData(prev => ({ ...prev, pickup_time: nowTime }));
         return;
       }

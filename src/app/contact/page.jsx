@@ -107,13 +107,6 @@ export default function ContactPage() {
 
             {/* Right: Booking Quote Form */}
             <div>
-              <div style={{ marginBottom: '16px' }}>
-                <div className="badge badge-sky" style={{ marginBottom: '8px' }}>TELL US</div>
-                <h2 style={{ fontSize: '1.8rem' }}>Request a Custom Quote</h2>
-                <p style={{ color: 'var(--color-grey-500)', fontSize: '0.9rem', marginTop: '4px' }}>
-                  Provide your pickup location, destination, date & time, passengers, and vehicle preferences.
-                </p>
-              </div>
               <BookingWidget sourcePage="/contact" />
             </div>
 
