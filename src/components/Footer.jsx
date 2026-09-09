@@ -119,8 +119,10 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
 
         {/* Bottom Copyright */}
         <div style={{ paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>
-          <div>
-            © Suhalaya Travels. All rights reserved.
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+            <span>© Suhalaya Travels. All rights reserved.</span>
+            <span style={{ opacity: 0.4 }}>|</span>
+            <span style={{ color: '#29ABE2', fontWeight: '600' }}>Bengaluru, Karnataka, India</span>
           </div>
           <div style={{ display: 'flex', gap: '20px' }}>
             <Link href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</Link>
