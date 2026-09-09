@@ -5,6 +5,7 @@ import { submitLeadToCRM } from '@/data/crm';
 import { CheckCircle2, ArrowRight, Car, MapPin, Calendar, User, Phone, Mail, Building, Sparkles } from 'lucide-react';
 
 export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
+  const [mounted, setMounted] = useState(false);
   const [todayDate, setTodayDate] = useState('');
   const [nowTime, setNowTime] = useState('');
 
@@ -14,7 +15,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
     service_interest: 'corporate-mobility',
     city: 'Bengaluru',
     pickup_date: '',
-    pickup_time: '',
+    pickup_time: '09:00',
     vehicle_preference: 'Executive SUV',
     contact_name: '',
     contact_phone: '',
@@ -24,6 +25,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
   });
 
   useEffect(() => {
+    setMounted(true);
     const now = new Date();
     const localDate = now.toLocaleDateString('en-CA');
     const hours = String(now.getHours()).padStart(2, '0');
@@ -34,7 +36,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
     setNowTime(localTime);
 
     setFormData(prev => {
-      const isTodayOrPast = !prev.pickup_date || prev.pickup_date <= localDate;
+      const isTodayOrPast = !prev.pickup_date || (localDate && prev.pickup_date <= localDate);
       const effectiveDate = isTodayOrPast ? localDate : prev.pickup_date;
       const effectiveTime = (effectiveDate === localDate && (!prev.pickup_time || prev.pickup_time < localTime)) ? localTime : prev.pickup_time;
       
