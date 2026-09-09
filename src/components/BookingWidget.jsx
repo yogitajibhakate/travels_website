@@ -7,13 +7,22 @@ import { CheckCircle2, ArrowRight, Car, MapPin, Calendar, User, Phone, Mail, Bui
 export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
   const todayDate = new Date().toLocaleDateString('en-CA');
   
+  const getNowTimeStr = () => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+  };
+
+  const nowTime = getNowTimeStr();
+  
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     service_interest: 'corporate-mobility',
     city: 'Bengaluru',
     pickup_date: todayDate,
-    pickup_time: '09:00',
+    pickup_time: nowTime,
     vehicle_preference: 'Executive SUV',
     contact_name: '',
     contact_phone: '',
@@ -25,9 +34,32 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     
-    if (name === 'pickup_date' && value && value < todayDate) {
-      setFormData(prev => ({ ...prev, pickup_date: todayDate }));
-      return;
+    if (name === 'pickup_date') {
+      const selectedDate = value;
+      if (selectedDate < todayDate) {
+        setFormData(prev => ({ 
+          ...prev, 
+          pickup_date: todayDate,
+          pickup_time: prev.pickup_time < nowTime ? nowTime : prev.pickup_time 
+        }));
+        return;
+      }
+      if (selectedDate === todayDate && formData.pickup_time < nowTime) {
+        setFormData(prev => ({ 
+          ...prev, 
+          pickup_date: selectedDate, 
+          pickup_time: nowTime 
+        }));
+        return;
+      }
+    }
+
+    if (name === 'pickup_time') {
+      const selectedTime = value;
+      if (formData.pickup_date === todayDate && selectedTime < nowTime) {
+        setFormData(prev => ({ ...prev, pickup_time: nowTime }));
+        return;
+      }
     }
     
     setFormData(prev => ({
@@ -167,6 +199,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
                   type="time" 
                   name="pickup_time" 
                   value={formData.pickup_time} 
+                  min={formData.pickup_date === todayDate ? nowTime : undefined}
                   onChange={handleChange} 
                   className="form-input" 
                   style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} 
