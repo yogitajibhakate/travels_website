@@ -8,7 +8,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
   return (
     <footer style={{ backgroundColor: 'var(--color-navy-900)', color: '#FFF', paddingTop: '64px', paddingBottom: '36px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
       <div className="container">
-        
+
         {/* Top Trust Metrics Strip */}
         <div style={{ paddingBottom: '48px', marginBottom: '48px', borderBottom: '1px solid rgba(255,255,255,0.1)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -46,15 +46,15 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
 
         {/* Sitemap Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '36px', marginBottom: '48px' }}>
-          
+
           {/* Column 1: Brand & Description */}
           <div style={{ gridColumn: 'span 1' }}>
             <Link href="/" style={{ display: 'inline-block', marginBottom: '16px' }}>
               <div style={{ backgroundColor: '#FFFFFF', padding: '6px 14px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center' }}>
-                <img 
-                  src="/images/logo.png" 
-                  alt="Suhalaya Travels" 
-                  style={{ height: '36px', width: 'auto', objectFit: 'contain' }} 
+                <img
+                  src="/images/logo.png"
+                  alt="Suhalaya Travels"
+                  style={{ height: '36px', width: 'auto', objectFit: 'contain' }}
                 />
               </div>
             </Link>
@@ -67,7 +67,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
             <p style={{ fontSize: '0.88rem', fontWeight: '600', color: '#FFF', marginBottom: '20px' }}>
               Wherever you're going, start with Suhalaya.
             </p>
-            
+
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a href="tel:+918049007777" className="btn btn-outline-white" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>
                 <Phone size={14} /> Call Us
@@ -85,6 +85,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
               <li><Link href="/" style={{ color: 'rgba(255,255,255,0.85)' }}>Home</Link></li>
               <li><Link href="/services" style={{ color: 'rgba(255,255,255,0.85)' }}>Services</Link></li>
               <li><Link href="/fleet" style={{ color: 'rgba(255,255,255,0.85)' }}>Fleet</Link></li>
+              <li><Link href="/locations" style={{ color: 'rgba(255,255,255,0.85)' }}>Office Locations</Link></li>
               <li><Link href="/blog" style={{ color: 'rgba(255,255,255,0.85)' }}>Blog</Link></li>
               <li><Link href="/contact" style={{ color: 'rgba(255,255,255,0.85)' }}>Contact Us</Link></li>
             </ul>
@@ -122,12 +123,19 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <span>© Suhalaya Travels. All rights reserved.</span>
             <span style={{ opacity: 0.4 }}>|</span>
-            <span style={{ color: '#29ABE2', fontWeight: '600' }}>Bengaluru, Karnataka, India</span>
+            <Link 
+              href="/locations" 
+              style={{ color: '#29ABE2', fontWeight: '600', textDecoration: 'none' }}
+              title="View Suhalaya Corporate Dispatch & Office Locations"
+            >
+              📍 Bengaluru & South India Offices →
+            </Link>
           </div>
-          <div style={{ display: 'flex', gap: '20px' }}>
+          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             <Link href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</Link>
             <Link href="/services" style={{ color: 'rgba(255,255,255,0.6)' }}>Services</Link>
             <Link href="/fleet" style={{ color: 'rgba(255,255,255,0.6)' }}>Fleet</Link>
+            <Link href="/locations" style={{ color: 'rgba(255,255,255,0.6)' }}>Locations</Link>
             <Link href="/blog" style={{ color: 'rgba(255,255,255,0.6)' }}>Blog</Link>
             <Link href="/contact" style={{ color: 'rgba(255,255,255,0.6)' }}>Contact Us</Link>
           </div>
