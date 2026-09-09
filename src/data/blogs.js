@@ -1,170 +1,418 @@
-export const blogsData = [
+﻿export const blogsData = [
   {
-    slug: 'corporate-car-vs-taxi',
-    title: 'Corporate Car Rental vs App-Based Cabs: What Should a Company Choose?',
+    slug: 'corporate-car-rental-vs-app-cabs',
+    title: 'Corporate Car Rental vs App-Based Cabs: Which Works Better for Business?',
     category: 'corporate-mobility',
     categoryName: 'Corporate Mobility',
     readTime: '5 min read',
-    date: 'Sep 05, 2026',
+    date: 'Sep 09, 2026',
     author: 'Suhalaya Mobility Desk',
-    summary: 'Evaluating SLA guarantees, safety compliance, invoice auditing, and cost predictability between dedicated corporate chauffeur services and app-based taxi aggregators.',
-    content: `
-      <h2>Corporate Car Rental vs App-Based Cabs: What Should a Company Choose?</h2>
-      <p>For an occasional trip, an app-based cab can be sufficient.</p>
-      <p>Corporate mobility becomes different when travel becomes recurring.</p>
-      <p>Companies may need airport transfers for visiting executives, vehicles available for multiple meetings, daily employee transportation, client movement and event fleets. At that point, the requirement is less about booking a car and more about managing mobility.</p>
-      <p>A corporate chauffeur partner can provide continuity across these requirements. The organisation can select vehicle categories, create recurring arrangements and coordinate multiple journeys through one service provider.</p>
-      <p>For HR and administration teams, this can simplify transportation management. For employees and executives, it can create a more consistent travel experience.</p>
-      <p>The right choice ultimately depends on travel volume, frequency, employee requirements, and the level of control the organisation needs.</p>
-    `,
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'The answer depends on how your people travel. For recurring business needs, a managed chauffeur arrangement brings consistency, billing clarity and better employee experience.',
+    content: '<p>An app-based cab works well for an occasional trip. But regular business travel brings different demands. That is where corporate car rental can make more sense. A planned mobility arrangement gives businesses greater consistency across recurring journeys, vehicle categories and billing. The real question is not "Which is cheaper?" It is "Which works better for the way our people travel?"</p>',
     relatedServiceSlug: 'corporate-mobility',
-    relatedPackageSlug: 'corporate-event-package'
   },
   {
-    slug: 'night-shift-safety',
-    title: 'Night-Shift Employee Transportation: A Corporate Safety Checklist',
+    slug: 'employee-transportation-more-than-commute',
+    title: 'Employee Transportation: More Than a Daily Commute',
+    category: 'corporate-mobility',
+    categoryName: 'Corporate Mobility',
+    readTime: '5 min read',
+    date: 'Sep 08, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/employee-transport.jpg',
+    summary: 'For organisations operating across shifts and locations, employee transportation is more than getting people to the office. When it works well, it quietly supports the entire workplace.',
+    content: '<p>The journey to work is part of the employee experience. Routes, timings, pickup points, shift changes and late-night journeys all need to work together. When transportation is predictable, employees spend less time worrying about how they will get to and from work.</p>',
+    relatedServiceSlug: 'employee-transportation',
+  },
+  {
+    slug: 'night-shift-transport-plan',
+    title: 'Night-Shift Transport When the Office Runs Late',
     category: 'corporate-mobility',
     categoryName: 'Corporate Mobility',
     readTime: '6 min read',
-    date: 'Sep 02, 2026',
+    date: 'Sep 07, 2026',
     author: 'Safety & Compliance Team',
-    summary: 'Essential procedures for HR and transport desks to ensure late-night female employee drops, route tracking, and chauffeur compliance.',
-    content: `
-      <h2>Night-Shift Employee Transportation: A Corporate Safety Checklist</h2>
-      <p>Night-shift transportation requires more planning than simply assigning a vehicle.</p>
-      <p>Organisations should establish clear pickup and drop procedures, maintain employee and route information, define escalation protocols and ensure that transportation teams can respond when schedules change.</p>
-      <p>For women employees, organisations may also need additional procedures around pickup verification and safe handover.</p>
-      <p>Where technology is available, journey tracking and transportation dashboards can provide greater visibility to the transport desk.</p>
-      <p>Vehicle condition, chauffeur documentation and compliance should also be part of the operating process.</p>
-      <p>The exact procedures will vary by organisation and location, but the principle remains constant: employee transportation should be treated as part of workplace safety—not merely a commuting benefit.</p>
-    `,
+    image: '/images/blog/night-shift.jpg',
+    summary: 'Night travel deserves its own transportation plan. When employees leave at 2 AM or 5 AM, ordinary commute planning is not enough.',
+    content: '<p>Night travel deserves its own transportation plan. Companies should establish clear pickup and drop points, maintain accurate passenger information and have defined procedures for delays. Night-shift transportation requires a more deliberate approach to routes, communication and passenger safety.</p>',
     relatedServiceSlug: 'employee-transportation',
-    relatedPackageSlug: 'corporate-event-package'
   },
   {
-    slug: 'ai-companies-mobility',
-    title: 'Why AI Companies Need a Different Approach to Corporate Mobility',
+    slug: 'executive-travel-beyond-comfort',
+    title: 'Executive Travel That Goes Beyond Comfort',
+    category: 'corporate-mobility',
+    categoryName: 'Executive Travel',
+    readTime: '5 min read',
+    date: 'Sep 06, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/executive-travel.jpg',
+    summary: 'A premium car is only the starting point. Punctuality, professional chauffeur conduct, privacy, and flexibility can matter just as much as the vehicle itself.',
+    content: '<p>A premium car is only the starting point. Executives often move between meetings, airports, offices and events with very little time between them. Executive travel is not about showing off the car. It is about protecting the passenger\'s time.</p>',
+    relatedServiceSlug: 'executive-travel',
+  },
+  {
+    slug: 'tech-company-flexible-mobility',
+    title: 'A More Flexible Mobility Strategy for Technology Companies',
     category: 'corporate-mobility',
     categoryName: 'AI & Tech Mobility',
     readTime: '5 min read',
-    date: 'Aug 28, 2026',
+    date: 'Sep 05, 2026',
     author: 'Suhalaya Mobility Desk',
-    summary: 'How fast-growing AI labs, GCCs, and tech startups manage 24/7 workforce schedules, international visitor arrivals, and summit mobility.',
-    content: `
-      <h2>Why AI Companies Need a Different Approach to Corporate Mobility</h2>
-      <p>AI companies are growing across Bengaluru, Hyderabad, Chennai, Pune, Mumbai and Delhi NCR—but their workforce and visitors are not always following traditional office schedules.</p>
-      <p>Teams may work across shifts. International executives may arrive for short visits. Investors, researchers and technology partners may move between offices, hotels and conferences.</p>
-      <p>AI summits and technology events add another layer, bringing together hundreds of delegates with different arrival and departure times.</p>
-      <p>A corporate mobility partner can help coordinate these requirements through executive cars, employee transportation, airport transfers and event fleets.</p>
-      <p>For fast-growing technology companies, transportation should be scalable enough to support both everyday movement and sudden increases in travel demand.</p>
-    `,
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'Fast-moving tech companies rarely have fixed travel patterns. Building a flexible mobility programme around recurring travel patterns changes everything.',
+    content: '<p>Fast-moving companies rarely have fixed travel patterns. One journey may need an executive sedan. Another may require employee transportation. A visiting team may need airport and hotel transfers. Instead of treating every booking separately, companies can build a more flexible mobility programme around them.</p>',
     relatedServiceSlug: 'ai-technology-gcc',
-    relatedPackageSlug: 'corporate-event-package'
   },
   {
-    slug: 'pharma-dealer-meet',
-    title: 'Planning Transportation for a Pharma Dealer Meet',
+    slug: 'gcc-mobility-challenge',
+    title: "The Mobility Challenge Behind India's GCC Boom",
+    category: 'corporate-mobility',
+    categoryName: 'AI & Tech Mobility',
+    readTime: '5 min read',
+    date: 'Sep 04, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/employee-transport.jpg',
+    summary: "India's GCC ecosystem brings together employees, international visitors, and senior executives across multiple locations. Structured mobility ties it together.",
+    content: "<p>A global workforce needs a local mobility network that keeps up. India's GCC ecosystem brings together employees, international visitors, senior executives and teams working across multiple locations. A structured corporate mobility programme can bring these requirements together.</p>",
+    relatedServiceSlug: 'ai-technology-gcc',
+  },
+  {
+    slug: 'ad-hoc-to-managed-mobility',
+    title: 'From Ad-Hoc Cabs to Managed Mobility',
+    category: 'corporate-mobility',
+    categoryName: 'Corporate Mobility',
+    readTime: '5 min read',
+    date: 'Sep 03, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'At some point, booking another cab stops being a solution. Managed mobility brings recurring transportation requirements into a structured programme.',
+    content: '<p>At some point, booking another cab stops being a solution. Managed mobility brings recurring transportation requirements into a more structured programme. It changes the question from "Who is booking the cab?" to "How should our people move?"</p>',
+    relatedServiceSlug: 'corporate-mobility',
+  },
+  {
+    slug: 'corporate-airport-transfer-details',
+    title: 'The Details That Make a Corporate Airport Transfer Work',
+    category: 'corporate-mobility',
+    categoryName: 'Airport Transfers',
+    readTime: '5 min read',
+    date: 'Sep 02, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/airport-transfer.jpg',
+    summary: "The journey doesn't begin when the flight lands. Terminal, timings, luggage and onward journey — the details that are easy to overlook.",
+    content: "<p>The journey doesn't begin when the flight lands. Flight timings and delays matter. So do the correct terminal, pickup location, luggage requirements and passenger communication. A good airport transfer is planned around the passenger's itinerary, not simply the aircraft's arrival time.</p>",
+    relatedServiceSlug: 'airport-transfers',
+  },
+  {
+    slug: 'ai-economy-mobility-scale',
+    title: 'Mobility at the Scale of the AI Economy',
     category: 'corporate-events',
     categoryName: 'Event Mobility',
     readTime: '6 min read',
-    date: 'Aug 24, 2026',
+    date: 'Sep 01, 2026',
     author: 'Event Logistics Desk',
-    summary: 'Structuring multi-vehicle fleets, airport transfers, hotel shuttles, and executive movement for pharmaceutical dealer conventions.',
-    content: `
-      <h2>Planning Transportation for a Pharma Dealer Meet</h2>
-      <p>A dealer meet may look like a single event on the calendar. From a transportation perspective, it can involve dozens of separate journeys.</p>
-      <p>Dealers may arrive from different cities. Senior leadership may require dedicated cars. Guests may stay at multiple hotels. Airport arrivals may span several hours.</p>
-      <p>A transportation plan should therefore begin with the guest list, hotel locations, flight timings, and event schedule.</p>
-      <p>Individual executive vehicles can operate alongside larger delegate vehicles, while hotel-to-venue shuttles can handle scheduled group movement.</p>
-      <p>The final objective is simple: delegates should focus on the event, not on how they are getting to it.</p>
-    `,
-    relatedServiceSlug: 'pharma-healthcare-events',
-    relatedPackageSlug: 'corporate-event-package'
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'Major technology summits gather executive leadership, guest speakers and international visitors. Managed event transportation succeeds when fleet operations are governed as one unified system.',
+    content: '<p>Expansive gatherings leave no room for guesswork. Airport transfers, hotel shuttles, executive sedans and venue shuttles ought to be structured alongside the main agenda. For major conventions, managed event transportation succeeds when fleet operations are governed as one unified system.</p>',
+    relatedServiceSlug: 'ai-summits-conferences',
   },
   {
-    slug: 'ai-summit-planning',
-    title: 'How to Plan Transportation for an AI Summit',
+    slug: 'industry-gatherings-movement',
+    title: "The Movement Behind Industry's Biggest Gatherings",
     category: 'corporate-events',
     categoryName: 'Event Mobility',
-    readTime: '7 min read',
-    date: 'Aug 20, 2026',
-    author: 'AI Event Desk',
-    summary: 'Segmenting delegate transportation, VIP speaker cars, airport receiving desks, and venue shuttle loops for high-profile AI conventions.',
-    content: `
-      <h2>How to Plan Transportation for an AI Summit</h2>
-      <p>An AI summit can bring together founders, investors, researchers, corporate leaders, government representatives and international guests.</p>
-      <p>Transportation planning should begin with segmentation.</p>
-      <ul>
-        <li>Who needs an executive vehicle?</li>
-        <li>Which delegates can travel together?</li>
-        <li>Which hotels require shuttle services?</li>
-        <li>What time do airport arrivals peak?</li>
-        <li>Are there separate movements for speakers and VIP guests?</li>
-      </ul>
-      <p>Once these questions are mapped, vehicles can be assigned according to the programme.</p>
-      <p>For larger events, a central transportation desk can coordinate arrivals, departures, vehicle allocation, and last-minute changes.</p>
-      <p>The technology on stage may be artificial intelligence. The transportation behind the event still needs very practical planning.</p>
-    `,
-    relatedServiceSlug: 'ai-summits-conferences',
-    relatedPackageSlug: 'corporate-event-package'
+    readTime: '6 min read',
+    date: 'Aug 30, 2026',
+    author: 'Event Logistics Desk',
+    image: '/images/blog/employee-transport.jpg',
+    summary: 'Massive industry forums unite pharmaceutical leaders, tech enterprises and executive teams. Planning begins with analysing the delegate roster.',
+    content: '<p>An event spans hours, but the underlying logistics require advance strategy. Effective planning begins with analysing the delegate roster. Superior event mobility operates quietly in the background. Delegates simply reach destinations and transit between venues without friction.</p>',
+    relatedServiceSlug: 'pharma-healthcare-events',
   },
   {
-    slug: 'air-show-logistics',
-    title: 'Air Show Transportation: Managing Timed Arrivals and Departures',
+    slug: 'architecture-of-well-moved-event',
+    title: 'The Architecture of a Well-Moved Event',
+    category: 'corporate-events',
+    categoryName: 'Event Mobility',
+    readTime: '5 min read',
+    date: 'Aug 28, 2026',
+    author: 'Event Logistics Desk',
+    image: '/images/blog/airport-transfer.jpg',
+    summary: 'Transit plans should be finalised before invitations are delivered. Attendees, locations and schedules are the three fundamentals.',
+    content: '<p>Transit plans should be finalised before invitations are delivered. Focus first on three fundamentals: attendees, locations and schedules. A thoughtful mobility strategy serves as an integrated framework harmonizing delegates, locations and schedules.</p>',
+    relatedServiceSlug: 'corporate-events',
+  },
+  {
+    slug: '200-person-arrival-mathematics',
+    title: 'The Mathematics of a 200-Person Arrival',
     category: 'corporate-events',
     categoryName: 'Large Events',
     readTime: '6 min read',
-    date: 'Aug 15, 2026',
+    date: 'Aug 26, 2026',
     author: 'Large Events Team',
-    summary: 'Navigating concentrated venue arrivals, perimeter security passes, VIP delegations, and shuttle loops during major air shows.',
-    content: `
-      <h2>Air Show Transportation: Managing Timed Arrivals and Departures</h2>
-      <p>An air show is not just an event at a venue. It is a transportation exercise involving airports, hotels, parking areas, entry gates, VIP zones and thousands of visitors. A successful mobility plan starts before the first guest arrives.</p>
-      <p>Vehicles can be allocated according to guest categories, pickup points can be planned in advance and return transportation can be scheduled around the event's closing window.</p>
-      <p>For corporate delegations and VIP guests, dedicated cars can operate alongside larger shuttle fleets. The objective is to reduce congestion, minimise uncertainty and ensure that transportation supports the event rather than becoming an event of its own.</p>
-    `,
+    image: '/images/blog/employee-transport.jpg',
+    summary: 'The real difficulty lies in managing tight arrival timeframes. When proceedings start at 9 AM, attendees arrive within a narrow 30-minute window.',
+    content: '<p>The real difficulty lies in managing tight arrival timeframes rather than sheer headcounts. When proceedings start at 9 AM, attendees arrive within a narrow thirty-minute period. Large-scale transportation is fundamentally a capacity puzzle.</p>',
     relatedServiceSlug: 'large-events-air-shows',
-    relatedPackageSlug: 'corporate-event-package'
   },
   {
-    slug: 'south-india-chauffeur-vs-self-drive',
-    title: 'Self-Drive Holiday Without Driving: Why a Chauffeur Can Be Better',
+    slug: 'designing-order-in-crowd',
+    title: 'Designing Order in the Midst of a Crowd',
+    category: 'corporate-events',
+    categoryName: 'Large Events',
+    readTime: '5 min read',
+    date: 'Aug 24, 2026',
+    author: 'Large Events Team',
+    image: '/images/blog/airport-transfer.jpg',
+    summary: 'Stadium sports, expos and cultural festivals trigger concentrated travel spikes. High-density mobility planning must account for venue access, crowd flow and timing.',
+    content: '<p>Managing arrivals is only part of handling large crowds. Stadium sports, expos, cultural festivals and public gatherings trigger concentrated travel spikes within extremely short windows. A well-organized vehicle strategy reduces bottlenecks and creates orderly arrivals and departures.</p>',
+    relatedServiceSlug: 'large-events-air-shows',
+  },
+  {
+    slug: 'five-hundred-delegates-one-venue',
+    title: 'One Venue. Five Hundred Delegates. Multiple Movements.',
+    category: 'corporate-events',
+    categoryName: 'Large Events',
+    readTime: '6 min read',
+    date: 'Aug 22, 2026',
+    author: 'Large Events Team',
+    image: '/images/blog/employee-transport.jpg',
+    summary: 'Logistics become a dedicated operational system at scale. Airport rides, hotel shuttles, executive cars — each with tailored solutions.',
+    content: '<p>Logistics become a dedicated operational system at scale. An integrated convention transport strategy allocates vehicles based on guest groups, locations and target times. Hotel shuttles run on fixed rotations. VIPs receive dedicated cars. Airport arrivals are aligned with flight rosters.</p>',
+    relatedServiceSlug: 'large-events-air-shows',
+  },
+  {
+    slug: 'executive-travel-more-than-car',
+    title: 'Executive Travel Is More Than the Car',
+    category: 'executive-travel',
+    categoryName: 'Executive Travel',
+    readTime: '4 min read',
+    date: 'Aug 20, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/executive-travel.jpg',
+    summary: 'The car creates the first impression. The journey creates the experience. Punctuality, chauffeur conduct, privacy and flexibility matter just as much.',
+    content: '<p>The car creates the first impression. The journey creates the experience. Punctuality, chauffeur conduct, privacy, communication and flexibility can matter just as much as the vehicle. Luxury is useful. Thoughtful service is better.</p>',
+    relatedServiceSlug: 'executive-travel',
+  },
+  {
+    slug: 'right-car-for-every-journey',
+    title: 'The Right Car for Every Journey',
+    category: 'executive-travel',
+    categoryName: 'Executive Travel',
+    readTime: '4 min read',
+    date: 'Aug 18, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/executive-travel.jpg',
+    summary: "The most expensive vehicle isn't always the right vehicle. Start with four questions: Who is travelling, what is the purpose, how much space, how long?",
+    content: "<p>The most expensive vehicle isn't always the right vehicle. Good corporate travel isn't about choosing the biggest car. It is about choosing the one that makes the journey comfortable, practical and appropriate.</p>",
+    relatedServiceSlug: 'executive-travel',
+  },
+  {
+    slug: 'sedan-suv-luxury-van-which',
+    title: 'Sedan, SUV or Luxury Van? Match the Vehicle to the Journey',
+    category: 'executive-travel',
+    categoryName: 'Executive Travel',
+    readTime: '4 min read',
+    date: 'Aug 16, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/executive-travel.jpg',
+    summary: 'Passenger count is only the beginning. Consider route, duration and number of stops. Think passenger, luggage, purpose and distance first.',
+    content: '<p>Passenger count is only the beginning. A sedan works well for individual corporate travel and airport transfers. An SUV offers more room for longer journeys. A luxury van makes sense when a small group wants to travel together comfortably. Think passenger, luggage, purpose and distance first.</p>',
+    relatedServiceSlug: 'executive-travel',
+  },
+  {
+    slug: 'road-trip-without-driving',
+    title: 'A Road Trip Without the Driving',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Aug 14, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "A chauffeur-driven road trip gives travellers freedom without the responsibility of driving. You still own the itinerary — you simply don't have to drive it.",
+    content: "<p>Keep the freedom. Lose the fatigue. A chauffeur-driven road trip gives travellers something a self-drive holiday often struggles to provide: freedom without the responsibility of driving. You can decide where to stop, change the pace, spend longer at a destination or pull over for a photograph. You still own the itinerary. You simply don't have to drive it.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'chauffeur-shapes-journey',
+    title: 'The Chauffeur Shapes the Journey',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '4 min read',
+    date: 'Aug 12, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/executive-travel.jpg',
+    summary: 'The person behind the wheel shapes the experience. Punctuality, driving behaviour, communication and courtesy all influence how comfortable the passenger feels.',
+    content: '<p>The person behind the wheel shapes the experience. A chauffeur does much more than navigate the route. The longer the journey, the more noticeable these details become. A good vehicle gets you there. A good chauffeur makes getting there enjoyable.</p>',
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'changing-role-chauffeur-travel-india',
+    title: 'The Changing Role of Chauffeur Travel in India',
     category: 'outstation-travel',
     categoryName: 'South India Journeys',
     readTime: '5 min read',
     date: 'Aug 10, 2026',
     author: 'Travel Journal Desk',
-    summary: 'Why removing highway driving fatigue lets you enjoy the scenic beauty of Coorg, Ooty, Wayanad, and Gokarna from the passenger seat.',
-    content: `
-      <h2>Self-Drive Holiday Without Driving: Why a Chauffeur Can Be Better</h2>
-      <p>A South India road trip is often about the journey as much as the destination.</p>
-      <p>But long-distance driving changes the experience. Someone has to navigate, manage traffic, find parking and stay alert for hours.</p>
-      <p>A chauffeur-driven road trip removes that responsibility without taking away the freedom of travelling by road.</p>
-      <p>You can create your own route, decide where to stop, spend longer at a destination or change the plan altogether.</p>
-      <p>From Bengaluru to Coorg, Ooty, Hampi, Gokarna, Kabini or Kerala, the road remains yours.</p>
-      <p>The only difference is that you get to enjoy the view from the passenger seat.</p>
-    `,
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: 'Chauffeur services in India are now used across corporate travel, airport transfers, events, weddings and leisure journeys. The journey matters as much as the vehicle.',
+    content: '<p>It started with a car and driver. The expectation has grown considerably. Chauffeur services in India are now used across corporate travel, airport transfers, executive mobility, events, weddings and leisure journeys. Modern chauffeur travel is about creating a dependable way to move.</p>',
     relatedServiceSlug: 'south-india-road-journeys',
-    relatedPackageSlug: 'bengaluru-mysuru-coorg'
   },
   {
-    slug: 'business-plus-leisure',
-    title: 'Business + Leisure: Turn the Work Trip into a Road Trip',
+    slug: 'ev-corporate-travel-practical',
+    title: 'EVs for Corporate Travel: A Practical Choice',
+    category: 'corporate-mobility',
+    categoryName: 'Corporate Mobility',
+    readTime: '5 min read',
+    date: 'Aug 08, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'Electric vehicles can be a practical option for planned corporate travel, particularly city journeys and airport transfers. Suhalaya Travels has EVs in its fleet.',
+    content: '<p>For many journeys, EVs already make sense. The important question is whether the vehicle fits the route. Suhalaya Travels has EV vehicles in its fleet, giving corporate travellers another option when planning their transportation.</p>',
+    relatedServiceSlug: 'corporate-mobility',
+  },
+  {
+    slug: 'booking-ev-chauffeur-service',
+    title: 'Booking an EV Chauffeur Service',
+    category: 'corporate-mobility',
+    categoryName: 'Corporate Mobility',
+    readTime: '4 min read',
+    date: 'Aug 06, 2026',
+    author: 'Suhalaya Mobility Desk',
+    image: '/images/blog/corporate-car.jpg',
+    summary: 'Before booking, look at distance, charging requirements, passenger load and timing. Suhalaya Travels can arrange EV vehicles with four hours notice.',
+    content: "<p>Electric mobility works best when the journey is planned around it. Suhalaya Travels can arrange EV vehicles with four hours' notice, subject to availability. The point isn't to choose an EV simply because it is electric. Choose it because it works for the journey.</p>",
+    relatedServiceSlug: 'corporate-mobility',
+  },
+  {
+    slug: 'south-india-road-trip-duration',
+    title: 'How Long Is Long Enough for a South India Road Trip?',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Aug 04, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: 'Seven days, ten days, fifteen days or three weeks? The trick is not to count destinations. Choose your theme first, then build the route.',
+    content: '<p>Seven days works beautifully for a focused regional trip. Fifteen days opens the door to a richer multi-state road trip. The trick is not to count destinations. Choose your theme first: food, architecture, temples, beaches, hills or wildlife. A chauffeur-driven journey adds another advantage.</p>',
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'fifteen-days-five-landscapes',
+    title: 'Fifteen Days, Five Landscapes, One Great Road Trip',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Aug 02, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "Heritage, hills, backwaters, beaches and food. Fifteen days can create a wonderfully varied journey through the South — if you resist the temptation to cover everything.",
+    content: "<p>Fifteen days can create a wonderfully varied journey through the South. A thoughtfully planned route could move through Karnataka's heritage, Tamil Nadu's temple towns, the Western Ghats and Kerala's backwaters. The best itinerary isn't the fullest one. It's the one you'll remember.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'temple-trail-south-india',
+    title: 'Where Stone Tells Stories: Following the Temple Trail',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Jul 31, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/temple-trail.jpg',
+    summary: "South India's temples are destinations in their own right. A temple-focused road trip through Kanchipuram, Thanjavur, Madurai and Kanyakumari — without a checklist.",
+    content: "<p>South India's temples are extraordinary architectural journeys. A temple-focused road trip could take you through Kanchipuram, Mahabalipuram, Chidambaram, Thanjavur, Madurai, Rameswaram and Kanyakumari. A temple trail is about architecture, history, ritual and the landscapes connecting them.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'goa-gokarna-hampi-road-trip',
+    title: 'Sun, Sand, Ruins and Slow Evenings',
     category: 'outstation-travel',
     categoryName: 'South India Journeys',
     readTime: '4 min read',
-    date: 'Aug 05, 2026',
+    date: 'Jul 29, 2026',
     author: 'Travel Journal Desk',
-    summary: 'Extending corporate meetings in Bengaluru, Hyderabad, or Chennai into relaxing outstation road trips across South India.',
-    content: `
-      <h2>Business + Leisure: Turn the Work Trip into a Road Trip</h2>
-      <p>A business trip does not always have to end at the airport.</p>
-      <p>If meetings take you to Bengaluru, Hyderabad, Chennai or Kochi, adding a few days of personal travel can turn a work journey into a longer South India experience.</p>
-      <p>Meetings can be followed by Mysuru and Coorg, Chennai by Mahabalipuram and Pondicherry, or Kochi by Munnar and Thekkady.</p>
-      <p>With a chauffeur-driven vehicle, the transition from business to leisure can happen without changing transportation.</p>
-      <p>Finish the meeting. Close the laptop. Start the road trip.</p>
-    `,
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "Goa sunsets, Gokarna beaches, coastal Karnataka and Hampi's dramatic ruins. Some road trips are better when they leave room for the unplanned.",
+    content: "<p>Think Goa sunsets, Gokarna beaches, coastal Karnataka, Hampi's dramatic ruins and long lunches along the way. The trick is not overplanning. A chauffeur-driven road trip makes those detours easier. The best part of a fun road trip is often the part that wasn't on the original itinerary.</p>",
     relatedServiceSlug: 'south-india-road-journeys',
-    relatedPackageSlug: 'bengaluru-ooty-coonoor'
-  }
+  },
+  {
+    slug: 'food-trail-south-india',
+    title: 'Eat Your Way South',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '4 min read',
+    date: 'Jul 27, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/temple-trail.jpg',
+    summary: 'Why decide the route first when the food can help draw the map? South India offers dramatically different food traditions across six states.',
+    content: '<p>Why decide the route first when the food can help draw the map? South India offers dramatically different food traditions across Karnataka, Tamil Nadu, Kerala, Andhra Pradesh, Telangana and Goa. Follow a breakfast trail. Explore coastal cuisine. Ask locals where they actually eat.</p>',
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'architecture-journey-south-india',
+    title: 'A Journey Through Stone, Scale and Time',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Jul 25, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/temple-trail.jpg',
+    summary: "For an architecture lover, South India is almost impossible to exhaust. Badami, Hampi, Mysuru palaces, Tamil Nadu temple cities — extraordinary journeys through how culture and landscape evolved.",
+    content: "<p>For an architecture lover, the South is almost impossible to exhaust. Begin with Badami and Pattadakal. Continue through Hampi's ruins, Mysuru's palace traditions and Tamil Nadu's temple cities. South India doesn't just contain monuments. It offers an extraordinary journey through how architecture, culture and landscape have evolved together.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'family-road-trip-south-india',
+    title: "The Family Road Trip That Doesn't Feel Like a Road Trip",
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Jul 23, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "The secret is leaving enough room for everyone. A chauffeur-driven car changes the rhythm of the holiday — parents aren't driving and navigating, everyone can enjoy the scenery.",
+    content: "<p>The secret is leaving enough room for everyone. Choose fewer bases. Reduce unnecessary hotel changes. Build in rest days. A chauffeur-driven car also changes the rhythm of the holiday. Parents aren't simultaneously driving, navigating and managing the family. A successful family road trip isn't measured in kilometres. It's measured in how many people enjoyed it.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'first-south-india-trip',
+    title: 'Your First Taste of the South',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Jul 21, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/temple-trail.jpg',
+    summary: "You don't need to see everything. You need to find your reason to return. For a first trip, start with your interests.",
+    content: "<p>You don't need to see everything. You need to find your reason to return. Trying to combine everything in one trip usually means spending more time travelling between places than experiencing them. Your first South India journey should be an introduction, not an exam.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: '15-day-south-india-road-trip-works',
+    title: 'Can a 15-Day South India Road Trip Really Work?',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '5 min read',
+    date: 'Jul 19, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "Absolutely — but only if you stop trying to see everything. Fifteen days is plenty, not to see all of South India, but to experience a memorable part of it properly.",
+    content: '<p>Absolutely — but only if you stop trying to see everything. Fifteen days gives you enough time for a substantial multi-state journey. The key is pacing. A chauffeur can make long-distance travel considerably more comfortable. Fifteen days is plenty — not to see all of South India, but to experience a memorable part of it properly.</p>',
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
+  {
+    slug: 'take-route-leave-rest-open',
+    title: 'Take the Route. Leave the Rest Open.',
+    category: 'outstation-travel',
+    categoryName: 'South India Journeys',
+    readTime: '4 min read',
+    date: 'Jul 17, 2026',
+    author: 'Travel Journal Desk',
+    image: '/images/blog/south-india-roadtrip.jpg',
+    summary: "The best road trips have a little room for things you didn't plan. Know your broad route, book the hotels, keep the major destinations clear — then leave some space.",
+    content: "<p>The best road trips have a little room for things you didn't plan. Know your broad route. Book the important hotels. Keep the major destinations clear. Then leave some space. A chauffeur-driven journey makes spontaneous stops easier. Choose the direction. Let the journey surprise you.</p>",
+    relatedServiceSlug: 'south-india-road-journeys',
+  },
 ];

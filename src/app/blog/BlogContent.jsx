@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { blogsData } from '@/data/blogs';
@@ -62,12 +62,25 @@ export default function BlogContent() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
             {blogsData.map(blog => (
-              <div key={blog.slug} className="card" style={{ padding: '28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div key={blog.slug} className="card" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                {blog.image && (
+                  <div style={{ width: '100%', height: '200px', overflow: 'hidden', flexShrink: 0 }}>
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.4s ease' }}
+                      onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
+                      onMouseLeave={e => e.target.style.transform = 'scale(1)'}
+                    />
+                  </div>
+                )}
+                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
                     <div className="badge badge-sky" style={{ fontSize: '0.75rem' }}>{blog.categoryName}</div>
                     <span style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)' }}>{blog.readTime}</span>
                   </div>
+
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '12px', lineHeight: '1.35' }}>{blog.title}</h3>
                   <p style={{ fontSize: '0.92rem', color: 'var(--color-ink-600)', marginBottom: '20px', lineHeight: '1.6' }}>
                     {blog.summary}
@@ -79,7 +92,9 @@ export default function BlogContent() {
                     Read Article <ArrowRight size={14} />
                   </Link>
                 </div>
+                </div>
               </div>
+
             ))}
           </div>
         </div>
