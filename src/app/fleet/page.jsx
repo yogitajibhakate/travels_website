@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { fleetData } from '@/data/fleet';
 import { Car, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { QuoteButton, DiscussButton } from '@/components/QuoteButton';
 
 export const metadata = {
   title: 'Our Fleet — Premium Vehicles for Every Journey',
@@ -72,15 +73,9 @@ export default function FleetPage() {
                     </ul>
 
                     <div style={{ marginTop: '28px' }}>
-                      <button 
-                        onClick={() => {
-                          const btn = document.getElementById('header-quote-btn');
-                          if (btn) btn.click();
-                        }}
-                        className="btn btn-navy"
-                      >
+                      <QuoteButton className="btn btn-navy">
                         Request Quote for {f.name} <ArrowRight size={14} />
-                      </button>
+                      </QuoteButton>
                     </div>
                   </div>
                 </div>
@@ -110,16 +105,9 @@ export default function FleetPage() {
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.08rem', marginBottom: '32px', lineHeight: '1.6' }}>
             Tell us the passenger count, journey type and destination. We'll help identify the appropriate vehicle category.
           </p>
-          <button 
-            onClick={() => {
-              const btn = document.getElementById('header-corporate-btn') || document.getElementById('header-quote-btn');
-              if (btn) btn.click();
-            }} 
-            className="btn btn-primary"
-            style={{ padding: '16px 36px', fontSize: '1rem' }}
-          >
+          <DiscussButton className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1rem' }}>
             Discuss Your Requirement
-          </button>
+          </DiscussButton>
         </div>
       </section>
     </div>

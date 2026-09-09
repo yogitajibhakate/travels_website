@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import { ArrowRight, ChevronRight, CheckCircle2, Phone, Compass, Calendar, Building2, Users } from 'lucide-react';
+import { QuoteButton } from '@/components/QuoteButton';
 
 export const metadata = {
   title: 'Our Services — Corporate, Airport & Executive Travel',
@@ -448,16 +449,9 @@ export default function ServicesHubPage() {
           <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', marginBottom: '36px', lineHeight: '1.6' }}>
             Share the destination, date, number of people and what you're trying to organise. We'll help you identify the right mobility solution.
           </p>
-          <button 
-            onClick={() => {
-              const btn = document.getElementById('header-quote-btn');
-              if (btn) btn.click();
-            }} 
-            className="btn btn-primary"
-            style={{ padding: '16px 36px', fontSize: '1rem' }}
-          >
+          <QuoteButton className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1rem' }}>
             Request a Quote
-          </button>
+          </QuoteButton>
         </div>
       </section>
     </div>
