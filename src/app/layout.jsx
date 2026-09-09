@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
         <title>Suhalaya — Premium Chauffeur-Driven Mobility Partner South India</title>
         <meta name="description" content="Suhalaya is a premium chauffeur-driven mobility partner for corporate mobility, employee transport, airport transfers, executive travel, and South India road journeys." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="any" />
       </head>
       <body>
         <Header 
