@@ -144,8 +144,7 @@ export default function ServiceDetailPage({ params }) {
             </div>
             
             <div>
-              <div className="badge badge-gold" style={{ marginBottom: '12px' }}>Service Guarantee</div>
-              <h2>Suhalaya Operational SLA</h2>
+
               <p style={{ fontSize: '1.05rem', color: 'var(--color-ink-700)', lineHeight: '1.7', marginTop: '16px', whiteSpace: 'pre-line' }}>
                 {service.description}
               </p>
