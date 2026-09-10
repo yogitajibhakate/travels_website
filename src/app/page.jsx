@@ -432,28 +432,7 @@ export default function HomePage() {
       {/* 7. Safety Block */}
       <SafetyBlock />
 
-      {/* 8. Industry Expertise (Section 20) */}
-      <section className="section">
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
-            <span className="eyebrow">Exploring the world of comfort</span>
-            <div className="badge badge-sky" style={{ marginBottom: '12px' }}>Industry Expertise</div>
-            <h2>Mobility That Understands Your Industry</h2>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-            {industriesData.map(ind => (
-              <div key={ind.slug} className="card" style={{ padding: '24px' }}>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{ind.name}</h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-ink-900)', marginBottom: '16px', lineHeight: '1.5' }}>{ind.tagline}</p>
-                <Link href={`/corporate/industries/${ind.slug}`} style={{ fontSize: '0.85rem', fontWeight: '700', color: '#29ABE2', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                  Explore Vertical Mobility <ChevronRight size={14} color="#29ABE2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 9. South India Mini-Itineraries Showcase (Section 18) */}
       <section className="section section-steel">
