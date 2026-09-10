@@ -330,7 +330,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
+          <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             <div className="card" style={{ padding: '28px' }}>
               <div style={{ color: '#29ABE2', fontWeight: '800', fontSize: '1.2rem', marginBottom: '8px' }}>A Fleet That Scales</div>
               <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)' }}>

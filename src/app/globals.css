@@ -549,3 +549,11 @@ a {
   background-color: rgba(41, 171, 226, 0.25);
   color: var(--color-sky-600);
 }
+
+ @ m e d i a   ( m i n - w i d t h :   9 9 2 p x )   { 
+     . g r i d - 3   { 
+         d i s p l a y :   g r i d ; 
+         g r i d - t e m p l a t e - c o l u m n s :   r e p e a t ( 3 ,   1 f r )   ! i m p o r t a n t ; 
+     } 
+ }  
+ 
