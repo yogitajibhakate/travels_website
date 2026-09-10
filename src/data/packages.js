@@ -24,8 +24,8 @@ export const packagesData = [
     ]
   },
   {
-    slug: 'bengaluru-hampi-badami',
-    name: 'Bengaluru → Hampi → Badami',
+    slug: 'hyderabad-hampi-badami',
+    name: 'Hyderabad → Hampi → Badami',
     duration: '4 Days / 3 Nights',
     category: 'mini-itinerary',
     tagline: 'Ancient UNESCO heritage, cave temples, and boulder landscapes.',
@@ -38,18 +38,18 @@ export const packagesData = [
     ],
     fleetUsed: 'Innova Crysta SUV, Tempo Traveller',
     itineraryDays: [
-      { day: 'Day 1', title: 'Bengaluru → Hampi', detail: 'Arrive and explore the landscape around the ruins.' },
+      { day: 'Day 1', title: 'Hyderabad → Hampi', detail: 'Arrive and explore the landscape around the ruins.' },
       { day: 'Day 2', title: 'Hampi Heritage', detail: 'Virupaksha Temple, Vittala Temple, Royal Enclosure and sunset viewpoints.' },
       { day: 'Day 3', title: 'Hampi → Badami', detail: 'Continue towards Badami and explore its famous cave temples.' },
-      { day: 'Day 4', title: 'Badami → Bengaluru', detail: 'Return through the heritage landscape of northern Karnataka.' }
+      { day: 'Day 4', title: 'Badami → Hyderabad', detail: 'Return through the heritage landscape of northern Karnataka.' }
     ],
     faqs: [
       { q: 'Is this itinerary suitable for senior citizens?', a: 'Yes, our chauffeurs drop you as close to entry gates as permissible.' }
     ]
   },
   {
-    slug: 'bengaluru-ooty-coonoor',
-    name: 'Bengaluru → Ooty → Coonoor',
+    slug: 'coimbatore-ooty-coonoor',
+    name: 'Coimbatore → Ooty → Coonoor',
     duration: '3 Days / 2 Nights',
     category: 'mini-itinerary',
     tagline: 'Mist-covered tea estates and mountain drives in the Nilgiris.',
@@ -58,39 +58,39 @@ export const packagesData = [
       'Chauffeur experienced in hill station driving and sharp curves',
       'Comfortable AC SUV / Sedan with luggage rack option',
       'All toll taxes, state permits, and driver lodging fees covered',
-      'Scenic stopovers along Bandipur/Mudumalai forest stretches'
+      'Scenic stopovers along forest stretches'
     ],
     fleetUsed: 'Innova Crysta SUV, Honda City',
     itineraryDays: [
-      { day: 'Day 1', title: 'Bengaluru → Ooty', detail: 'Drive towards the Nilgiris and settle into the hills.' },
+      { day: 'Day 1', title: 'Coimbatore → Ooty', detail: 'Drive up towards the Nilgiris and settle into the hills.' },
       { day: 'Day 2', title: 'Ooty → Coonoor', detail: 'Tea estates, viewpoints and the quieter side of the Nilgiris.' },
-      { day: 'Day 3', title: 'Coonoor → Bengaluru', detail: 'A relaxed return journey.' }
+      { day: 'Day 3', title: 'Coonoor → Coimbatore', detail: 'A relaxed return journey.' }
     ],
     faqs: [
       { q: 'Are hill station driver allowances extra?', a: 'No, all driver night allowances and hill fees are fully included.' }
     ]
   },
   {
-    slug: 'bengaluru-wayanad',
-    name: 'Bengaluru → Wayanad',
-    duration: '3 Days / 2 Nights',
+    slug: 'kochi-munnar-alleppey',
+    name: 'Kochi → Munnar → Alleppey',
+    duration: '4 Days / 3 Nights',
     category: 'mini-itinerary',
-    tagline: 'Forest drives, waterfalls, and Western Ghats greenery.',
+    tagline: 'Tea gardens, backwater houseboats, and Kerala greenery.',
     bestFor: 'Nature lovers and relaxed family holidays.',
     inclusions: [
-      'Inter-state Kerala permit tax included',
-      'Expert highway chauffeur fluent in Kannada, Malayalam & English',
+      'Expert highway chauffeur fluent in Malayalam & English',
       'Dedicated vehicle reserved exclusively for your family',
       'Custom stopovers at spice plantations and waterfalls'
     ],
     fleetUsed: 'Innova Crysta SUV, Force Urbania',
     itineraryDays: [
-      { day: 'Day 1', title: 'Bengaluru → Wayanad', detail: 'Travel through Mysuru towards the Kerala hills.' },
-      { day: 'Day 2', title: 'Wayanad Sights', detail: 'Choose between waterfalls, plantations, viewpoints and heritage attractions.' },
-      { day: 'Day 3', title: 'Wayanad → Bengaluru', detail: 'Return through the forested routes of the Western Ghats.' }
+      { day: 'Day 1', title: 'Kochi → Munnar', detail: 'Travel from the coast into the high ranges of Kerala.' },
+      { day: 'Day 2', title: 'Munnar Sights', detail: 'Choose between waterfalls, plantations, and viewpoints.' },
+      { day: 'Day 3', title: 'Munnar → Alleppey', detail: 'Descend to the backwaters for a houseboat experience.' },
+      { day: 'Day 4', title: 'Alleppey → Kochi', detail: 'Return along the coastal route.' }
     ],
     faqs: [
-      { q: 'How are state entry permits handled when entering Kerala?', a: 'Our chauffeurs hold valid inter-state permits and manage tax checkpoints automatically.' }
+      { q: 'Can we add a houseboat stay?', a: 'Yes, we coordinate your drop-off and pick-up directly at the boat jetties.' }
     ]
   },
   {
@@ -118,8 +118,8 @@ export const packagesData = [
     ]
   },
   {
-    slug: 'bengaluru-gokarna-udupi',
-    name: 'Bengaluru → Gokarna → Udupi',
+    slug: 'mangalore-udupi-gokarna',
+    name: 'Mangaluru → Udupi → Gokarna',
     duration: '4 Days / 3 Nights',
     category: 'mini-itinerary',
     tagline: 'Coastal highways, serene beaches, and historic coastal temples.',
@@ -132,33 +132,33 @@ export const packagesData = [
     ],
     fleetUsed: 'Innova Crysta SUV, Force Urbania',
     itineraryDays: [
-      { day: 'Day 1', title: 'Bengaluru → Gokarna', detail: 'Drive across Karnataka towards the Arabian Sea coast.' },
-      { day: 'Day 2', title: 'Gokarna', detail: 'Beaches, temples and a slow coastal day.' },
-      { day: 'Day 3', title: 'Gokarna → Udupi', detail: 'Continue along the Karnataka coast.' },
-      { day: 'Day 4', title: 'Udupi → Bengaluru', detail: 'Return journey to Bengaluru.' }
+      { day: 'Day 1', title: 'Mangaluru → Udupi', detail: 'Drive across the coast, visit Malpe and Krishna Temple.' },
+      { day: 'Day 2', title: 'Udupi → Murudeshwar', detail: 'Coastal drive to the iconic Shiva temple by the sea.' },
+      { day: 'Day 3', title: 'Murudeshwar → Gokarna', detail: 'Continue to Gokarna for beaches and a slow coastal day.' },
+      { day: 'Day 4', title: 'Gokarna → Mangaluru', detail: 'Return journey down the coast.' }
     ],
     faqs: [
       { q: 'Is there a minimum daily km charge?', a: 'Outstation packages feature flat, all-inclusive pricing with transparent caps.' }
     ]
   },
   {
-    slug: 'bengaluru-tirupati-chennai',
-    name: 'Bengaluru → Tirupati → Chennai',
+    slug: 'chennai-tirupati-kanchipuram',
+    name: 'Chennai → Tirupati → Kanchipuram',
     duration: '3 Days / 2 Nights',
     category: 'mini-itinerary',
-    tagline: 'Pilgrimage, heritage architecture, and coastal city exploration.',
+    tagline: 'Pilgrimage, heritage architecture, and silk city exploration.',
     bestFor: 'A good combination of pilgrimage, heritage and city exploration.',
     inclusions: [
       'Andhra Pradesh & Tamil Nadu inter-state permits included',
       'Patient driver familiar with temple entry procedures',
-      'Dedicated vehicle for smooth transition from temple to beach highway',
+      'Dedicated vehicle for smooth transition between temple towns',
       'Luggage assistance and senior-citizen friendly vehicle access'
     ],
     fleetUsed: 'Innova Crysta SUV, Executive Sedan',
     itineraryDays: [
-      { day: 'Day 1', title: 'Bengaluru → Tirupati', detail: 'Drive to sacred Tirupati hills for darshan and evening stay.' },
-      { day: 'Day 2', title: 'Tirupati → Chennai', detail: 'Continue towards Chennai and explore coastal attractions.' },
-      { day: 'Day 3', title: 'Chennai / Mahabalipuram → Bengaluru', detail: 'Visit Mahabalipuram shore temples and return to Bengaluru.' }
+      { day: 'Day 1', title: 'Chennai → Tirupati', detail: 'Drive to sacred Tirupati hills for darshan and evening stay.' },
+      { day: 'Day 2', title: 'Tirupati → Kanchipuram', detail: 'Continue towards the city of thousand temples.' },
+      { day: 'Day 3', title: 'Kanchipuram → Chennai', detail: 'Explore the silk weavers and return to Chennai.' }
     ],
     faqs: [
       { q: 'Can the driver assist with luggage at Tirupati hotels?', a: 'Yes, our chauffeurs are exceptionally helpful and assist with all guest luggage.' }
