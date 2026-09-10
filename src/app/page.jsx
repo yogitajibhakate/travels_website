@@ -544,10 +544,7 @@ export default function HomePage() {
                   <h3 style={{ fontSize: '1.2rem' }}>{loc.city}</h3>
                 </div>
                 <div style={{ fontSize: '0.8rem', color: '#1E8FC2', fontWeight: '700', marginBottom: '8px' }}>{loc.type}</div>
-                <p style={{ fontSize: '0.85rem', color: 'var(--color-ink-900)', marginBottom: '16px' }}>{loc.address}</p>
-                <Link href={`/locations/${loc.slug}`} style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--color-navy-900)' }}>
-                  View Dispatch Point Details →
-                </Link>
+                <p style={{ fontSize: '0.85rem', color: 'var(--color-ink-900)', margin: '0' }}>{loc.address}</p>
               </div>
             ))}
           </div>
