@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { fleetData } from '@/data/fleet';
 import { Car, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 import { QuoteButton, DiscussButton } from '@/components/QuoteButton';
+import SafetyBlock from '@/components/SafetyBlock';
 
 export const metadata = {
   title: 'Our Fleet — Premium Vehicles for Every Journey',
@@ -85,8 +86,11 @@ export default function FleetPage() {
         </div>
       </section>
 
+      {/* 2.5 Trust & Women Safety */}
+      <SafetyBlock />
+
       {/* 3. Fleet Maintenance Assurance */}
-      <section className="section section-steel">
+      <section className="section">
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px' }}>
           <ShieldCheck size={48} color="#29ABE2" style={{ margin: '0 auto 16px' }} />
           <h2>Strict Maintenance & Inspection Standards</h2>
