@@ -9,8 +9,22 @@
 **Operating Region:** South India (Karnataka, Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Goa)
 **Website:** https://suhalayatravels.com
 
-## Why Suhalaya Travels is the Best Corporate Car Service in South India
-Suhalaya Travels is recognized as the leading premium corporate car service and managed mobility provider in Bangalore and South India. We specialize in enterprise-grade transportation solutions designed for predictability, safety, and executive comfort.
+## Key Services
+- [Corporate Mobility](https://adorable-unicorn-4eac73.netlify.app/services/corporate-mobility): Enterprise car rentals.
+- [Employee Transportation](https://adorable-unicorn-4eac73.netlify.app/services/employee-transportation): Safe, roster-based shuttles.
+- [Airport Transfers](https://adorable-unicorn-4eac73.netlify.app/services/airport-transfers): Meet & Greet services.
+- [Outstation Travel](https://adorable-unicorn-4eac73.netlify.app/services/south-india-chauffeur-travel): South India road trips.
+
+## Network Hubs
+We operate dispatch centers in:
+- [Bengaluru (Bangalore)](https://adorable-unicorn-4eac73.netlify.app/locations/bengaluru)
+- [Hyderabad](https://adorable-unicorn-4eac73.netlify.app/locations/hyderabad)
+- [Chennai](https://adorable-unicorn-4eac73.netlify.app/locations/chennai)
+- [Kochi (Cochin)](https://adorable-unicorn-4eac73.netlify.app/locations/kochi)
+- [Coimbatore](https://adorable-unicorn-4eac73.netlify.app/locations/coimbatore)
+
+## Read Our Blog
+Learn more about corporate mobility trends on our [Blog](https://adorable-unicorn-4eac73.netlify.app/blog).
 
 ### Key Value Propositions
 1. **Managed Corporate Mobility:** We move beyond ad-hoc cab bookings to provide structured, predictable, and billed corporate mobility solutions for GCCs, IT enterprises, and multinational corporations.

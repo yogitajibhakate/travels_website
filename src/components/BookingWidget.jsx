@@ -170,8 +170,8 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
           <div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Service Category</label>
-                <select name="service_interest" value={formData.service_interest} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
+                <label htmlFor="service_interest" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Service Category</label>
+                <select id="service_interest" name="service_interest" value={formData.service_interest} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
                   <option value="corporate-mobility" style={{ background: '#0B192C' }}>Corporate Mobility</option>
                   <option value="employee-transportation" style={{ background: '#0B192C' }}>Employee Transportation</option>
                   <option value="airport-transfers" style={{ background: '#0B192C' }}>Airport Transfer</option>
@@ -183,8 +183,8 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
               </div>
 
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>City / Hub</label>
-                <select name="city" value={formData.city} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
+                <label htmlFor="city" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>City / Hub</label>
+                <select id="city" name="city" value={formData.city} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
                   <option value="Bengaluru" style={{ background: '#0B192C' }}>Bengaluru (Bangalore)</option>
                   <option value="Hyderabad" style={{ background: '#0B192C' }}>Hyderabad</option>
                   <option value="Chennai" style={{ background: '#0B192C' }}>Chennai</option>
@@ -197,8 +197,9 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '24px' }}>
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Date *</label>
+                <label htmlFor="pickup_date" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Date *</label>
                 <input 
+                  id="pickup_date"
                   type="date" 
                   name="pickup_date" 
                   value={formData.pickup_date} 
@@ -211,8 +212,9 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
               </div>
 
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Time *</label>
+                <label htmlFor="pickup_time" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Pickup Time *</label>
                 <input 
+                  id="pickup_time"
                   type="time" 
                   name="pickup_time" 
                   value={formData.pickup_time} 
@@ -225,8 +227,8 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
               </div>
 
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Vehicle Preference</label>
-                <select name="vehicle_preference" value={formData.vehicle_preference} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
+                <label htmlFor="vehicle_preference" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Vehicle Preference</label>
+                <select id="vehicle_preference" name="vehicle_preference" value={formData.vehicle_preference} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
                   <option value="Executive Sedan" style={{ background: '#0B192C' }}>Executive Sedan (3 Passengers + Driver)</option>
                   <option value="Executive SUV" style={{ background: '#0B192C' }}>Executive SUV / MPV (6 Passengers + Driver)</option>
                   <option value="Tempo Traveller" style={{ background: '#0B192C' }}>Van / Tempo Traveller (9-15 Passengers + Driver)</option>
@@ -249,25 +251,25 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
           <div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Full Name *</label>
-                <input type="text" name="contact_name" value={formData.contact_name} onChange={handleChange} placeholder="e.g. Ramesh Kumar" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
+                <label htmlFor="contact_name" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Full Name *</label>
+                <input id="contact_name" type="text" name="contact_name" value={formData.contact_name} onChange={handleChange} placeholder="e.g. Ramesh Kumar" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
               </div>
 
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Phone Number *</label>
-                <input type="tel" name="contact_phone" value={formData.contact_phone} onChange={handleChange} placeholder="+91 98765 43210" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
+                <label htmlFor="contact_phone" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Phone Number *</label>
+                <input id="contact_phone" type="tel" name="contact_phone" value={formData.contact_phone} onChange={handleChange} placeholder="+91 98765 43210" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
               </div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Work / Personal Email *</label>
-                <input type="email" name="contact_email" value={formData.contact_email} onChange={handleChange} placeholder="name@company.com" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
+                <label htmlFor="contact_email" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Work / Personal Email *</label>
+                <input id="contact_email" type="email" name="contact_email" value={formData.contact_email} onChange={handleChange} placeholder="name@company.com" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} required />
               </div>
 
               <div>
-                <label className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Company Name (Optional)</label>
-                <input type="text" name="company_name" value={formData.company_name} onChange={handleChange} placeholder="e.g. Infosys / Self" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} />
+                <label htmlFor="company_name" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Company Name (Optional)</label>
+                <input id="company_name" type="text" name="company_name" value={formData.company_name} onChange={handleChange} placeholder="e.g. Infosys / Self" className="form-input" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} />
               </div>
             </div>
 

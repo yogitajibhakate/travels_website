@@ -32,7 +32,7 @@ export default function CorporateAccountModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={onClose} role="button" tabIndex={0} aria-label="Close modal" onKeyDown={(e) => e.key === 'Escape' && onClose()}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div style={{ padding: '24px 28px 16px', borderBottom: '1px solid var(--color-steel-200)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
