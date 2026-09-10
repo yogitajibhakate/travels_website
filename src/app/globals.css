@@ -564,3 +564,7 @@ a {
     grid-template-columns: repeat(5, 1fr) !important;
   }
 }
+
+
+.hide-scroll::-webkit-scrollbar { display: none; }
+.hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
