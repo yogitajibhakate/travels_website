@@ -51,7 +51,7 @@ const jsonLd = {
   ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     opens: '00:00',
     closes: '23:59',
   },
@@ -69,7 +69,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* 1. Hero */}
-      <Hero 
+      <Hero
         onOpenQuoteModal={() => {
           const btn = document.getElementById('header-quote-btn');
           if (btn) btn.click();
@@ -136,9 +136,9 @@ export default function HomePage() {
 
             {/* Visual Image Banner */}
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-card)', border: '1px solid var(--color-steel-200)' }}>
-              <img 
-                src="/images/executive-chauffeur.png" 
-                alt="Suhalaya Executive Chauffeur Mobility" 
+              <img
+                src="/images/executive-chauffeur.png"
+                alt="Suhalaya Executive Chauffeur Mobility"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
               />
             </div>
@@ -308,9 +308,9 @@ export default function HomePage() {
 
             {/* Scenic South India Road Trip Image */}
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-              <img 
-                src="/images/south-india-trip.png" 
-                alt="South India Scenic Road Trips" 
+              <img
+                src="/images/south-india-trip.png"
+                alt="South India Scenic Road Trips"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
               />
             </div>
@@ -455,7 +455,7 @@ export default function HomePage() {
                   <div className="badge badge-sky" style={{ marginBottom: '12px', fontSize: '0.75rem' }}>{pkg.duration}</div>
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '8px' }}>{pkg.name}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '16px' }}>{pkg.tagline}</p>
-                  
+
                   <div style={{ backgroundColor: 'var(--color-white)', padding: '12px', borderRadius: '8px', border: '1px solid var(--color-steel-200)', fontSize: '0.85rem', color: 'var(--color-navy-900)', marginBottom: '20px' }}>
                     <strong>Best for:</strong> {pkg.bestFor}
                   </div>
@@ -545,18 +545,18 @@ export default function HomePage() {
             We'll work out the transportation around it.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button 
+            <button
               onClick={() => {
                 const btn = document.getElementById('header-quote-btn');
                 if (btn) btn.click();
-              }} 
+              }}
               className="btn btn-primary"
               style={{ padding: '16px 36px', fontSize: '1rem' }}
             >
               Request a Quote
             </button>
-            <a 
-              href="tel:+918049007777" 
+            <a
+              href="tel:+918049007777"
               className="btn btn-outline-white"
               style={{ padding: '16px 36px', fontSize: '1rem' }}
             >
