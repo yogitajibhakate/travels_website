@@ -187,6 +187,8 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 style={{ background: 'none', border: 'none', color: 'var(--color-navy-900)', padding: '6px', cursor: 'pointer' }}
                 className="mobile-toggle"
+                aria-label="Toggle mobile navigation menu"
+                id="mobile-menu-toggle-btn"
               >
                 {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
