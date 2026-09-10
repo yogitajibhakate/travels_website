@@ -405,7 +405,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '28px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
             {fleetData.map(f => (
               <div key={f.id} className="card" style={{ padding: '24px' }}>
                 <div className="badge badge-sky" style={{ marginBottom: '12px', fontSize: '0.75rem' }}>{f.tag}</div>
