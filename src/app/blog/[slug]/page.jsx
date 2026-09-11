@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { blogsData } from '@/data/blogs';
 import { servicesData } from '@/data/services';
 import BookingWidget from '@/components/BookingWidget';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -76,52 +77,97 @@ export default async function BlogDetailPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Blog Article Header */}
-      <section className="section section-dark" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
-        <div className="container" style={{ maxWidth: '840px' }}>
-          <div className="badge badge-gold" style={{ marginBottom: '16px' }}>{post.categoryName}</div>
-          <h1 style={{ color: '#FFF', marginBottom: '20px', lineHeight: '1.25' }}>{post.title}</h1>
-          <div style={{ display: 'flex', gap: '20px', fontSize: '0.88rem', color: '#CBD4DC' }}>
-            <span>Author: {post.author}</span>
-            <span>•</span>
-            <span>{post.date}</span>
-            <span>•</span>
-            <span>{post.readTime}</span>
+      <section className="section section-dark" style={{ paddingTop: '100px', paddingBottom: '120px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="container" style={{ maxWidth: '880px', position: 'relative', zIndex: 1, textAlign: 'center' }}>
+          <div className="badge badge-sky" style={{ marginBottom: '24px', backgroundColor: 'rgba(41, 171, 226, 0.15)', borderColor: 'rgba(41, 171, 226, 0.3)' }}>{post.categoryName}</div>
+          <h1 style={{ color: '#FFF', marginBottom: '32px', lineHeight: '1.2' }}>{post.title}</h1>
+          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', fontSize: '0.95rem', color: '#CBD4DC', fontWeight: '500' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><User size={16} color="var(--color-sky-500)" /> {post.author}</span>
+            <span style={{ color: 'var(--color-navy-700)' }}>|</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Calendar size={16} color="var(--color-sky-500)" /> {post.date}</span>
+            <span style={{ color: 'var(--color-navy-700)' }}>|</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Clock size={16} color="var(--color-sky-500)" /> {post.readTime}</span>
           </div>
         </div>
       </section>
 
       {/* Article Content & Contextual CTA */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: '0' }}>
         <div className="container" style={{ maxWidth: '840px' }}>
+          
+          {/* Hero Image pulled up to overlap header slightly */}
+          <div style={{ marginTop: '-80px', marginBottom: '60px', borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: '0 20px 40px rgba(15, 42, 82, 0.15)', position: 'relative', zIndex: 2, backgroundColor: 'var(--color-steel-100)', aspectRatio: '16/9' }}>
+            <Image 
+              src={post.image} 
+              alt={post.title} 
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 840px) 100vw, 840px"
+              priority
+            />
+          </div>
+
           {/* Main Article Body */}
-          <div 
-            style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--color-ink-900)', marginBottom: '48px' }}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
           {/* Contextual Service Callout */}
-          <div className="card" style={{ padding: '32px', backgroundColor: 'var(--color-steel-100)', borderLeft: '6px solid var(--color-navy-900)', marginBottom: '48px' }}>
-            <div className="badge badge-navy" style={{ marginBottom: '10px' }}>Recommended Service</div>
-            <h3 style={{ fontSize: '1.3rem', marginBottom: '8px' }}>{relatedService.name}</h3>
-            <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-600)', marginBottom: '20px' }}>{relatedService.tagline}</p>
-            <Link href={`/services/${relatedService.slug}`} className="btn btn-navy">
-              Explore {relatedService.shortTitle} Solutions <ArrowRight size={14} />
-            </Link>
+          <div style={{ 
+            marginTop: '64px',
+            marginBottom: '64px',
+            borderRadius: 'var(--radius-lg)', 
+            overflow: 'hidden',
+            position: 'relative',
+            backgroundColor: 'var(--color-navy-900)',
+            color: 'var(--color-white)',
+            boxShadow: '0 20px 40px rgba(15, 42, 82, 0.2)'
+          }}>
+            {/* Background Pattern */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, backgroundImage: 'linear-gradient(135deg, transparent 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, transparent 50%, transparent 75%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.2) 100%)', backgroundSize: '20px 20px' }}></div>
+            
+            <div style={{ padding: '48px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '6px solid var(--color-sky-500)' }}>
+              <div style={{ 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                gap: '8px', 
+                backgroundColor: 'rgba(255,255,255,0.1)', 
+                padding: '6px 14px', 
+                borderRadius: 'var(--radius-pill)', 
+                fontSize: '0.8rem', 
+                fontWeight: '700', 
+                textTransform: 'uppercase', 
+                letterSpacing: '0.05em', 
+                color: 'var(--color-sky-500)', 
+                marginBottom: '20px' 
+              }}>
+                <ArrowRight size={14} /> Recommends
+              </div>
+              
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '16px', color: '#FFF' }}>{relatedService.name}</h3>
+              <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)', marginBottom: '32px', lineHeight: '1.7', maxWidth: '600px' }}>
+                {relatedService.tagline}
+              </p>
+              
+              <Link href={`/services/${relatedService.slug}`} className="btn btn-primary" style={{ backgroundColor: 'var(--color-sky-500)', color: '#fff', border: 'none', padding: '14px 28px' }}>
+                Explore Solutions <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
 
           {/* Related Articles */}
           {relatedPosts.length > 0 && (
-            <div style={{ paddingTop: '40px', borderTop: '1px solid var(--color-steel-200)' }}>
-              <h3 style={{ marginBottom: '24px' }}>Related Travel Journal Articles</h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            <div style={{ paddingTop: '56px', borderTop: '2px solid var(--color-steel-100)' }}>
+              <h3 style={{ marginBottom: '32px', fontSize: '1.8rem' }}>More from our Journal</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
                 {relatedPosts.map(p => (
-                  <div key={p.slug} className="card" style={{ padding: '20px' }}>
-                    <h4 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>{p.title}</h4>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--color-ink-600)', marginBottom: '14px' }}>{p.summary.substring(0, 90)}...</p>
-                    <Link href={`/blog/${p.slug}`} style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--color-navy-900)' }}>
-                      Read Article →
-                    </Link>
-                  </div>
+                  <Link href={`/blog/${p.slug}`} key={p.slug} className="card" style={{ padding: '24px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <div className="badge badge-navy" style={{ alignSelf: 'flex-start', marginBottom: '16px', fontSize: '0.7rem' }}>{p.categoryName}</div>
+                    <h4 style={{ fontSize: '1.2rem', marginBottom: '12px', lineHeight: '1.4' }}>{p.title}</h4>
+                    <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-600)', marginBottom: '24px', flexGrow: 1 }}>{p.summary.substring(0, 100)}...</p>
+                    <span style={{ fontSize: '0.9rem', fontWeight: '700', color: 'var(--color-sky-500)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      Read Article <ArrowRight size={14} />
+                    </span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -132,10 +178,15 @@ export default async function BlogDetailPage({ params }) {
       {/* Embedded Quote Form */}
       <section className="section section-steel">
         <div className="container" style={{ maxWidth: '640px' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Request a Mobility Quote</h2>
-          <BookingWidget sourcePage={`/blog/${post.slug}`} />
+          <h2 style={{ textAlign: 'center', marginBottom: '32px' }}>Require Professional Mobility?</h2>
+          <div className="card" style={{ padding: '0', overflow: 'hidden', border: 'none', boxShadow: 'var(--shadow-hover)' }}>
+            <div style={{ padding: '32px 32px 0' }}>
+              <BookingWidget sourcePage={`/blog/${post.slug}`} />
+            </div>
+          </div>
         </div>
       </section>
     </div>
   );
 }
+
