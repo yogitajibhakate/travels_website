@@ -153,30 +153,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted, defaultSe
         </div>
       </div>
 
-      {/* Widget Service Category Tabs Header */}
-      <div style={{ display: 'flex', backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: 'var(--radius-pill)', padding: '4px', marginBottom: '24px', gap: '4px' }}>
-        <button 
-          type="button"
-          onClick={() => setFormData(p => ({ ...p, service_interest: 'corporate-mobility' }))}
-          style={{ flex: 1, padding: '9px 12px', borderRadius: 'var(--radius-pill)', border: 'none', background: formData.service_interest === 'corporate-mobility' ? 'var(--color-sky-500)' : 'transparent', color: formData.service_interest === 'corporate-mobility' ? '#FFF' : 'rgba(255,255,255,0.7)', fontSize: '0.82rem', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s ease' }}
-        >
-          Corporate
-        </button>
-        <button 
-          type="button"
-          onClick={() => setFormData(p => ({ ...p, service_interest: 'airport-transfers' }))}
-          style={{ flex: 1, padding: '9px 12px', borderRadius: 'var(--radius-pill)', border: 'none', background: formData.service_interest === 'airport-transfers' ? 'var(--color-sky-500)' : 'transparent', color: formData.service_interest === 'airport-transfers' ? '#FFF' : 'rgba(255,255,255,0.7)', fontSize: '0.82rem', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s ease' }}
-        >
-          Airport
-        </button>
-        <button 
-          type="button"
-          onClick={() => setFormData(p => ({ ...p, service_interest: 'south-india-chauffeur-travel' }))}
-          style={{ flex: 1, padding: '9px 12px', borderRadius: 'var(--radius-pill)', border: 'none', background: formData.service_interest === 'south-india-chauffeur-travel' ? 'var(--color-sky-500)' : 'transparent', color: formData.service_interest === 'south-india-chauffeur-travel' ? '#FFF' : 'rgba(255,255,255,0.7)', fontSize: '0.82rem', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s ease' }}
-        >
-          Outstation
-        </button>
-      </div>
+      {/* Removed Widget Service Category Tabs Header as per user request to avoid confusion on service pages */}
 
       <form onSubmit={handleSubmit}>
         {step === 1 ? (
