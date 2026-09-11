@@ -130,6 +130,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
             <Link href="/locations" style={{ color: 'rgba(255,255,255,0.6)' }}>Locations</Link>
             <Link href="/blog" style={{ color: 'rgba(255,255,255,0.6)' }}>Blog</Link>
             <Link href="/contact" style={{ color: 'rgba(255,255,255,0.6)' }}>Contact Us</Link>
+            <Link href="/admin/login" style={{ color: 'rgba(255,255,255,0.6)' }}>Admin Login</Link>
           </div>
         </div>
 

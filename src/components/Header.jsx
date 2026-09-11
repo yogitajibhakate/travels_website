@@ -178,6 +178,28 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 <span>+91 80 4900 7777</span>
               </a>
 
+              {/* Login Button */}
+              <Link 
+                href="/login" 
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: '6px', 
+                  color: '#FFFFFF', 
+                  fontSize: '0.88rem', 
+                  fontWeight: '600',
+                  padding: '8px 20px',
+                  borderRadius: 'var(--radius-pill)',
+                  backgroundColor: '#29ABE2',
+                  border: 'none',
+                  transition: 'all 0.2s ease',
+                  textDecoration: 'none'
+                }}
+                className="login-btn-header"
+              >
+                Login
+              </Link>
+
               {/* Hidden trigger elements for modal triggers */}
               <button id="header-corporate-btn" onClick={onOpenCorporateModal} style={{ display: 'none' }} aria-hidden="true" />
               <button id="header-quote-btn" onClick={onOpenQuoteModal} style={{ display: 'none' }} aria-hidden="true" />
@@ -210,6 +232,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
           <Link href="/packages" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Packages</Link>
           <Link href="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Blog</Link>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--color-navy-900)', fontWeight: '600', fontSize: '1.05rem' }}>Contact Us</Link>
+          <Link href="/login" onClick={() => setMobileMenuOpen(false)} style={{ color: '#29ABE2', fontWeight: '600', fontSize: '1.05rem', marginTop: '8px' }}>Login</Link>
         </div>
       )}
     </header>

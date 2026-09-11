@@ -113,43 +113,43 @@ export default async function BlogDetailPage({ params }) {
 
           {/* Contextual Service Callout */}
           <div style={{ 
-            marginTop: '64px',
-            marginBottom: '64px',
-            borderRadius: 'var(--radius-lg)', 
+            marginTop: '40px',
+            marginBottom: '48px',
+            borderRadius: 'var(--radius-md)', 
             overflow: 'hidden',
             position: 'relative',
-            backgroundColor: 'var(--color-navy-900)',
-            color: 'var(--color-white)',
-            boxShadow: '0 20px 40px rgba(15, 42, 82, 0.2)'
+            backgroundColor: '#F8FAFC', /* Soft light gray/blue */
+            border: '1px solid var(--color-steel-200)',
+            borderLeft: '4px solid var(--color-sky-500)',
           }}>
-            {/* Background Pattern */}
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, backgroundImage: 'linear-gradient(135deg, transparent 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, transparent 50%, transparent 75%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.2) 100%)', backgroundSize: '20px 20px' }}></div>
+            {/* Very subtle background pattern instead of dark */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.03, backgroundImage: 'linear-gradient(135deg, var(--color-sky-500) 25%, transparent 25%, transparent 50%, var(--color-sky-500) 50%, var(--color-sky-500) 75%, transparent 75%, transparent 100%)', backgroundSize: '10px 10px' }}></div>
             
-            <div style={{ padding: '48px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '6px solid var(--color-sky-500)' }}>
+            <div style={{ padding: '32px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
               <div style={{ 
                 display: 'inline-flex', 
                 alignItems: 'center', 
-                gap: '8px', 
-                backgroundColor: 'rgba(255,255,255,0.1)', 
-                padding: '6px 14px', 
+                gap: '6px', 
+                backgroundColor: 'rgba(41, 171, 226, 0.1)', 
+                padding: '4px 12px', 
                 borderRadius: 'var(--radius-pill)', 
-                fontSize: '0.8rem', 
+                fontSize: '0.75rem', 
                 fontWeight: '700', 
                 textTransform: 'uppercase', 
                 letterSpacing: '0.05em', 
-                color: 'var(--color-sky-500)', 
-                marginBottom: '20px' 
+                color: 'var(--color-sky-600)', 
+                marginBottom: '16px' 
               }}>
-                <ArrowRight size={14} /> Recommends
+                <ArrowRight size={14} /> Recommended for you
               </div>
               
-              <h3 style={{ fontSize: '1.8rem', marginBottom: '16px', color: '#FFF' }}>{relatedService.name}</h3>
-              <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)', marginBottom: '32px', lineHeight: '1.7', maxWidth: '600px' }}>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '12px', color: 'var(--color-navy-900)' }}>{relatedService.name}</h3>
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-ink-700)', marginBottom: '24px', lineHeight: '1.6', maxWidth: '700px' }}>
                 {relatedService.tagline}
               </p>
               
-              <Link href={`/services/${relatedService.slug}`} className="btn btn-primary" style={{ backgroundColor: 'var(--color-sky-500)', color: '#fff', border: 'none', padding: '14px 28px' }}>
-                Explore Solutions <ArrowRight size={16} />
+              <Link href={`/services/${relatedService.slug}`} className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '10px 20px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                Explore Solutions <ArrowRight size={14} />
               </Link>
             </div>
           </div>
