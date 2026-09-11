@@ -94,7 +94,7 @@ export default function ServiceDetailPage({ params }) {
 
             {/* Embedded Quote Widget pre-filled with service */}
             <div>
-              <BookingWidget sourcePage={`/services/${service.slug}`} />
+              <BookingWidget sourcePage={`/services/${service.slug}`} defaultService={service.slug} />
             </div>
           </div>
         </div>

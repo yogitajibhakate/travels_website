@@ -4,15 +4,28 @@ import { useState, useEffect } from 'react';
 import { submitLeadToCRM } from '@/data/crm';
 import { CheckCircle2, ArrowRight, Car, MapPin, Calendar, User, Phone, Mail, Building, Sparkles } from 'lucide-react';
 
-export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
+export default function BookingWidget({ sourcePage = '/', onSubmitted, defaultService }) {
   const [mounted, setMounted] = useState(false);
   const [todayDate, setTodayDate] = useState('');
   const [nowTime, setNowTime] = useState('');
 
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  
+  // Map of slugs to valid select option values to prevent blank selects
+  const validServices = [
+    'corporate-mobility', 'employee-transportation', 'airport-transfers', 
+    'chauffeur-on-call', 'south-india-chauffeur-travel', 'weddings-family-events', 
+    'executive-vip-travel', 'corporate-events-conferences', 'pilgrimage-heritage-travel',
+    'large-events-air-shows', 'team-outings-offsites'
+  ];
+  
+  const initialService = (defaultService && validServices.includes(defaultService)) 
+    ? defaultService 
+    : 'corporate-mobility';
+
   const [formData, setFormData] = useState({
-    service_interest: 'corporate-mobility',
+    service_interest: initialService,
     city: 'Bengaluru',
     pickup_date: '',
     pickup_time: '09:00',
@@ -158,8 +171,8 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
         </button>
         <button 
           type="button"
-          onClick={() => setFormData(p => ({ ...p, service_interest: 'south-india-road-journeys' }))}
-          style={{ flex: 1, padding: '9px 12px', borderRadius: 'var(--radius-pill)', border: 'none', background: formData.service_interest === 'south-india-road-journeys' || formData.service_interest === 'outstation-chauffeur-south-india' ? 'var(--color-sky-500)' : 'transparent', color: formData.service_interest === 'south-india-road-journeys' || formData.service_interest === 'outstation-chauffeur-south-india' ? '#FFF' : 'rgba(255,255,255,0.7)', fontSize: '0.82rem', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s ease' }}
+          onClick={() => setFormData(p => ({ ...p, service_interest: 'south-india-chauffeur-travel' }))}
+          style={{ flex: 1, padding: '9px 12px', borderRadius: 'var(--radius-pill)', border: 'none', background: formData.service_interest === 'south-india-chauffeur-travel' ? 'var(--color-sky-500)' : 'transparent', color: formData.service_interest === 'south-india-chauffeur-travel' ? '#FFF' : 'rgba(255,255,255,0.7)', fontSize: '0.82rem', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s ease' }}
         >
           Outstation
         </button>
@@ -176,9 +189,13 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted }) {
                   <option value="employee-transportation" style={{ background: '#0B192C' }}>Employee Transportation</option>
                   <option value="airport-transfers" style={{ background: '#0B192C' }}>Airport Transfer</option>
                   <option value="chauffeur-on-call" style={{ background: '#0B192C' }}>Chauffeur on Call</option>
-                  <option value="outstation-chauffeur-south-india" style={{ background: '#0B192C' }}>Outstation South India</option>
+                  <option value="south-india-chauffeur-travel" style={{ background: '#0B192C' }}>Outstation South India</option>
                   <option value="weddings-family-events" style={{ background: '#0B192C' }}>Weddings & Events</option>
                   <option value="executive-vip-travel" style={{ background: '#0B192C' }}>Executive VIP Travel</option>
+                  <option value="corporate-events-conferences" style={{ background: '#0B192C' }}>Corporate Events</option>
+                  <option value="pilgrimage-heritage-travel" style={{ background: '#0B192C' }}>Pilgrimage & Heritage</option>
+                  <option value="large-events-air-shows" style={{ background: '#0B192C' }}>Large Events</option>
+                  <option value="team-outings-offsites" style={{ background: '#0B192C' }}>Team Outings</option>
                 </select>
               </div>
 
