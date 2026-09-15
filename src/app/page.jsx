@@ -200,18 +200,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
-              <div>
-                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Business Mobility</div>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Chauffeur on Call</h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
-                  Need a car for a few hours, a full day or a specific engagement? Book around your schedule.
-                </p>
-              </div>
-              <Link href="/services/chauffeur-on-call" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Explore Details <ChevronRight size={16} color="#29ABE2" />
-              </Link>
-            </div>
 
             <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
               <div>
@@ -255,12 +243,12 @@ export default function HomePage() {
             <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
               <div>
                 <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Journeys Beyond</div>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>South India Chauffeur Travel</h3>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>South India Travel</h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
                   Build your own road journey across South India and enjoy the route without driving it yourself.
                 </p>
               </div>
-              <Link href="/services/south-india-chauffeur-travel" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Link href="/services/south-india-travel" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                 Explore Details <ChevronRight size={16} color="#29ABE2" />
               </Link>
             </div>
@@ -275,7 +263,7 @@ export default function HomePage() {
             <div>
               <span className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>Exploring the world of comfort</span>
               <div className="badge badge-heritage" style={{ marginBottom: '16px' }}>
-                <Compass size={14} style={{ marginRight: '6px' }} /> South India Chauffeur Travel
+                <Compass size={14} style={{ marginRight: '6px' }} /> South India Travel
               </div>
               <h2 style={{ color: '#FFF', fontSize: '2.4rem', marginBottom: '20px' }}>
                 You Plan the Journey. We Handle the Road.
@@ -300,7 +288,7 @@ export default function HomePage() {
               </p>
 
               <div>
-                <Link href="/services/south-india-chauffeur-travel" className="btn btn-primary">
+                <Link href="/services/south-india-travel" className="btn btn-primary">
                   Plan a South India Journey <ArrowRight size={16} />
                 </Link>
               </div>
@@ -558,7 +546,7 @@ export default function HomePage() {
               Request a Quote
             </button>
             <a
-              href="tel:+918049007777"
+              href="tel:+919187140587"
               className="btn btn-outline-white"
               style={{ padding: '16px 36px', fontSize: '1rem' }}
             >

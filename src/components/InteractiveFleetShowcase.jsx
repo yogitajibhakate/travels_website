@@ -10,23 +10,23 @@ export default function InteractiveFleetShowcase({ onOpenQuoteModal }) {
 
   const categories = [
     { id: 'all', label: 'All Fleet' },
-    { id: 'Executive Sedans', label: 'Executive Sedans' },
-    { id: 'Premium SUVs', label: 'Premium SUVs' },
-    { id: 'Luxury MPVs', label: 'Luxury MPVs' },
-    { id: 'Group Transportation', label: 'Coaches & Vans' },
+    { id: 'Economy', label: 'Economy' },
+    { id: 'Executive', label: 'Executive' },
+    { id: 'Premium', label: 'Premium' },
+    { id: 'Luxury', label: 'Luxury' },
+    { id: 'Multi-passenger', label: 'Multi-passenger' },
   ];
 
   const filteredFleet = activeCategory === 'all' 
     ? fleetData 
-    : fleetData.filter(item => item.tag === activeCategory || (activeCategory === 'Group Transportation' && item.tag.includes('Coaches')));
+    : fleetData.filter(item => item.tag === activeCategory);
 
   const fleetImages = {
-    'executive-sedans': '/images/executive-chauffeur.png',
-    'premium-suvs': '/images/south-india-trip.png',
-    'luxury-mpvs': '/images/executive-chauffeur.png',
-    'executive-luxury-sedans': '/images/wedding-event-fleet.png',
-    'luxury-coaches-buses': '/images/employee-shuttle-fleet.png',
-    'tempo-travellers-urbania': '/images/employee-shuttle-fleet.png',
+    'economy': '/images/executive-chauffeur.png',
+    'executive': '/images/executive-chauffeur.png',
+    'premium': '/images/south-india-trip.png',
+    'luxury': '/images/wedding-event-fleet.png',
+    'multi-passenger': '/images/employee-shuttle-fleet.png',
   };
 
   return (
@@ -70,14 +70,41 @@ export default function InteractiveFleetShowcase({ onOpenQuoteModal }) {
           </div>
         </div>
 
-        {/* Fleet Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '32px' }}>
+        <style jsx>{`
+          .fleet-scroll-container {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding-bottom: 24px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+          }
+          .fleet-scroll-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+          }
+          .fleet-card {
+            flex: 0 0 340px;
+            scroll-snap-align: start;
+          }
+          @media (min-width: 768px) {
+            .fleet-scroll-container {
+              gap: 32px;
+            }
+            .fleet-card {
+              flex: 0 0 380px;
+            }
+          }
+        `}</style>
+        
+        {/* Fleet Grid / Scroll */}
+        <div className="fleet-scroll-container">
           {filteredFleet.map(vehicle => {
             const vehicleImage = fleetImages[vehicle.id] || '/images/executive-chauffeur.png';
             return (
               <div 
                 key={vehicle.id} 
-                className="card"
+                className="card fleet-card"
                 style={{
                   padding: '0',
                   display: 'flex',

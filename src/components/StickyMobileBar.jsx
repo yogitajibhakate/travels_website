@@ -6,7 +6,7 @@ export default function StickyMobileBar({ onOpenQuoteModal }) {
   return (
     <div className="mobile-sticky-bar" id="mobile-sticky-bar">
       <a 
-        href="tel:+918049007777" 
+        href="tel:+919187140587" 
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFF', fontSize: '0.75rem', gap: '2px' }}
       >
         <Phone size={18} color="#29ABE2" />
@@ -14,7 +14,7 @@ export default function StickyMobileBar({ onOpenQuoteModal }) {
       </a>
 
       <a 
-        href="https://wa.me/918049007777" 
+        href="https://wa.me/919187140587" 
         target="_blank" 
         rel="noopener noreferrer" 
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#25D366', fontSize: '0.75rem', gap: '2px' }}

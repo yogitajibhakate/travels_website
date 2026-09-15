@@ -47,13 +47,12 @@ export default function ServiceDetailPage({ params }) {
       case 'large-events-air-shows':
       case 'corporate-events-conferences':
         return '/images/employee-shuttle-fleet.png';
-      case 'south-india-chauffeur-travel':
+      case 'south-india-travel':
       case 'pilgrimage-heritage-travel':
       case 'team-outings-offsites':
         return '/images/south-india-trip.png';
       case 'corporate-mobility':
       case 'executive-vip-travel':
-      case 'chauffeur-on-call':
         return '/images/executive-chauffeur.png';
       default:
         return '/images/hero-bg.jpg';
@@ -86,7 +85,7 @@ export default function ServiceDetailPage({ params }) {
                   {service.ctaText || `Request ${service.shortTitle} Quote`} <ArrowRight size={16} />
                 </button>
                 
-                <a href="https://wa.me/918049007777" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                <a href="https://wa.me/919187140587" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
                   WhatsApp Helpline
                 </a>
               </div>

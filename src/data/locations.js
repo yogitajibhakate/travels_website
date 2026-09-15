@@ -5,7 +5,7 @@ export const locationsData = [
     type: 'Head Office & Operations Control Center',
     tagline: 'Corporate Chauffeur & Mobility Services in Bengaluru',
     address: 'Suhalaya Mobility Towers, Outer Ring Road, Bellandur, Bengaluru, Karnataka 560103',
-    phone: '+91 80 4900 7777',
+    phone: '+91 91871 40587',
     email: 'blr.dispatch@suhalaya.com',
     hours: '24/7 Dispatch Control & Corporate Desk',
     serviceArea: 'South Bengaluru, Electronic City, Mysore Road, East Bengaluru, Whitefield, Bellandur, ORR, North Bengaluru, Hebbal, Nagawara, Airport Road, Central Bengaluru, Domlur and Peenya.',

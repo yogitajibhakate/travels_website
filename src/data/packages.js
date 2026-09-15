@@ -24,30 +24,6 @@ export const packagesData = [
     ]
   },
   {
-    slug: 'hyderabad-hampi-badami',
-    name: 'Hyderabad → Hampi → Badami',
-    duration: '4 Days / 3 Nights',
-    category: 'mini-itinerary',
-    tagline: 'Ancient UNESCO heritage, cave temples, and boulder landscapes.',
-    bestFor: 'Architecture, history and photography enthusiasts.',
-    inclusions: [
-      'Dedicated chauffeur-driven vehicle for 4 days',
-      'Highway FASTag tolls, state permit taxes, and driver night allowances',
-      'Spacious luggage capacity and comfortable seating',
-      'Custom stops at heritage ruins and temple sites'
-    ],
-    fleetUsed: 'Innova Crysta SUV, Tempo Traveller',
-    itineraryDays: [
-      { day: 'Day 1', title: 'Hyderabad → Hampi', detail: 'Arrive and explore the landscape around the ruins.' },
-      { day: 'Day 2', title: 'Hampi Heritage', detail: 'Virupaksha Temple, Vittala Temple, Royal Enclosure and sunset viewpoints.' },
-      { day: 'Day 3', title: 'Hampi → Badami', detail: 'Continue towards Badami and explore its famous cave temples.' },
-      { day: 'Day 4', title: 'Badami → Hyderabad', detail: 'Return through the heritage landscape of northern Karnataka.' }
-    ],
-    faqs: [
-      { q: 'Is this itinerary suitable for senior citizens?', a: 'Yes, our chauffeurs drop you as close to entry gates as permissible.' }
-    ]
-  },
-  {
     slug: 'coimbatore-ooty-coonoor',
     name: 'Coimbatore → Ooty → Coonoor',
     duration: '3 Days / 2 Nights',

@@ -95,7 +95,7 @@ export default function ContactPage() {
                   <Phone size={22} color="#29ABE2" />
                   <div>
                     <div style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Phone / WhatsApp</div>
-                    <a href="tel:+919900556611" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 99005 56611</a>
+                    <a href="https://wa.me/919187140587" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 91871 40587</a>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
               <div style={{ padding: '18px', backgroundColor: '#FFF', borderRadius: '12px', border: '1px solid var(--color-steel-200)' }}>
                 <div style={{ fontWeight: '700', fontSize: '0.92rem', color: 'var(--color-navy-900)', marginBottom: '4px' }}>Headquarters Address</div>
                 <div style={{ fontSize: '0.88rem', color: 'var(--color-ink-700)' }}>{headOffice.address}</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--color-grey-500)', marginTop: '8px' }}>24/7 Corporate Control Desk: +91 80 4900 7777</div>
+                <div style={{ fontSize: '0.82rem', color: 'var(--color-grey-500)', marginTop: '8px' }}>24/7 Corporate Control Desk: +91 91871 40587</div>
               </div>
             </div>
 

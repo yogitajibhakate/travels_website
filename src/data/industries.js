@@ -47,7 +47,7 @@ export const industriesData = [
       'Branch audit team outstation travel across South India',
       'VIP investor & financial summit delegate transport'
     ],
-    relevantServices: ['chauffeur-on-call', 'executive-vip-mobility', 'airport-transfers']
+    relevantServices: ['corporate-mobility', 'executive-vip-mobility', 'airport-transfers']
   },
   {
     slug: 'consulting',
@@ -55,11 +55,11 @@ export const industriesData = [
     tagline: 'Client visits, executive mobility, multi-city business travel and team transportation.',
     description: 'Punctual, professional chauffeur services enabling management consultants to work productively between client appointments.',
     useCases: [
-      'Dedicated Chauffeur on Call for full-day client engagements',
+      'Dedicated corporate mobility for full-day client engagements',
       'Multi-city executive airport & hotel mobility',
       'Project team outstation travel'
     ],
-    relevantServices: ['chauffeur-on-call', 'executive-vip-mobility', 'pan-india-mobility']
+    relevantServices: ['corporate-mobility', 'executive-vip-mobility', 'pan-india-mobility']
   },
   {
     slug: 'ai-technology',

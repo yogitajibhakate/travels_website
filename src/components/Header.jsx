@@ -85,10 +85,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                         Airport Transfers
                         <small>Airport-to-office, hotel, home and onward transfers.</small>
                       </Link>
-                      <Link href="/services/chauffeur-on-call" className="mega-link">
-                        Chauffeur on Call
-                        <small>A chauffeur and vehicle available around your schedule.</small>
-                      </Link>
+
                       <Link href="/services/executive-vip-travel" className="mega-link">
                         Executive & VIP Travel
                         <small>Executive cars and chauffeur-driven travel for important guests and leadership.</small>
@@ -119,8 +116,8 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                     {/* Column 3: JOURNEYS BEYOND THE CITY */}
                     <div className="mega-column">
                       <h4>JOURNEYS BEYOND THE CITY</h4>
-                      <Link href="/services/south-india-chauffeur-travel" className="mega-link">
-                        South India Chauffeur Travel
+                      <Link href="/services/south-india-travel" className="mega-link">
+                        South India Travel
                         <small>Self-planned chauffeur-driven road journeys across South India.</small>
                       </Link>
                       <Link href="/services/pilgrimage-heritage-travel" className="mega-link">
@@ -158,7 +155,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
             {/* Action CTAs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <a 
-                href="tel:+918049007777" 
+                href="https://wa.me/919187140587" 
                 style={{ 
                   display: 'inline-flex', 
                   alignItems: 'center', 
@@ -175,7 +172,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 className="phone-link-wrapper"
               >
                 <Phone size={15} color="#29ABE2" className="pulse-icon" />
-                <span>+91 80 4900 7777</span>
+                <span>+91 91871 40587</span>
               </a>
 
               {/* Login Button */}

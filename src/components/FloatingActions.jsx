@@ -38,7 +38,7 @@ export default function FloatingActions({ onOpenQuoteModal }) {
         >
           {/* WhatsApp Direct Chat */}
           <a
-            href="https://wa.me/918049007777?text=Hello%20Suhalaya%20Travels,%20I%20would%20like%20to%20enquire%20about%20chauffeur%20mobility%20services."
+            href="https://wa.me/919187140587?text=Hello%20Suhalaya%20Travels,%20I%20would%20like%20to%20enquire%20about%20chauffeur%20mobility%20services."
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -60,7 +60,7 @@ export default function FloatingActions({ onOpenQuoteModal }) {
 
           {/* 24/7 Phone Call */}
           <a
-            href="tel:+918049007777"
+            href="tel:+919187140587"
             style={{
               display: 'flex',
               alignItems: 'center',

@@ -69,7 +69,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
             </p>
 
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <a href="tel:+918049007777" className="btn btn-outline-white" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>
+              <a href="tel:+919187140587" className="btn btn-outline-white" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>
                 <Phone size={14} /> Call Us
               </a>
               <button onClick={onOpenQuoteModal} className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>

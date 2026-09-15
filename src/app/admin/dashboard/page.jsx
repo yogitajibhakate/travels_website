@@ -10,6 +10,7 @@ export default function AdminDashboard() {
   const router = useRouter();
 
   const [blogs, setBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('manual'); // 'manual' | 'ai'
 
@@ -36,60 +37,51 @@ export default function AdminDashboard() {
     loadAllBlogs();
   }, []);
 
-  const loadAllBlogs = () => {
+  const loadAllBlogs = async () => {
+    setIsLoading(true);
     try {
-      const deletedSlugs = JSON.parse(localStorage.getItem('admin_deleted_slugs') || '[]');
-      const statusOverrides = JSON.parse(localStorage.getItem('admin_status_overrides') || '{}');
-      const createdPosts = JSON.parse(localStorage.getItem('admin_created_posts') || '[]');
+      const response = await fetch('/api/blogs', { cache: 'no-store' });
+      const text = await response.text();
+      let data = [];
+      try {
+        data = JSON.parse(text);
+      } catch (err) {
+        console.warn('Could not parse response:', text.slice(0, 100));
+        data = [];
+      }
+      
+      // Map Google Sheet rows to dashboard format
+      const formattedList = Array.isArray(data) ? data.map((b, index) => ({
+        id: `sheet-${index + 1}`,
+        title: b.title || b.Title || '',
+        slug: b.slug || b.Slug || '',
+        fullSlug: `/blog/${b.slug || b.Slug}`,
+        dateCreated: b.dateCreated || b.Date || new Date().toLocaleDateString(),
+        status: b.status || b.Status || 'Published',
+        summary: b.summary || b.Summary || b.meta_description || '',
+        category: b.category || b.Category || 'Corporate Travel',
+        imageUrl: b.imageUrl || b.Image || b.image_url || ''
+      })) : [];
 
-      // Format static blogs
-      const staticList = blogsData
-        .filter(b => !deletedSlugs.includes(b.slug))
-        .map((blog, index) => {
-          const status = statusOverrides[blog.slug] || 'Published';
-          return {
-            id: `static-${index + 1}`,
-            title: blog.title,
-            slug: blog.slug,
-            fullSlug: `/blog/${blog.slug}`,
-            dateCreated: blog.date || 'August 7, 2024',
-            status: status
-          };
-        });
-
-      // Format locally created posts
-      const localList = createdPosts
-        .filter(p => !deletedSlugs.includes(p.slug))
-        .map((p, idx) => ({
-          id: `local-${idx + 1}`,
-          title: p.title,
-          slug: p.slug,
-          fullSlug: `/blog/${p.slug}`,
-          dateCreated: p.dateCreated || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-          status: statusOverrides[p.slug] || p.status || 'Published'
-        }));
-
-      setBlogs([...localList, ...staticList]);
+      setBlogs(formattedList);
     } catch (e) {
-      console.error(e);
-      // Fallback
-      setBlogs(blogsData.map((blog, index) => ({
-        id: `fallback-${index + 1}`,
-        title: blog.title,
-        slug: blog.slug,
-        fullSlug: `/blog/${blog.slug}`,
-        dateCreated: blog.date || 'August 7, 2024',
-        status: 'Published'
-      })));
+      console.error('Error fetching blogs:', e);
+      setBlogs([]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const handleStatusToggle = (slug, currentStatus) => {
     const newStatus = currentStatus === 'Published' ? 'Draft' : 'Published';
     try {
-      const overrides = JSON.parse(localStorage.getItem('admin_status_overrides') || '{}');
-      overrides[slug] = newStatus;
-      localStorage.setItem('admin_status_overrides', JSON.stringify(overrides));
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'update_status', slug, status: newStatus })
+      }).catch(err => console.error('Error updating status on sheet:', err));
     } catch (e) {
       console.error(e);
     }
@@ -102,11 +94,13 @@ export default function AdminDashboard() {
       return;
     }
     try {
-      const deletedSlugs = JSON.parse(localStorage.getItem('admin_deleted_slugs') || '[]');
-      if (!deletedSlugs.includes(slug)) {
-        deletedSlugs.push(slug);
-        localStorage.setItem('admin_deleted_slugs', JSON.stringify(deletedSlugs));
-      }
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'delete', slug })
+      }).catch(err => console.error('Error deleting from sheet:', err));
     } catch (e) {
       console.error(e);
     }
@@ -148,10 +142,18 @@ export default function AdminDashboard() {
     };
 
     try {
-      const existing = JSON.parse(localStorage.getItem('admin_created_posts') || '[]');
-      const filtered = existing.filter(p => p.slug !== slug);
-      filtered.unshift(newPost);
-      localStorage.setItem('admin_created_posts', JSON.stringify(filtered));
+      // Send to Google Sheets Web App
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
+      const postData = { ...newPost, action: 'create' };
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(postData)
+      }).catch(err => console.error('Error saving to sheet:', err));
+
+      // Optimistic update
+      setBlogs(prev => [newPost, ...prev]);
     } catch (err) {
       console.error(err);
     }
@@ -192,76 +194,37 @@ export default function AdminDashboard() {
       else if (lower.includes("employee") || lower.includes("shuttle")) category = "Employee Transportation";
       else if (lower.includes("chauffeur") || lower.includes("luxury")) category = "Luxury Chauffeur";
 
-      let title = `${cleanTopic.charAt(0).toUpperCase() + cleanTopic.slice(1)}: Comprehensive Guide & Mobility Solutions`;
-      if (!title.toLowerCase().includes("bangalore")) {
-        title += " in Bangalore";
-      }
-
-      let slug = title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
-      const summary = `Explore essential strategies, corporate best practices, and logistics solutions for ${cleanTopic}. Learn how Suhalaya Travels provides 24/7 reliable, compliant, and premium transport in Bangalore.`;
-
-      // Fallback Unsplash image curated for travels
-      const sampleImages = [
-        "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
-      ];
-      const imageUrl = sampleImages[Math.floor(Math.random() * sampleImages.length)];
-
-      const content = `<p class="lead">Navigating modern corporate mobility requirements calls for seamless operational coordination, experienced drivers, and uncompromised safety compliance. In this comprehensive guide, we explore key insights for <strong>${cleanTopic}</strong> and how organization managers and travel planners can optimize their transport workflow across Bangalore.</p>
-
-<h2>Critical Considerations for ${cleanTopic}</h2>
-<p>Corporate travel administrators and event coordinators frequently contend with common mobility hurdles: unpredictable delay risks, unverified driver credentials, opaque pricing structures, and lack of real-time GPS fleet tracking. Mitigating these risks is paramount for ensuring corporate compliance and seamless guest experiences.</p>
-
-<h2>Why Choose Suhalaya Travels?</h2>
-<p>With over 25+ years of dedicated service in Bangalore, <strong>Suhalaya Travels Private Limited</strong> is trusted by top MNCs, tech hubs, and event planners to deliver gold-standard transportation solutions.</p>
-<ul>
-  <li><strong>Vetted Professional Chauffeurs:</strong> Every driver undergoes rigorous background verification, route training, and customer service orientation.</li>
-  <li><strong>Fleet Versatility & Luxury:</strong> Choose from executive sedans, premium SUVs, 12-26 seater Tempo Travellers, and luxury coaches.</li>
-  <li><strong>24/7 Command Center Monitoring:</strong> Automated GPS tracking and live dispatch management ensure on-time arrival guaranteed.</li>
-  <li><strong>Transparent B2B Invoicing:</strong> Simplified monthly corporate billing with compliance-ready tax invoices.</li>
-</ul>`;
-
-      // Attempt webhook trigger if n8n is configured
+      // Trigger webhook for n8n to generate the blog
+      setGenerationMessage('Sending topic to n8n AI workflow...');
       try {
-        fetch('https://profithax.app.n8n.cloud/webhook/generate-blog', {
+        await fetch('https://profithax.app.n8n.cloud/webhook/generate-blog', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ topic: cleanTopic, status: aiStatus })
-        }).catch(() => {});
-      } catch (e) {}
+        });
+      } catch (e) {
+        console.warn('Webhook triggered (may have CORS or background execution):', e);
+      }
 
-      // Simulate a quick AI processing delay for great UX
-      await new Promise(r => setTimeout(r, 1200));
-
-      const newPost = {
-        title,
-        slug,
-        summary,
-        category,
-        status: aiStatus,
-        imageUrl,
-        imageAlt: `Suhalaya Travels ${cleanTopic}`,
-        content,
-        dateCreated: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-      };
-
-      const existing = JSON.parse(localStorage.getItem('admin_created_posts') || '[]');
-      const filtered = existing.filter(p => p.slug !== slug);
-      filtered.unshift(newPost);
-      localStorage.setItem('admin_created_posts', JSON.stringify(filtered));
-
-      alert(`✨ AI Blog Generated & Added Successfully!\nTitle: ${title}`);
-      setIsCreateModalOpen(false);
-      setAiTopic('');
-      loadAllBlogs();
+      setGenerationMessage('AI is researching & writing the blog to Google Sheets...');
+      
+      // Keep modal in progress or finish and schedule a refresh
+      setTimeout(() => {
+        setIsGenerating(false);
+        setIsCreateModalOpen(false);
+        setAiTopic('');
+        loadAllBlogs();
+        alert('🚀 Blog generation started! n8n is creating the blog and saving it to Google Sheets. If it does not appear right away, it will show up in 15-30 seconds once n8n completes.');
+        
+        // Auto refresh again after 20 seconds to pick up the new sheet row
+        setTimeout(() => {
+          loadAllBlogs();
+        }, 20000);
+      }, 1500);
     } catch (err) {
       console.error(err);
-      alert('Error generating blog. Please try again.');
-    } finally {
       setIsGenerating(false);
-      setGenerationMessage('');
+      alert('Error connecting to AI webhook.');
     }
   };
 
@@ -332,9 +295,13 @@ export default function AdminDashboard() {
 
           {/* Table Body */}
           <div>
-            {blogs.length === 0 ? (
+            {isLoading ? (
               <div style={{ padding: '40px', textAlign: 'center', color: '#64748b' }}>
-                No blog posts found.
+                Loading blogs from Google Sheets...
+              </div>
+            ) : blogs.length === 0 ? (
+              <div style={{ padding: '40px', textAlign: 'center', color: '#64748b' }}>
+                No blog posts found in Google Sheets.
               </div>
             ) : (
               blogs.map((blog) => {

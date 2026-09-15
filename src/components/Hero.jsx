@@ -100,7 +100,7 @@ export default function Hero({ onOpenQuoteModal, onOpenCorporateModal }) {
               <ShieldCheck size={24} />
             </div>
             <div>
-              <div style={{ fontWeight: '700', color: '#FFF', fontSize: '0.96rem' }}>Background-Vetted Drivers</div>
+              <div style={{ fontWeight: '700', color: '#FFF', fontSize: '0.96rem' }}>Background-Vetted Chauffeurs</div>
               <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.65)' }}>Professional conduct & safety</div>
             </div>
           </div>

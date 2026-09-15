@@ -38,7 +38,7 @@ export default function CorporatePage() {
                 <Link href="/corporate/create-account" className="btn btn-primary">
                   Create Corporate Account <ArrowRight size={16} />
                 </Link>
-                <a href="tel:+918049007777" className="btn btn-outline-white">
+                <a href="tel:+919187140587" className="btn btn-outline-white">
                   Call Corporate Desk
                 </a>
               </div>

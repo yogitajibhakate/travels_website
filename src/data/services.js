@@ -124,47 +124,6 @@ For corporate guests, airport transportation can also form part of a wider busin
     ]
   },
   {
-    slug: 'chauffeur-on-call',
-    name: 'Chauffeur on Call',
-    shortTitle: 'Chauffeur on Call',
-    categoryCluster: 'business-mobility',
-    categoryName: 'BUSINESS MOBILITY',
-    priority: 'P0',
-    tagline: 'A chauffeur and vehicle available around your schedule.',
-    heroHeadline: 'Your Day. Your Schedule. Your Chauffeur.',
-    heroSubheadline: 'Sometimes you don\'t need a transfer. You need a car available when you need it.',
-    description: `Sometimes you don't need a transfer. You need a car available when you need it.
-
-For meetings across the city, appointments, business engagements or a full day of movement, chauffeur-on-call gives you the flexibility to keep the vehicle with you for the duration of your requirement.
-
-Choose the vehicle for the occasion and spend the day focusing on what brought you there—not traffic or parking.`,
-    ctaText: 'Book a Chauffeur',
-    whoItsFor: 'Morning meetings, Multiple appointments, Shopping and personal travel, Business engagements, Full-day city movement',
-    whatsIncluded: [
-      'Dedicated vehicle & driver at your disposal for 4hr, 8hr, or 12hr packages',
-      'Flexible routes with unlimited intermediate stops',
-      'Experienced chauffeurs familiar with local city geography & traffic patterns',
-      'Fuel, maintenance, and insurance fully covered',
-      'Seamless extension options if your day runs longer'
-    ],
-    vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'Luxury Sedans'],
-    steps: [
-      { number: '01', title: 'Package Selection', description: 'Choose your preferred duration (e.g. 8 Hrs / 80 Kms) and vehicle class.' },
-      { number: '02', title: 'Chauffeur Arrival', description: 'Your vehicle arrives at your designated starting point ahead of time.' },
-      { number: '03', title: 'Flexible Itinerary', description: 'Travel to multiple meetings, lunch, and stops without rebooking.' },
-      { number: '04', title: 'Day Wrap-Up', description: 'Simple duty slip confirmation upon final drop-off.' }
-    ],
-    useCases: [
-      'Multi-meeting Business Days',
-      'Client Entertainment & Dinners',
-      'City Sightseeing & Personal Chauffeur Usage'
-    ],
-    faqs: [
-      { q: 'Can I extend the package hours during the trip?', a: 'Yes, extra hours and kilometers are calculated transparently at standard pro-rata rates.' },
-      { q: 'Is the chauffeur dedicated exclusively to me?', a: 'Yes, the car and driver remain exclusively assigned to you for your entire booking duration.' }
-    ]
-  },
-  {
     slug: 'executive-vip-travel',
     name: 'Executive & VIP Travel',
     shortTitle: 'Executive VIP Travel',
@@ -329,18 +288,18 @@ Keeping these movements organised means families can concentrate on the celebrat
     ]
   },
   {
-    slug: 'south-india-chauffeur-travel',
-    name: 'South India Chauffeur Travel',
+    slug: 'south-india-travel',
+    name: 'South India Travel',
     shortTitle: 'South India Road Trips',
     categoryCluster: 'journeys-beyond',
     categoryName: 'JOURNEYS BEYOND THE CITY',
     priority: 'P0',
     tagline: 'Self-planned chauffeur-driven road journeys across South India.',
     heroHeadline: 'Your Route. Your Pace. Our Chauffeur.',
-    heroSubheadline: 'Forget the fixed sightseeing circuit. Build the trip around what you actually want to see.',
+    heroSubheadline: 'Forget the fixed sightseeing circuit. Build the trip around what you actually want to see across South India, including Goa.',
     description: `Forget the fixed sightseeing circuit. Build the trip around what you actually want to see.
 
-Spend longer in Mysuru. Take a detour through Coorg. Combine Hampi and Badami. Head towards Ooty, Wayanad, Gokarna or Kerala.
+Spend longer in Mysuru. Take a detour through Coorg. Combine Hampi and Badami. Head towards Ooty, Wayanad, Gokarna, Udupi, Tirupati, Chennai, or Kerala. Explore travel across South India, including Goa, with our wide range of 3-seater to 45-seater vehicle availability.
 
 The chauffeur handles the road while you experience the journey. Build the route around your own interests and schedule.`,
     ctaText: 'Build Your Road Trip',

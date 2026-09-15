@@ -1,15 +1,34 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { blogsData } from '@/data/blogs';
 import { servicesData } from '@/data/services';
-import BookingWidget from '@/components/BookingWidget';
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = blogsData.find(b => b.slug === slug);
-  if (!post) return {};
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
+  let data = [];
+  try {
+    const res = await fetch(scriptUrl, { cache: 'no-store' });
+    const text = await res.text();
+    data = JSON.parse(text);
+  } catch (err) {
+    data = [];
+  }
+  const rawPost = Array.isArray(data) ? data.find(b => {
+    const slugVal = b.slug || b.Slug || '';
+    return slugVal.toLowerCase() === slug.toLowerCase();
+  }) : null;
+
+  if (!rawPost) return {};
+
+  const post = {
+    title: rawPost.title || rawPost.Title || '',
+    summary: rawPost.summary || rawPost.meta_description || rawPost.Summary || '',
+    image: rawPost.imageUrl || rawPost.image_url || rawPost.Image || '/images/blog/corporate-car.jpg',
+    date: rawPost.dateCreated || rawPost.Date || new Date().toISOString(),
+    author: 'Suhalaya Travels'
+  };
 
   return {
     title: `${post.title} | Suhalaya Travels Blog`,
@@ -28,7 +47,7 @@ export async function generateMetadata({ params }) {
         },
       ],
       type: 'article',
-      publishedTime: new Date(post.date).toISOString(),
+      publishedTime: isNaN(new Date(post.date)) ? new Date().toISOString() : new Date(post.date).toISOString(),
       authors: [post.author],
     },
   };
@@ -36,14 +55,54 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogDetailPage({ params }) {
   const { slug } = await params;
-  const post = blogsData.find(b => b.slug === slug);
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
+  let data = [];
+  try {
+    const res = await fetch(scriptUrl, { cache: 'no-store' });
+    const text = await res.text();
+    data = JSON.parse(text);
+  } catch (err) {
+    data = [];
+  }
+  
+  const rawPost = Array.isArray(data) ? data.find(b => {
+    const slugVal = b.slug || b.Slug || '';
+    return slugVal.toLowerCase() === slug.toLowerCase();
+  }) : null;
 
-  if (!post) {
+  if (!rawPost) {
     notFound();
   }
 
+  const post = {
+    title: rawPost.title || rawPost.Title || '',
+    summary: rawPost.summary || rawPost.meta_description || rawPost.Summary || '',
+    image: rawPost.imageUrl || rawPost.image_url || rawPost.Image || '/images/blog/corporate-car.jpg',
+    date: rawPost.dateCreated || rawPost.Date ? new Date(rawPost.dateCreated || rawPost.Date).toLocaleDateString() : new Date().toLocaleDateString(),
+    content: rawPost.content || rawPost.body_html || rawPost.Content || '<p>No content available.</p>',
+    author: 'Suhalaya Travels',
+    categoryName: rawPost.category || rawPost.focus_keyword || rawPost.Category || 'General',
+    readTime: '5 min read',
+    slug: rawPost.slug || rawPost.Slug || slug,
+    relatedServiceSlug: 'corporate-mobility'
+  };
+
   const relatedService = servicesData.find(s => s.slug === post.relatedServiceSlug) || servicesData[0];
-  const relatedPosts = blogsData.filter(b => b.slug !== slug && b.category === post.category).slice(0, 2);
+  
+  // Format related posts
+  const relatedPosts = data
+    .filter(b => {
+      const bSlug = b.slug || b.Slug || '';
+      const bStatus = b.status || b.Status || '';
+      return bSlug.toLowerCase() !== slug.toLowerCase() && bStatus.toLowerCase() === 'published';
+    })
+    .slice(0, 2)
+    .map(p => ({
+      slug: p.slug || p.Slug || '',
+      title: p.title || p.Title || '',
+      categoryName: p.category || p.focus_keyword || p.Category || 'General',
+      summary: p.summary || p.meta_description || p.Summary || ''
+    }));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -62,7 +121,7 @@ export default async function BlogDetailPage({ params }) {
         url: 'https://suhalayatravels.com/logo.png',
       },
     },
-    datePublished: new Date(post.date).toISOString(),
+    datePublished: isNaN(new Date(post.date)) ? new Date().toISOString() : new Date(post.date).toISOString(),
     description: post.summary,
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -175,17 +234,6 @@ export default async function BlogDetailPage({ params }) {
         </div>
       </section>
 
-      {/* Embedded Quote Form */}
-      <section className="section section-steel">
-        <div className="container" style={{ maxWidth: '640px' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '32px' }}>Require Professional Mobility?</h2>
-          <div className="card" style={{ padding: '0', overflow: 'hidden', border: 'none', boxShadow: 'var(--shadow-hover)' }}>
-            <div style={{ padding: '32px 32px 0' }}>
-              <BookingWidget sourcePage={`/blog/${post.slug}`} />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted, defaultSe
   // Map of slugs to valid select option values to prevent blank selects
   const validServices = [
     'corporate-mobility', 'employee-transportation', 'airport-transfers', 
-    'chauffeur-on-call', 'south-india-chauffeur-travel', 'weddings-family-events', 
+    'south-india-travel', 'weddings-family-events', 
     'executive-vip-travel', 'corporate-events-conferences', 'pilgrimage-heritage-travel',
     'large-events-air-shows', 'team-outings-offsites'
   ];
@@ -165,8 +165,7 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted, defaultSe
                   <option value="corporate-mobility" style={{ background: '#0B192C' }}>Corporate Mobility</option>
                   <option value="employee-transportation" style={{ background: '#0B192C' }}>Employee Transportation</option>
                   <option value="airport-transfers" style={{ background: '#0B192C' }}>Airport Transfer</option>
-                  <option value="chauffeur-on-call" style={{ background: '#0B192C' }}>Chauffeur on Call</option>
-                  <option value="south-india-chauffeur-travel" style={{ background: '#0B192C' }}>Outstation South India</option>
+                  <option value="south-india-travel" style={{ background: '#0B192C' }}>Outstation South India</option>
                   <option value="weddings-family-events" style={{ background: '#0B192C' }}>Weddings & Events</option>
                   <option value="executive-vip-travel" style={{ background: '#0B192C' }}>Executive VIP Travel</option>
                   <option value="corporate-events-conferences" style={{ background: '#0B192C' }}>Corporate Events</option>

@@ -31,8 +31,25 @@ export function submitLeadToCRM(leadData) {
       existingLeads.unshift(leadRecord);
       localStorage.setItem('suhalaya_crm_leads', JSON.stringify(existingLeads));
       console.log('CRM Lead successfully registered:', leadRecord);
+
+      // WhatsApp Integration
+      const waNumber = '919187140587';
+      const text = `New Enquiry on Suhalaya Travels:
+Name: ${leadRecord.contact_name}
+Phone: ${leadRecord.contact_phone}
+Email: ${leadRecord.contact_email}
+Company: ${leadRecord.company_name || 'N/A'}
+Service: ${leadRecord.service_interest}
+City: ${leadRecord.city}
+Pickup Date: ${leadRecord.pickup_date || 'N/A'}
+Vehicle Preference: ${leadRecord.vehicle_preference}
+Notes: ${leadRecord.notes || 'None'}`;
+      
+      const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+      window.open(waUrl, '_blank');
+
     } catch (e) {
-      console.error('Error saving CRM lead to local storage:', e);
+      console.error('Error processing CRM lead:', e);
     }
   }
 

@@ -1,10 +1,53 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { blogsData } from '@/data/blogs';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-export default function BlogContent() {
+export default function BlogContent({ initialBlogs = [] }) {
+  const [blogs, setBlogs] = useState(initialBlogs);
+  const [isLoading, setIsLoading] = useState(initialBlogs.length === 0);
+
+  useEffect(() => {
+    // If we have initial blogs from the server, don't fetch on mount!
+    if (initialBlogs.length > 0) return;
+
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch('/api/blogs', { cache: 'no-store' });
+        const text = await response.text();
+        let data = [];
+        try {
+          data = JSON.parse(text);
+        } catch (err) {
+          data = [];
+        }
+        
+        const formattedList = Array.isArray(data) ? data
+          .filter(b => {
+            const status = b.status || b.Status || '';
+            return status.toLowerCase() === 'published';
+          })
+          .map(p => ({
+            ...p,
+            status: p.status || p.Status || 'Published',
+            categoryName: p.category || p.Category || 'General',
+            readTime: '5 min read',
+            date: p.dateCreated || p.Date || new Date().toLocaleDateString(),
+            image: p.image_url || p.imageUrl || p.Image || '/images/blog/corporate-car.jpg'
+          })) : [];
+
+        setBlogs(formattedList);
+      } catch (e) {
+        console.error('Error fetching blogs:', e);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchBlogs();
+  }, []);
   const comingSoonCategories = [
     { title: 'Corporate Mobility', desc: 'Ideas for making business travel easier to manage.' },
     { title: 'Travel & Destinations', desc: 'Routes, destinations and practical travel ideas.' },
@@ -37,22 +80,7 @@ export default function BlogContent() {
       {/* 2. COMING SOON CATEGORIES GRID */}
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
-            <div className="badge badge-sky" style={{ marginBottom: '12px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Sparkles size={14} /> Coming Soon
-            </div>
-            <h2>Upcoming Editorial Topics</h2>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', marginBottom: '56px' }}>
-            {comingSoonCategories.map((cat, idx) => (
-              <div key={idx} className="card" style={{ padding: '28px' }}>
-                <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#29ABE2', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>Category 0{idx + 1}</div>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px', color: 'var(--color-navy-900)' }}>{cat.title}</h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-700)', lineHeight: '1.6' }}>{cat.desc}</p>
-              </div>
-            ))}
-          </div>
 
           {/* Published Articles List */}
           <div style={{ marginBottom: '32px', textAlign: 'center' }}>
@@ -60,11 +88,20 @@ export default function BlogContent() {
             <h2>Published Articles & Mobility Guides</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-            {blogsData.map(blog => (
-              <div key={blog.slug} className="card" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '32px' }}>
+            {isLoading ? (
+              <div style={{ padding: '40px', textAlign: 'center', gridColumn: '1 / -1', color: 'var(--color-ink-600)' }}>
+                Loading our latest insights...
+              </div>
+            ) : blogs.length === 0 ? (
+              <div style={{ padding: '40px', textAlign: 'center', gridColumn: '1 / -1', color: 'var(--color-ink-600)' }}>
+                No published blogs found.
+              </div>
+            ) : (
+              blogs.map(blog => (
+              <div key={blog.slug} className="card" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden', height: '100%' }}>
                 {blog.image && (
-                  <div style={{ width: '100%', height: '200px', overflow: 'hidden', flexShrink: 0 }}>
+                  <div style={{ width: '100%', height: '220px', overflow: 'hidden', flexShrink: 0 }}>
                     <img
                       src={blog.image}
                       alt={blog.title}
@@ -74,28 +111,32 @@ export default function BlogContent() {
                     />
                   </div>
                 )}
-                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-                    <div className="badge badge-sky" style={{ fontSize: '0.75rem' }}>{blog.categoryName}</div>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)' }}>{blog.readTime}</span>
-                  </div>
+                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1, backgroundColor: '#fff' }}>
+                  <div>
+                    <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--color-sky-600, #0077b6)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>
+                      {blog.categoryName}
+                    </div>
 
-                  <h3 style={{ fontSize: '1.3rem', marginBottom: '12px', lineHeight: '1.35' }}>{blog.title}</h3>
-                  <p style={{ fontSize: '0.92rem', color: 'var(--color-ink-600)', marginBottom: '20px', lineHeight: '1.6' }}>
-                    {blog.summary}
-                  </p>
-                </div>
-                <div style={{ paddingTop: '20px', borderTop: '1px solid var(--color-steel-200)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)' }}>{blog.date}</span>
-                  <Link href={"/blog/" + blog.slug} className="btn btn-navy" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
-                    Read Article <ArrowRight size={14} />
-                  </Link>
-                </div>
+                    <Link href={"/blog/" + blog.slug} style={{ textDecoration: 'none' }}>
+                      <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', lineHeight: '1.4', color: 'var(--color-navy-800, #003366)', fontWeight: '700' }}>
+                        {blog.title}
+                      </h3>
+                    </Link>
+                    
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-700, #444)', marginBottom: '24px', lineHeight: '1.6', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {blog.summary}
+                    </p>
+                  </div>
+                  
+                  <div style={{ marginTop: 'auto' }}>
+                    <Link href={"/blog/" + blog.slug} style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--color-navy-700, #004488)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                      Read Guide <ArrowRight size={14} />
+                    </Link>
+                  </div>
                 </div>
               </div>
-
-            ))}
+              ))
+            )}
           </div>
         </div>
       </section>

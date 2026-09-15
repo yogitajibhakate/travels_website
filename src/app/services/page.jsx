@@ -330,7 +330,7 @@ export default function ServicesHubPage() {
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', marginBottom: '32px', lineHeight: '1.6' }}>
                 With chauffeur-driven travel, you can build the itinerary around your interests while someone else handles the driving.
               </p>
-              <Link href="/services/south-india-chauffeur-travel" className="btn btn-primary">
+              <Link href="/services/south-india-travel" className="btn btn-primary">
                 Explore South India Travel <ArrowRight size={16} />
               </Link>
             </div>
@@ -376,13 +376,6 @@ export default function ServicesHubPage() {
               <ChevronRight size={20} color="#29ABE2" />
             </Link>
 
-            <Link href="/services/chauffeur-on-call" className="card" style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div>
-                <div style={{ fontSize: '0.88rem', color: 'var(--color-grey-500)' }}>Need a car for the day?</div>
-                <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--color-navy-900)', marginTop: '4px' }}>→ Chauffeur on Call</div>
-              </div>
-              <ChevronRight size={20} color="#29ABE2" />
-            </Link>
 
             <Link href="/services/executive-vip-travel" className="card" style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
@@ -416,10 +409,10 @@ export default function ServicesHubPage() {
               <ChevronRight size={20} color="#29ABE2" />
             </Link>
 
-            <Link href="/services/south-india-chauffeur-travel" className="card" style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Link href="/services/south-india-travel" className="card" style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ fontSize: '0.88rem', color: 'var(--color-grey-500)' }}>Planning your own South India road trip?</div>
-                <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--color-navy-900)', marginTop: '4px' }}>→ South India Chauffeur Travel</div>
+                <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--color-navy-900)', marginTop: '4px' }}>→ South India Travel</div>
               </div>
               <ChevronRight size={20} color="#29ABE2" />
             </Link>
