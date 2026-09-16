@@ -172,7 +172,7 @@ export const fleetData = [
         seats: '9–13 Seater',
         ac: 'Full Cabin A/C',
         luggage: 'Dedicated Rear Luggage',
-        image: ''
+        image: '/images/fleet/toyota-commuter-van.jpg'
       },
       {
         name: 'Premium AC Coaches',
