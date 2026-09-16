@@ -16,8 +16,15 @@ export default async function BlogPage() {
   let initialBlogs = [];
   try {
     const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
-    const response = await fetch(scriptUrl, { next: { revalidate: 60 } });
-    if (response.ok) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+    let response;
+    try {
+      response = await fetch(scriptUrl, { next: { revalidate: 60 }, signal: controller.signal });
+    } finally {
+      clearTimeout(timeoutId);
+    }
+    if (response && response.ok) {
       const text = await response.text();
       let data = [];
       try {

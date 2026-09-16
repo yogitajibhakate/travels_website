@@ -9,9 +9,17 @@ export async function generateMetadata({ params }) {
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
   let data = [];
   try {
-    const res = await fetch(scriptUrl, { cache: 'no-store' });
-    const text = await res.text();
-    data = JSON.parse(text);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+    try {
+      const res = await fetch(scriptUrl, { cache: 'no-store', signal: controller.signal });
+      if (res.ok) {
+        const text = await res.text();
+        data = JSON.parse(text);
+      }
+    } finally {
+      clearTimeout(timeoutId);
+    }
   } catch (err) {
     data = [];
   }
@@ -58,9 +66,17 @@ export default async function BlogDetailPage({ params }) {
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZa8Us-jLPF6ffpNTui5z64_ocpuB5FCZQAw1vN8wOu3MIfBhLwi6BsjlewOIfamQI4w/exec';
   let data = [];
   try {
-    const res = await fetch(scriptUrl, { cache: 'no-store' });
-    const text = await res.text();
-    data = JSON.parse(text);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+    try {
+      const res = await fetch(scriptUrl, { cache: 'no-store', signal: controller.signal });
+      if (res.ok) {
+        const text = await res.text();
+        data = JSON.parse(text);
+      }
+    } finally {
+      clearTimeout(timeoutId);
+    }
   } catch (err) {
     data = [];
   }
