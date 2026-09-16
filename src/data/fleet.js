@@ -180,7 +180,7 @@ export const fleetData = [
         seats: '23–48 Seater',
         ac: 'Central High-power A/C',
         luggage: 'Underbody Luggage Bays',
-        image: ''
+        image: '/images/fleet/premium-ac-coach.jpg'
       },
       {
         name: 'Volvo / Benz Luxury Bus',
