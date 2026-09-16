@@ -107,7 +107,7 @@ export default function HomePage() {
       {/* 2. Introduction: More Than a Ride. A Mobility Partner. */}
       <section className="section" id="introduction-section" style={{ backgroundColor: '#FFF' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '48px', alignItems: 'center' }}>
+          <div className="intro-grid">
             <div>
               <span className="eyebrow">Exploring the world of comfort</span>
               <div className="badge badge-sky" style={{ marginBottom: '16px' }}>Welcome to Suhalaya Travels</div>
@@ -117,7 +117,7 @@ export default function HomePage() {
 
               <div style={{ fontSize: '1.05rem', color: 'var(--color-ink-900)', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <p style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--color-navy-900)' }}>
-                  Some journeys need a car. Others need coordination.
+                   Some journeys need a car. Others need coordination.
                 </p>
                 <p style={{ backgroundColor: 'var(--color-steel-100)', padding: '18px 22px', borderRadius: 'var(--radius-md)', borderLeft: '4px solid #29ABE2', fontWeight: '500', fontSize: '0.98rem' }}>
                   Daily employee movement. Visiting executives. Airport schedules. Multiple event venues. Wedding guests arriving from different cities.
@@ -135,11 +135,11 @@ export default function HomePage() {
             </div>
 
             {/* Visual Image Banner */}
-            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-card)', border: '1px solid var(--color-steel-200)' }}>
+            <div className="intro-image-wrapper">
               <img
                 src="/images/executive-chauffeur.png"
                 alt="Suhalaya Executive Chauffeur Mobility"
-                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                className="intro-image"
               />
             </div>
           </div>
