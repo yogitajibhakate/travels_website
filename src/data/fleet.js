@@ -188,7 +188,7 @@ export const fleetData = [
         seats: '44 Seater',
         ac: 'Multi-zone Climate Control',
         luggage: 'Massive Underfloor Bay',
-        image: ''
+        image: '/images/fleet/volvo-luxury-bus.jpg'
       }
     ]
   }
