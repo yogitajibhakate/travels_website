@@ -37,7 +37,7 @@ export const packagesData = [
       'All toll taxes, state permits, and chauffeur lodging fees covered',
       'Scenic stopovers along forest stretches'
     ],
-    fleetUsed: 'Innova Crysta SUV, Honda City',
+    fleetUsed: 'Innova Crysta SUV, Maruti Suzuki Ciaz',
     sampleFlow: '09:00 AM Pickup from Coimbatore Airport/Station → 12:30 PM Arrival in Ooty (Check-in & Lunch) → 03:00 PM Botanical Garden & Lake visit. Next day proceeds to Coonoor. Vehicle remains available for all local transits.',
     itineraryDays: [
       { day: 'Day 1', title: 'Coimbatore → Ooty', detail: 'Drive up towards the Nilgiris and settle into the hills.' },

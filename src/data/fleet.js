@@ -12,7 +12,7 @@ export const fleetData = [
     id: 'executive',
     tag: 'Executive',
     name: 'Executive',
-    models: ['Honda City', 'Maruti Suzuki Ciaz'],
+    models: ['Maruti Suzuki Ciaz'],
     capacity: '3 Passengers (+ Chauffeur)',
     idealFor: 'Executive city travel, client meetings, business visits, and high-comfort corporate transfers.',
     features: ['3 Executive Passenger Seats', 'Executive Legroom', 'Rear A/C Vents', 'Charging Ports']
