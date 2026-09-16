@@ -87,7 +87,7 @@ export const fleetData = [
         seats: '6 Seater',
         ac: 'Rear AC Vents',
         luggage: '4 Bags',
-        image: ''
+        image: '/images/fleet/toyota-fortuner.jpg'
       },
       {
         name: 'Toyota Camry',
