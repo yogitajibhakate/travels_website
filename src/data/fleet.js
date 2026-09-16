@@ -31,7 +31,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Comfortable A/C',
         luggage: '3 Bags',
-        image: ''
+        image: '/images/fleet/hyundai-verna.jpg'
       }
     ]
   },
