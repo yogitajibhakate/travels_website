@@ -139,7 +139,7 @@ export const fleetData = [
         seats: '3–6 Seater',
         ac: 'Multi-zone Climate A/C',
         luggage: '4 Large Bags',
-        image: ''
+        image: '/images/fleet/audi-q7.jpg'
       }
     ]
   },
