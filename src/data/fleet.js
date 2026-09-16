@@ -1,9 +1,9 @@
 export const fleetData = [
   {
     id: 'economy',
-    tag: 'Economy Sedan',
+    tag: 'Economy',
     name: 'Economy',
-    image: '/images/fleet/maruti-dzire.jpg',
+    image: '',
     models: ['Maruti Suzuki Dzire', 'Hyundai Aura', 'Hyundai Verna'],
     capacity: '3 Passengers (+ Chauffeur)',
     idealFor: 'Everyday corporate travel, point-to-point city journeys, airport transfers, and budget-conscious business movement.',
@@ -23,7 +23,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Comfortable A/C',
         luggage: '2 Medium Bags',
-        image: ''
+        image: '/images/fleet/hyundai-aura.jpg'
       },
       {
         name: 'Hyundai Verna',
@@ -37,7 +37,7 @@ export const fleetData = [
   },
   {
     id: 'executive',
-    tag: 'Executive Sedan',
+    tag: 'Executive',
     name: 'Executive',
     image: '',
     models: ['Maruti Suzuki Ciaz'],
@@ -57,7 +57,7 @@ export const fleetData = [
   },
   {
     id: 'premium',
-    tag: 'Premium MPV / SUV',
+    tag: 'Premium',
     name: 'Premium',
     image: '',
     models: ['Toyota Innova Crysta (6 Pax)', 'Toyota Innova Hycross (6 Pax)', 'Toyota Fortuner (6 Pax)', 'Toyota Camry (3 Pax)'],
@@ -101,7 +101,7 @@ export const fleetData = [
   },
   {
     id: 'luxury',
-    tag: 'Luxury VIP Mobility',
+    tag: 'Luxury',
     name: 'Luxury',
     image: '',
     models: ['Toyota Vellfire / Audi Q7 (6 Pax)', 'BMW 5 & 7 Series (3 Pax)', 'Mercedes-Benz E & S-Class (3 Pax)', 'Audi A4 (3 Pax)'],
@@ -145,7 +145,7 @@ export const fleetData = [
   },
   {
     id: 'multi-passenger',
-    tag: 'Multi-passenger Coaches & Vans',
+    tag: 'Multi-passenger',
     name: 'Multi-passenger',
     image: '',
     models: [

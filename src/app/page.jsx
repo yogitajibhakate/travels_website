@@ -411,7 +411,6 @@ export default function HomePage() {
               <div key={f.id} className="card" style={{ minWidth: '340px', flex: '0 0 340px', scrollSnapAlign: 'start', padding: '24px', display: 'flex', flexDirection: 'column' }}>
                 <div className="badge badge-sky" style={{ marginBottom: '12px', fontSize: '0.75rem' }}>{f.tag}</div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{f.name}</h3>
-
                 <div style={{ fontSize: '0.85rem', color: '#1E8FC2', fontWeight: '700', marginBottom: '12px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   {f.models.map((model, idx) => (
                     <span key={idx}>{model}</span>
