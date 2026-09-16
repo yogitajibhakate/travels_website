@@ -164,7 +164,7 @@ export const fleetData = [
         seats: '8–15 Seater',
         ac: 'Individual Air Vents & High Roof',
         luggage: 'Large Luggage Space',
-        image: ''
+        image: '/images/fleet/force-urbania.jpg'
       },
       {
         name: 'Toyota Commuter VIP Van',
