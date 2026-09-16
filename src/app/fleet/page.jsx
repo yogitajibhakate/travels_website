@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { fleetData } from '@/data/fleet';
-import { Car, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Car, ShieldCheck, CheckCircle2, ArrowRight, Users, Snowflake, Briefcase, ChevronRight } from 'lucide-react';
 import { QuoteButton, DiscussButton } from '@/components/QuoteButton';
 import SafetyBlock from '@/components/SafetyBlock';
 
@@ -37,56 +37,199 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* 2. Fleet Categories Showcase */}
-      <section className="section">
+      {/* 2. Fleet Categories Showcase - Horizontal Row Scroll */}
+      <section className="section" style={{ backgroundColor: 'var(--color-steel-50, #f8fafc)' }}>
         <div className="container">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '64px' }}>
             {fleetData.map(f => (
-              <div key={f.id} id={f.id} className="card" style={{ padding: '36px', scrollMarginTop: '100px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+              <div key={f.id} id={f.id} style={{ scrollMarginTop: '100px' }}>
+                
+                {/* Category Header */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                   <div>
-                    <div className="badge badge-sky" style={{ marginBottom: '16px' }}>{f.tag}</div>
-                    <h2 style={{ fontSize: '1.8rem', marginBottom: '12px' }}>{f.name}</h2>
-                    
-                    {f.image && (
-                      <div style={{ backgroundColor: '#F8FAFC', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '220px', overflow: 'hidden' }}>
-                        <img src={f.image} alt={f.name} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
-                      </div>
-                    )}
-
-                    <p style={{ color: 'var(--color-ink-700)', fontSize: '1rem', marginBottom: '20px', lineHeight: '1.6' }}>
-                      {f.idealFor}
-                    </p>
-
-                    <div style={{ backgroundColor: 'var(--color-steel-100)', padding: '16px 20px', borderRadius: '12px', marginBottom: '20px' }}>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--color-navy-900)', fontWeight: '700', textTransform: 'uppercase' }}>Fleet Models & Options:</div>
-                      <div style={{ fontSize: '1.02rem', fontWeight: '700', color: '#1E8FC2', marginTop: '4px' }}>
-                        {f.models.join(' • ')}
-                      </div>
-                    </div>
-
-                    <div style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--color-navy-900)' }}>
-                      Capacity Spec: <span style={{ color: 'var(--color-ink-700)', fontWeight: '400' }}>{f.capacity}</span>
-                    </div>
+                    <div className="badge badge-sky" style={{ marginBottom: '8px', fontSize: '0.78rem' }}>{f.tag}</div>
+                    <h2 style={{ fontSize: '1.85rem', color: 'var(--color-navy-900)' }}>{f.name} Class</h2>
                   </div>
-
-                  <div>
-                    <h3 style={{ fontSize: '1.15rem', marginBottom: '16px' }}>Features & Amenities</h3>
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', padding: 0, margin: 0 }}>
-                      {f.features.map((feat, idx) => (
-                        <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.92rem', color: 'var(--color-ink-900)', fontWeight: '500' }}>
-                          <CheckCircle2 size={16} color="#29ABE2" /> {feat}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div style={{ marginTop: '28px' }}>
-                      <QuoteButton className="btn btn-navy">
-                        Request Quote for {f.name} <ArrowRight size={14} />
-                      </QuoteButton>
-                    </div>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    Scroll to view cars <ChevronRight size={16} color="#29ABE2" />
                   </div>
                 </div>
+
+                {/* Horizontal Scroll Row */}
+                <div
+                  className="hide-scroll"
+                  style={{
+                    display: 'flex',
+                    overflowX: 'auto',
+                    gap: '24px',
+                    paddingBottom: '16px',
+                    scrollSnapType: 'x mandatory',
+                    WebkitOverflowScrolling: 'touch',
+                    alignItems: 'stretch'
+                  }}
+                >
+                  {/* 1. First Card: Category Overview Box ("pahile abhi joh box hai") */}
+                  <div
+                    className="card"
+                    style={{
+                      minWidth: '340px',
+                      maxWidth: '360px',
+                      flex: '0 0 340px',
+                      scrollSnapAlign: 'start',
+                      padding: '28px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                      background: 'linear-gradient(135deg, #0A192F 0%, #172A45 100%)',
+                      color: '#FFFFFF',
+                      borderRadius: '16px',
+                      boxShadow: '0 12px 30px rgba(10,25,47,0.18)'
+                    }}
+                  >
+                    <div>
+                      <div
+                        style={{
+                          display: 'inline-block',
+                          backgroundColor: 'rgba(41,171,226,0.22)',
+                          color: '#4DC0EC',
+                          padding: '4px 12px',
+                          borderRadius: '20px',
+                          fontSize: '0.72rem',
+                          fontWeight: '700',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.05em',
+                          marginBottom: '14px'
+                        }}
+                      >
+                        Category Overview
+                      </div>
+                      
+                      <h3 style={{ fontSize: '1.45rem', color: '#FFFFFF', marginBottom: '12px' }}>
+                        {f.name} Fleet
+                      </h3>
+                      
+                      <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem', marginBottom: '20px', lineHeight: '1.6' }}>
+                        {f.idealFor}
+                      </p>
+
+                      <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '10px', padding: '12px 16px', marginBottom: '20px' }}>
+                        <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', fontWeight: '700' }}>
+                          Standard Capacity
+                        </div>
+                        <div style={{ fontSize: '0.92rem', color: '#4DC0EC', fontWeight: '700', marginTop: '3px' }}>
+                          {f.capacity}
+                        </div>
+                      </div>
+
+                      <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', fontWeight: '700', marginBottom: '10px' }}>
+                        Key Amenities & Standards:
+                      </div>
+                      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, margin: '0 0 20px 0' }}>
+                        {f.features.map((feat, idx) => (
+                          <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'rgba(255,255,255,0.92)' }}>
+                            <CheckCircle2 size={15} color="#29ABE2" /> {feat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <QuoteButton
+                      className="btn btn-primary"
+                      style={{ width: '100%', justifyContent: 'center', padding: '12px 20px', fontSize: '0.92rem' }}
+                    >
+                      Request Quote for {f.name} <ArrowRight size={14} />
+                    </QuoteButton>
+                  </div>
+
+                  {/* 2. Individual Car Cards ("then first car then second then aise karke") */}
+                  {(f.cars || []).map((car, idx) => (
+                    <div
+                      key={idx}
+                      className="card"
+                      style={{
+                        minWidth: '310px',
+                        maxWidth: '330px',
+                        flex: '0 0 310px',
+                        scrollSnapAlign: 'start',
+                        padding: '24px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: '16px',
+                        border: '1px solid #E2E8F0',
+                        boxShadow: 'var(--shadow-card)',
+                        transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                      }}
+                    >
+                      <div>
+                        <div className="badge badge-sky" style={{ marginBottom: '10px', fontSize: '0.72rem' }}>
+                          {car.type || f.tag}
+                        </div>
+                        
+                        <h4 style={{ fontSize: '1.22rem', color: 'var(--color-navy-900)', marginBottom: '14px', fontWeight: '700' }}>
+                          {car.name}
+                        </h4>
+
+                        {/* Car Image Preview Container */}
+                        <div
+                          style={{
+                            backgroundColor: '#F8FAFC',
+                            borderRadius: '12px',
+                            border: '1px solid #E2E8F0',
+                            padding: '12px',
+                            marginBottom: '16px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            height: '160px',
+                            overflow: 'hidden'
+                          }}
+                        >
+                          {car.image ? (
+                            <img
+                              src={car.image}
+                              alt={car.name}
+                              style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                            />
+                          ) : (
+                            <div style={{ textAlign: 'center', color: '#94A3B8' }}>
+                              <Car size={42} strokeWidth={1.4} style={{ margin: '0 auto 8px', opacity: 0.55 }} />
+                              <div style={{ fontSize: '0.78rem', fontWeight: '600', color: '#64748B' }}>
+                                Verified Chauffeur Vehicle
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Key Specs Pill List */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', marginBottom: '20px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--color-navy-900)', fontWeight: '600' }}>
+                            <Users size={16} color="#29ABE2" /> {car.seats}
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--color-navy-900)', fontWeight: '600' }}>
+                            <Snowflake size={16} color="#29ABE2" /> {car.ac}
+                          </div>
+                          {car.luggage && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--color-ink-700)' }}>
+                              <Briefcase size={16} color="#64748B" /> {car.luggage}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      <div style={{ paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
+                        <QuoteButton
+                          className="btn btn-navy"
+                          style={{ width: '100%', justifyContent: 'center', fontSize: '0.9rem', padding: '11px 18px' }}
+                        >
+                          Request Quote <ArrowRight size={14} />
+                        </QuoteButton>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             ))}
           </div>
