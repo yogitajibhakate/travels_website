@@ -71,7 +71,7 @@ export const fleetData = [
         seats: '6 Seater',
         ac: 'Triple-zone A/C',
         luggage: '4 Large Bags',
-        image: ''
+        image: '/images/fleet/toyota-innova-crysta.jpg'
       },
       {
         name: 'Toyota Innova Hycross',

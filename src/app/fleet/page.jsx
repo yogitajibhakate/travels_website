@@ -190,7 +190,7 @@ export default function FleetPage() {
                             <img
                               src={car.image}
                               alt={car.name}
-                              style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                           ) : (
                             <div style={{ textAlign: 'center', color: '#94A3B8' }}>
