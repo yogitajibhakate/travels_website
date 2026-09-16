@@ -51,7 +51,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Climate Control A/C',
         luggage: '3 Large Bags',
-        image: ''
+        image: '/images/fleet/maruti-ciaz.jpg'
       }
     ]
   },
