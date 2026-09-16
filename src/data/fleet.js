@@ -79,7 +79,7 @@ export const fleetData = [
         seats: '6 Seater',
         ac: 'Dual-zone Climate Control',
         luggage: '4 Large Bags',
-        image: ''
+        image: '/images/fleet/toyota-innova-hycross.jpg'
       },
       {
         name: 'Toyota Fortuner',
