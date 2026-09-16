@@ -47,6 +47,13 @@ export default function FleetPage() {
                   <div>
                     <div className="badge badge-sky" style={{ marginBottom: '16px' }}>{f.tag}</div>
                     <h2 style={{ fontSize: '1.8rem', marginBottom: '12px' }}>{f.name}</h2>
+                    
+                    {f.image && (
+                      <div style={{ backgroundColor: '#F8FAFC', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '220px', overflow: 'hidden' }}>
+                        <img src={f.image} alt={f.name} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+                      </div>
+                    )}
+
                     <p style={{ color: 'var(--color-ink-700)', fontSize: '1rem', marginBottom: '20px', lineHeight: '1.6' }}>
                       {f.idealFor}
                     </p>
