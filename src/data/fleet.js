@@ -131,7 +131,7 @@ export const fleetData = [
         seats: '6 Seater',
         ac: 'Executive Ottoman & Triple A/C',
         luggage: '5 Bags',
-        image: ''
+        image: '/images/fleet/toyota-vellfire.jpg'
       },
       {
         name: 'Audi A4 / Q7',
