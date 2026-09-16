@@ -95,7 +95,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Reclining Rear Seats & A/C',
         luggage: '3 Large Bags',
-        image: ''
+        image: '/images/fleet/toyota-camry.jpg'
       }
     ]
   },
@@ -115,7 +115,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Thermotronic Multi-zone A/C',
         luggage: '3 Large Bags',
-        image: ''
+        image: '/images/fleet/mercedes-s-class.jpg'
       },
       {
         name: 'BMW 5 & 7 Series',
@@ -123,7 +123,7 @@ export const fleetData = [
         seats: '3 Seater',
         ac: 'Ambient Climate Control',
         luggage: '3 Large Bags',
-        image: ''
+        image: '/images/fleet/bmw-7-series.jpg'
       },
       {
         name: 'Toyota Vellfire',
