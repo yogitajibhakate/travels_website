@@ -64,18 +64,9 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
             <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.75)', marginBottom: '14px', lineHeight: '1.6' }}>
               From everyday corporate transportation to executive journeys, events and long-distance travel, Suhalaya Travels continues to move people across the journeys that matter.
             </p>
-            <p style={{ fontSize: '0.88rem', fontWeight: '600', color: '#FFF', marginBottom: '20px' }}>
+            <p style={{ fontSize: '0.88rem', fontWeight: '600', color: '#FFF', marginBottom: '0' }}>
               Wherever you're going, start with Suhalaya.
             </p>
-
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <a href="tel:+919187140587" className="btn btn-outline-white" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>
-                <Phone size={14} /> Call Us
-              </a>
-              <button onClick={onOpenQuoteModal} className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.82rem' }}>
-                Request a Quote
-              </button>
-            </div>
           </div>
 
           {/* Column 2: QUICK LINKS */}
@@ -123,7 +114,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
           <div>
             © Suhalaya Travels. All rights reserved.
           </div>
-          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', alignItems: 'center' }}>
             <Link href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</Link>
             <Link href="/services" style={{ color: 'rgba(255,255,255,0.6)' }}>Services</Link>
             <Link href="/fleet" style={{ color: 'rgba(255,255,255,0.6)' }}>Fleet</Link>

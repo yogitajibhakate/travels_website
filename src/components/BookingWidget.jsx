@@ -222,11 +222,11 @@ export default function BookingWidget({ sourcePage = '/', onSubmitted, defaultSe
               <div>
                 <label htmlFor="vehicle_preference" className="form-label" style={{ color: 'rgba(255,255,255,0.9)' }}>Vehicle Preference</label>
                 <select id="vehicle_preference" name="vehicle_preference" value={formData.vehicle_preference} onChange={handleChange} className="form-select" style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }}>
-                  <option value="Executive Sedan" style={{ background: '#0B192C' }}>Executive Sedan (3 Passengers + Driver)</option>
-                  <option value="Executive SUV" style={{ background: '#0B192C' }}>Executive SUV / MPV (6 Passengers + Driver)</option>
-                  <option value="Tempo Traveller" style={{ background: '#0B192C' }}>Van / Tempo Traveller (9-15 Passengers + Driver)</option>
-                  <option value="Staff Coach" style={{ background: '#0B192C' }}>Staff Bus / Coach (21-48 Passengers + Driver & Crew)</option>
-                  <option value="Luxury Flagship" style={{ background: '#0B192C' }}>Luxury Flagship (3 Passengers + Driver)</option>
+                  <option value="Executive Sedan" style={{ background: '#0B192C' }}>Executive Sedan (3 Passengers + Chauffeur)</option>
+                  <option value="Executive SUV" style={{ background: '#0B192C' }}>Executive SUV / MPV (6 Passengers + Chauffeur)</option>
+                  <option value="Tempo Traveller" style={{ background: '#0B192C' }}>Van / Tempo Traveller (9-15 Passengers + Chauffeur)</option>
+                  <option value="Staff Coach" style={{ background: '#0B192C' }}>Staff Bus / Coach (21-48 Passengers + Chauffeur & Crew)</option>
+                  <option value="Luxury Flagship" style={{ background: '#0B192C' }}>Luxury Flagship (3 Passengers + Chauffeur)</option>
                 </select>
               </div>
             </div>

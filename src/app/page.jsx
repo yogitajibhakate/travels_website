@@ -252,6 +252,19 @@ export default function HomePage() {
                 Explore Details <ChevronRight size={16} color="#29ABE2" />
               </Link>
             </div>
+
+            <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px' }}>
+              <div>
+                <div className="badge badge-sky" style={{ marginBottom: '16px', fontSize: '0.75rem' }}>Journeys Beyond</div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Pilgrimage Travel</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-900)', marginBottom: '20px', lineHeight: '1.6' }}>
+                  Comfortable, reliable transportation for spiritual journeys and temple visits across the region.
+                </p>
+              </div>
+              <Link href="/services/pilgrimage-heritage-travel" style={{ color: '#29ABE2', fontWeight: '700', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Explore Details <ChevronRight size={16} color="#29ABE2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

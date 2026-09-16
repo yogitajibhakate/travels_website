@@ -632,3 +632,16 @@ a {
 .blog-content li {
   margin-bottom: 0.5em;
 }
+
+/* Floating Live Support Button Position */
+.floating-support-btn {
+  bottom: 28px;
+  right: 28px;
+}
+
+@media (max-width: 768px) {
+  .floating-support-btn {
+    bottom: 76px;
+    right: 16px;
+  }
+}

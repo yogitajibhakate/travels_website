@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, MessageCircle, FileText, ChevronUp, X } from 'lucide-react';
+import { Phone, MessageCircle, FileText, ChevronUp, X, Bot, Headset } from 'lucide-react';
 
 export default function FloatingActions({ onOpenQuoteModal }) {
   const [expanded, setExpanded] = useState(false);
@@ -11,11 +11,11 @@ export default function FloatingActions({ onOpenQuoteModal }) {
       style={{
         position: 'fixed',
         bottom: '24px',
-        right: '24px',
+        left: '24px',
         zIndex: 1500,
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-end',
+        alignItems: 'flex-start',
         gap: '12px'
       }}
       id="floating-actions-container"
@@ -106,32 +106,82 @@ export default function FloatingActions({ onOpenQuoteModal }) {
             <FileText size={18} color="#FFF" />
             Request Instant Quote
           </button>
+
+          {/* Live Chat Support */}
+          <button
+            onClick={() => {
+              setExpanded(false);
+              // We can trigger Chatbot via a global event if we don't want to pass props down through the entire tree
+              window.dispatchEvent(new CustomEvent('open-chatbot'));
+            }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              color: '#FFF',
+              backgroundColor: 'rgba(255,255,255,0.1)',
+              padding: '10px 16px',
+              borderRadius: '10px',
+              fontSize: '0.88rem',
+              fontWeight: '700',
+              border: '1px solid rgba(0, 180, 216, 0.4)',
+              cursor: 'pointer',
+              transition: 'background 0.2s'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 180, 216, 0.2)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
+          >
+            <Headset size={18} color="#00B4D8" />
+            Live Chat Support
+          </button>
         </div>
       )}
 
-      {/* Main Trigger Button */}
-      <button
-        onClick={() => setExpanded(!expanded)}
-        style={{
-          width: '56px',
-          height: '56px',
-          borderRadius: '50%',
-          background: 'linear-gradient(135deg, #00B4D8 0%, #0B192C 100%)',
-          color: '#FFF',
-          border: '2px solid rgba(255,255,255,0.3)',
-          boxShadow: '0 8px 24px rgba(0, 180, 216, 0.45)',
-          display: 'flex',
-          alignItems: 'center',
-          justify: 'center',
-          cursor: 'pointer',
-          transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        aria-label="Toggle Quick Contact Menu"
-      >
-        {expanded ? <X size={26} /> : <MessageCircle size={26} />}
-      </button>
+      {/* Main Trigger Button & Tooltip Container */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexDirection: 'row-reverse' }}>
+        
+        {!expanded && (
+          <div style={{
+            backgroundColor: '#0F172A',
+            color: '#FFF',
+            padding: '10px 18px',
+            borderRadius: '24px',
+            fontSize: '0.9rem',
+            fontWeight: '600',
+            border: '1px solid rgba(255,255,255,0.1)',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            whiteSpace: 'nowrap',
+            cursor: 'pointer'
+          }}
+          onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}>
+            Write your query here 💬
+          </div>
+        )}
+
+        <button
+          onClick={() => setExpanded(!expanded)}
+          style={{
+            width: '56px',
+            height: '56px',
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #00B4D8 0%, #0B192C 100%)',
+            color: '#FFF',
+            border: '2px solid rgba(255,255,255,0.3)',
+            boxShadow: '0 8px 24px rgba(0, 180, 216, 0.45)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+            flexShrink: 0
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
+          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          aria-label="Toggle Quick Contact Menu"
+        >
+          {expanded ? <X size={26} /> : <MessageCircle size={26} />}
+        </button>
+      </div>
     </div>
   );
 }

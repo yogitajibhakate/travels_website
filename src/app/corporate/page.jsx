@@ -119,7 +119,7 @@ export default function CorporatePage() {
                   <CheckCircle2 size={16} color="#29ABE2" /> Controlled advance pickup & drop coordination
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <CheckCircle2 size={16} color="#29ABE2" /> Advance driver & vehicle verification details
+                  <CheckCircle2 size={16} color="#29ABE2" /> Advance chauffeur & vehicle verification details
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <CheckCircle2 size={16} color="#29ABE2" /> Discreet movement & private cabin environment

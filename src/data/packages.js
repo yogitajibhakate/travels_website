@@ -9,10 +9,11 @@ export const packagesData = [
     inclusions: [
       'Dedicated Innova Crysta / SUV reserved for your entire journey',
       'Experienced highway chauffeur fluent in local routes & stops',
-      'All inter-state permits, FASTag tolls, and driver allowances included',
+      'All inter-state permits, FASTag tolls, and chauffeur allowances included',
       'Flexible daily itinerary—stop and explore at your pace'
     ],
     fleetUsed: 'Innova Crysta SUV, Executive Sedans',
+    sampleFlow: '08:00 AM Departure from Bengaluru → 11:30 AM Arrival in Mysuru (Palace & Lunch) → 02:30 PM Proceed to Coorg → 05:30 PM Check-in at Coorg Estate. The chauffeur remains on call throughout your stay for local sightseeing.',
     itineraryDays: [
       { day: 'Day 1', title: 'Bengaluru → Mysuru', detail: 'Palace, Devaraja Market and an evening around the city.' },
       { day: 'Day 2', title: 'Mysuru → Coorg', detail: 'Drive into coffee country. Relax at your stay and explore the plantation landscape.' },
@@ -33,17 +34,18 @@ export const packagesData = [
     inclusions: [
       'Chauffeur experienced in hill station driving and sharp curves',
       'Comfortable AC SUV / Sedan with luggage rack option',
-      'All toll taxes, state permits, and driver lodging fees covered',
+      'All toll taxes, state permits, and chauffeur lodging fees covered',
       'Scenic stopovers along forest stretches'
     ],
     fleetUsed: 'Innova Crysta SUV, Honda City',
+    sampleFlow: '09:00 AM Pickup from Coimbatore Airport/Station → 12:30 PM Arrival in Ooty (Check-in & Lunch) → 03:00 PM Botanical Garden & Lake visit. Next day proceeds to Coonoor. Vehicle remains available for all local transits.',
     itineraryDays: [
       { day: 'Day 1', title: 'Coimbatore → Ooty', detail: 'Drive up towards the Nilgiris and settle into the hills.' },
       { day: 'Day 2', title: 'Ooty → Coonoor', detail: 'Tea estates, viewpoints and the quieter side of the Nilgiris.' },
       { day: 'Day 3', title: 'Coonoor → Coimbatore', detail: 'A relaxed return journey.' }
     ],
     faqs: [
-      { q: 'Are hill station driver allowances extra?', a: 'No, all driver night allowances and hill fees are fully included.' }
+      { q: 'Are hill station chauffeur allowances extra?', a: 'No, all chauffeur night allowances and hill fees are fully included.' }
     ]
   },
   {
@@ -59,6 +61,7 @@ export const packagesData = [
       'Custom stopovers at spice plantations and waterfalls'
     ],
     fleetUsed: 'Innova Crysta SUV, Force Urbania',
+    sampleFlow: '09:00 AM Kochi Airport Pickup → 01:00 PM Arrival in Munnar (Spice Garden stopover) → Day 2 Munnar Sightseeing → Day 3 08:30 AM Departure to Alleppey → 11:30 AM Houseboat Boarding. Chauffeur meets you at the jetty for the return trip.',
     itineraryDays: [
       { day: 'Day 1', title: 'Kochi → Munnar', detail: 'Travel from the coast into the high ranges of Kerala.' },
       { day: 'Day 2', title: 'Munnar Sights', detail: 'Choose between waterfalls, plantations, and viewpoints.' },
@@ -78,11 +81,12 @@ export const packagesData = [
     bestFor: 'Families, wildlife enthusiasts and photographers.',
     inclusions: [
       'Dedicated luxury SUV for forest and plantation terrain',
-      'Driver allowances, night charges, tolls & permits fully covered',
+      'Chauffeur allowances, night charges, tolls & permits fully covered',
       'Flexible daily schedule around jungle safari slots',
       'Sanitized, comfortable interior with bottled water'
     ],
     fleetUsed: 'Toyota Fortuner, Innova Crysta',
+    sampleFlow: '07:00 AM Early departure from Bengaluru → 11:30 AM Kabini Arrival (Lunch & Afternoon Safari) → Day 3 Morning transfer to Coorg (3 hours). Chauffeur coordinates with lodge schedules to ensure timely safari drops.',
     itineraryDays: [
       { day: 'Day 1', title: 'Bengaluru → Kabini', detail: 'Arrive and settle into the forest landscape.' },
       { day: 'Day 2', title: 'Kabini Wildlife', detail: 'Wildlife experience and a relaxed evening.' },
@@ -90,7 +94,7 @@ export const packagesData = [
       { day: 'Day 4', title: 'Coorg → Bengaluru', detail: 'Return to Bengaluru.' }
     ],
     faqs: [
-      { q: 'Can the chauffeur take us to safari gate points?', a: 'Yes, your driver drops and picks you up from designated safari hubs.' }
+      { q: 'Can the chauffeur take us to safari gate points?', a: 'Yes, your chauffeur drops and picks you up from designated safari hubs.' }
     ]
   },
   {
@@ -102,11 +106,12 @@ export const packagesData = [
     bestFor: 'Beach lovers, families and coastal road-trip enthusiasts.',
     inclusions: [
       'Highway vehicle with luggage carrier for long-distance driving',
-      'Experienced long-distance coastal route driver',
-      'Tolls, permits, and driver lodging all included',
+      'Experienced long-distance coastal route chauffeur',
+      'Tolls, permits, and chauffeur lodging all included',
       'Customized beach and temple stops along the Karavali coast'
     ],
     fleetUsed: 'Innova Crysta SUV, Force Urbania',
+    sampleFlow: '09:00 AM Mangaluru Pickup → 10:30 AM Udupi Sri Krishna Darshan & Malpe Beach → 04:00 PM Arrival in Murudeshwar. Day 3 scenic coastal drive to Gokarna. The route is flexible for spontaneous beach stops.',
     itineraryDays: [
       { day: 'Day 1', title: 'Mangaluru → Udupi', detail: 'Drive across the coast, visit Malpe and Krishna Temple.' },
       { day: 'Day 2', title: 'Udupi → Murudeshwar', detail: 'Coastal drive to the iconic Shiva temple by the sea.' },
@@ -126,18 +131,19 @@ export const packagesData = [
     bestFor: 'A good combination of pilgrimage, heritage and city exploration.',
     inclusions: [
       'Andhra Pradesh & Tamil Nadu inter-state permits included',
-      'Patient driver familiar with temple entry procedures',
+      'Patient chauffeur familiar with temple entry procedures',
       'Dedicated vehicle for smooth transition between temple towns',
       'Luggage assistance and senior-citizen friendly vehicle access'
     ],
     fleetUsed: 'Innova Crysta SUV, Executive Sedan',
+    sampleFlow: '06:00 AM Early start from Chennai → 09:30 AM Tirumala Darshan entry → 03:00 PM Return to base and overnight stay. Day 2 Morning departure to Kanchipuram (temple visits & silk shopping) → Evening return drop at Chennai.',
     itineraryDays: [
       { day: 'Day 1', title: 'Chennai → Tirupati', detail: 'Drive to sacred Tirupati hills for darshan and evening stay.' },
       { day: 'Day 2', title: 'Tirupati → Kanchipuram', detail: 'Continue towards the city of thousand temples.' },
       { day: 'Day 3', title: 'Kanchipuram → Chennai', detail: 'Explore the silk weavers and return to Chennai.' }
     ],
     faqs: [
-      { q: 'Can the driver assist with luggage at Tirupati hotels?', a: 'Yes, our chauffeurs are exceptionally helpful and assist with all guest luggage.' }
+      { q: 'Can the chauffeur assist with luggage at Tirupati hotels?', a: 'Yes, our chauffeurs are exceptionally helpful and assist with all guest luggage.' }
     ]
   },
   {
@@ -154,6 +160,7 @@ export const packagesData = [
       'On-site transport marshal managing vehicle staging'
     ],
     fleetUsed: 'Luxury Sedans, Innova Crysta, VIP & Group Vans',
+    sampleFlow: 'Day 1: Coordinated fleet deployed at airport/station for guest pickups and hotel transfers. Day 2-3: Dedicated SUVs handle family movement between venues, while shuttles run continuous loops for guests. On-site marshal manages dispatch.',
     itineraryDays: [
       { day: 'Day 1', title: 'Guest Arrivals & Shuttles', detail: 'Airport/railway station pickups and hotel check-in shuttles.' },
       { day: 'Day 2', title: 'Ceremony Movement', detail: 'Coordinated fleets for Sangeet, Mehendi, and ritual venues.' },
@@ -177,6 +184,7 @@ export const packagesData = [
       'Consolidated monthly GST billing for corporate accounts'
     ],
     fleetUsed: 'Executive Sedans, Premium SUVs, AC Coaches',
+    sampleFlow: 'Pre-event: Chauffeurs staged at airport with placards. Event Days: Sedans on standby for VIPs; shuttles run scheduled loops between partner hotels and the convention center. Real-time fleet tracking by ground coordinators.',
     itineraryDays: [
       { day: 'Day 1', title: 'Delegate Arrivals', description: 'Continuous airport pickups and hotel transfers.' },
       { day: 'Day 2', title: 'Summit & Venue Loops', description: 'Shuttle rotations connecting hotels and event halls.' },

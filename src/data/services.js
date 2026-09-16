@@ -78,7 +78,7 @@ From regular office commutes to shift-based transportation, mobility can be orga
       'Campus & Metro Connector Shuttles'
     ],
     faqs: [
-      { q: 'How do you handle late-night shift safety for female employees?', a: 'We incorporate strict pickup/drop procedures, escort protocols where required, driver verification, and escalation guidelines.' },
+      { q: 'How do you handle late-night shift safety for female employees?', a: 'We incorporate strict pickup/drop procedures, escort protocols where required, chauffeur verification, and escalation guidelines.' },
       { q: 'Can rosters be modified dynamically?', a: 'Yes, our 24/7 dispatch control desk processes roster adjustments and backup deployments.' }
     ]
   },
@@ -224,8 +224,8 @@ Sedans, SUVs, vans and coaches can be arranged depending on the group and itiner
     whoItsFor: 'A short outing around Bengaluru, A weekend team trip, A multi-day offsite outside the city',
     whatsIncluded: [
       'Comfortable group vehicles (Force Urbania, Tempo Travellers, 24-49 Seater Coaches)',
-      'Interstate permits, toll fees, and driver allowances pre-arranged',
-      'Experienced outstation drivers familiar with resort routes & highways',
+      'Interstate permits, toll fees, and chauffeur allowances pre-arranged',
+      'Experienced outstation chauffeurs familiar with resort routes & highways',
       'Luggage space management for overnight offsites',
       'Custom pickup points at corporate headquarters or tech parks'
     ],
@@ -242,7 +242,7 @@ Sedans, SUVs, vans and coaches can be arranged depending on the group and itiner
       'Multi-day Departmental Strategy Offsites'
     ],
     faqs: [
-      { q: 'Are interstate taxes included in outstation quotes?', a: 'Yes, all permit fees, tolls, state taxes, and driver charges are clearly outlined.' },
+      { q: 'Are interstate taxes included in outstation quotes?', a: 'Yes, all permit fees, tolls, state taxes, and chauffeur charges are clearly outlined.' },
       { q: 'What AC coaches are available for large teams?', a: 'We offer 24, 35, 40, 45, and 49 seater luxury AC coaches including Volvo Gliders.' }
     ]
   },
@@ -308,7 +308,7 @@ The chauffeur handles the road while you experience the journey. Build the route
       'Clean, comfortable outstation vehicles (Innova Crysta, Hycross, Fortuner, Sedans)',
       'Experienced long-distance highway chauffeurs knowledgeable about regional routes',
       'Flexible itineraries with freedom to stop and explore along the way',
-      'All toll, parking, interstate taxes, and driver allowance covered',
+      'All toll, parking, interstate taxes, and chauffeur allowance covered',
       '24/7 customer care & emergency breakdown support'
     ],
     vehicleClasses: ['Executive Sedans', 'Premium SUVs', 'VIP Vans'],
@@ -325,7 +325,7 @@ The chauffeur handles the road while you experience the journey. Build the route
     ],
     faqs: [
       { q: 'Is the itinerary fixed or can we change stops during the trip?', a: 'You have complete freedom to adjust stops and timings as you travel.' },
-      { q: 'Are driver accommodation and meals handled by Suhalaya?', a: 'Yes, driver allowances are fully included in our transparent pricing.' }
+      { q: 'Are chauffeur accommodation and meals handled by Suhalaya?', a: 'Yes, chauffeur allowances are fully included in our transparent pricing.' }
     ]
   },
   {
@@ -366,7 +366,7 @@ The itinerary can be planned around the places you want to visit rather than fit
     ],
     faqs: [
       { q: 'Are your vehicles suitable for elderly family members?', a: 'Yes, vehicles like Innova Crysta and Force Urbania offer comfortable seating and easy entry/exit.' },
-      { q: 'Can the driver adjust to early-morning darshan schedules?', a: 'Yes, our chauffeurs are accustomed to early-morning temple timings and rituals.' }
+      { q: 'Can the chauffeur adjust to early-morning darshan schedules?', a: 'Yes, our chauffeurs are accustomed to early-morning temple timings and rituals.' }
     ]
   },
   {

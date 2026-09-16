@@ -125,10 +125,10 @@ export default function InteractiveRoutePlanner() {
                 onChange={(e) => setVehicle(e.target.value)}
                 style={{ width: '100%', padding: '14px 16px', borderRadius: '10px', backgroundColor: 'rgba(7,15,30,0.8)', color: '#FFF', border: '1px solid rgba(255,255,255,0.2)', fontSize: '0.95rem' }}
               >
-                <option value="Toyota Innova Crysta">Toyota Innova Crysta (6 Passengers + Driver)</option>
-                <option value="Toyota Fortuner">Toyota Fortuner 4x4 (6 Passengers + Driver)</option>
-                <option value="Executive Sedan">Executive Sedan (3 Passengers + Driver)</option>
-                <option value="Force Urbania / Traveller">Force Urbania Luxury Van (9-15 Passengers + Driver)</option>
+                <option value="Toyota Innova Crysta">Toyota Innova Crysta (6 Passengers + Chauffeur)</option>
+                <option value="Toyota Fortuner">Toyota Fortuner 4x4 (6 Passengers + Chauffeur)</option>
+                <option value="Executive Sedan">Executive Sedan (3 Passengers + Chauffeur)</option>
+                <option value="Force Urbania / Traveller">Force Urbania Luxury Van (9-15 Passengers + Chauffeur)</option>
               </select>
             </div>
 
