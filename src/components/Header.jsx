@@ -155,7 +155,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
             {/* Action CTAs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <a 
-                href="https://wa.me/919187140587" 
+                href="https://wa.me/919845655466" 
                 style={{ 
                   display: 'inline-flex', 
                   alignItems: 'center', 
@@ -172,7 +172,7 @@ export default function Header({ onOpenQuoteModal, onOpenCorporateModal }) {
                 className="phone-link-wrapper"
               >
                 <Phone size={15} color="#29ABE2" className="pulse-icon" />
-                <span>+91 91871 40587</span>
+                <span>+91 9845655466</span>
               </a>
 
               {/* Login Button */}
