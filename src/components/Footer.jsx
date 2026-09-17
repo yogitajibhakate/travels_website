@@ -45,10 +45,10 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
         </div>
 
         {/* Sitemap Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '36px', marginBottom: '48px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '36px', marginBottom: '48px', justifyContent: 'space-between' }}>
 
           {/* Column 1: Brand & Description */}
-          <div style={{ gridColumn: 'span 1' }}>
+          <div style={{ flex: '1.2 1 240px' }}>
             <Link href="/" style={{ display: 'inline-block', marginBottom: '16px' }}>
               <div style={{ backgroundColor: '#FFFFFF', padding: '6px 14px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center' }}>
                 <img
@@ -70,7 +70,7 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
           </div>
 
           {/* Column 2: QUICK LINKS */}
-          <div>
+          <div style={{ flex: '0.8 1 150px' }}>
             <h4 style={{ color: '#29ABE2', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>QUICK LINKS</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', padding: 0, margin: 0 }}>
               <li><Link href="/" style={{ color: 'rgba(255,255,255,0.85)' }}>Home</Link></li>
@@ -83,9 +83,9 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
           </div>
 
           {/* Column 3 & 4: SERVICES LIST */}
-          <div style={{ gridColumn: 'span 2' }}>
+          <div style={{ flex: '1.8 1 300px' }}>
             <h4 style={{ color: '#29ABE2', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>SERVICES</h4>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '10px' }}>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', padding: 0, margin: 0 }}>
                 {servicesData.slice(0, 6).map(s => (
                   <li key={s.slug}>
@@ -104,6 +104,28 @@ export default function Footer({ onOpenQuoteModal, onOpenCorporateModal }) {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Column 5: CONTACT US */}
+          <div style={{ flex: '1.2 1 220px' }}>
+            <h4 style={{ color: '#29ABE2', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>CONTACT US</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', fontSize: '0.88rem', color: 'rgba(255,255,255,0.85)' }}>
+              <div>
+                <strong style={{ color: '#FFF' }}>WhatsApp & Calls</strong>
+                <div style={{ marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <a href="https://wa.me/919845655466" style={{ color: 'rgba(255,255,255,0.85)', display: 'block' }}>+91 9845655466</a>
+                  <a href="tel:+918553344393" style={{ color: 'rgba(255,255,255,0.85)', display: 'block' }}>+91 8553344393</a>
+                  <a href="tel:+919900556611" style={{ color: 'rgba(255,255,255,0.85)', display: 'block' }}>+91 9900556611</a>
+                </div>
+              </div>
+              <div>
+                <strong style={{ color: '#FFF' }}>Email Support</strong>
+                <div style={{ marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <a href="mailto:fleetcare@suhalayatravels.in" style={{ color: 'rgba(255,255,255,0.85)', wordBreak: 'break-word', display: 'block' }}>fleetcare@suhalayatravels.in</a>
+                  <a href="mailto:reachus@suhalayatravels.in" style={{ color: 'rgba(255,255,255,0.85)', wordBreak: 'break-word', display: 'block' }}>reachus@suhalayatravels.in</a>
+                </div>
+              </div>
             </div>
           </div>
 

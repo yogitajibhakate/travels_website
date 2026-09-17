@@ -33,7 +33,7 @@ export function submitLeadToCRM(leadData) {
       console.log('CRM Lead successfully registered:', leadRecord);
 
       // WhatsApp Integration
-      const waNumber = '919187140587';
+      const waNumber = '919845655466';
       const text = `New Enquiry on Suhalaya Travels:
 Name: ${leadRecord.contact_name}
 Phone: ${leadRecord.contact_phone}

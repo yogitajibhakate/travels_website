@@ -91,19 +91,27 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                  <Phone size={22} color="#29ABE2" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                  <Phone size={22} color="#29ABE2" style={{ marginTop: '4px' }} />
                   <div>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Phone / WhatsApp</div>
-                    <a href="https://wa.me/919187140587" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 91871 40587</a>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>Phone / WhatsApp</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <a href="https://wa.me/919845655466" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 9845655466</a>
+                      <a href="tel:+918553344393" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 8553344393</a>
+                      <a href="tel:+919900556611" style={{ color: 'var(--color-navy-900)', fontWeight: '700' }}>+91 9900556611</a>
+                    </div>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                  <Mail size={22} color="#29ABE2" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                  <Mail size={22} color="#29ABE2" style={{ marginTop: '4px' }} />
                   <div>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Direct Email</div>
-                    <a href="mailto:swamy@suhalayatravels.in" style={{ color: '#29ABE2', fontWeight: '700' }}>swamy@suhalayatravels.in</a>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>Direct Email</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <a href="mailto:fleetcare@suhalayatravels.in" style={{ color: '#29ABE2', fontWeight: '700' }}>fleetcare@suhalayatravels.in</a>
+                      <a href="mailto:reachus@suhalayatravels.in" style={{ color: '#29ABE2', fontWeight: '700' }}>reachus@suhalayatravels.in</a>
+                      <a href="mailto:swamy@suhalayatravels.in" style={{ color: '#29ABE2', fontWeight: '700' }}>swamy@suhalayatravels.in</a>
+                    </div>
                   </div>
                 </div>
               </div>
